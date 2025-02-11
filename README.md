@@ -45,7 +45,7 @@ We programmatically scanned through the Service Authorization pages of AWS IAM (
 
 #### When to use
 
-Use this condition key when tags are required.  For example, ensuring that required tags are present when tagging a resource.
+Use this condition key when tags are required.  For example, ensuring that required tags are present when tagging a resource.  Note, this does not check to see what the tag key value may be.  To check for the tag key value in a request, we recommend using `aws:RequestTag/tag-key`.
 
 
 ### References
