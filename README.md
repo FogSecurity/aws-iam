@@ -20,9 +20,9 @@ For resources
 
 #### Methodology 
 
-We programmatically scanned through the Service Authorization pages of AWS IAM ([Actions, resources, and condition keys for AWS services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)) and looked for which IAM Actions supported `aws:ResourceTag/tag-key`.  From those IAM actions, we checked the resource types in the table that those actions apply to.
+We programmatically scanned through the Service Authorization pages of AWS IAM ([Actions, resources, and condition keys for AWS services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)) and looked for at resource tables and pulled resource types that support `aws:ResourceTag/tag-key`.
 
-`aws:ResouceTag/tag-key` -> IAM Action -> Supported Resources
+`aws:ResourceTag/tag-key` ->  Supported Resources
 
 #### When to Use
 
@@ -39,7 +39,7 @@ Use this condition key when ensuring that an action is only permitted on resourc
 
 #### Methodology 
 
-We programmatically scanned through the Service Authorization pages of AWS IAM ([Actions, resources, and condition keys for AWS services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)) and looked for which IAM Actions supported `aws:TagKeys` in the condition keys section.  From there, we checked the resource types in the table that those actions could be applied to.  
+We programmatically scanned through the Service Authorization pages of AWS IAM ([Actions, resources, and condition keys for AWS services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)) and looked for at resource tables and pulled resource types that support `aws:TagKeys`.
 
 `aws:TagKeys` -> IAM Action -> Supported Resources
 
