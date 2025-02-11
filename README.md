@@ -4,7 +4,7 @@ Fog Security: https://www.fogsecurity.io/
 
 Contact info@fogsecurity.io for help and feedback. Additions or feedback can be submitted here as well.
 
-This repository contains information parsed and processed from AWS IAM
+This repository contains information to help with tagging and tag compliance in AWS.   
 
 ## Tagging
 
