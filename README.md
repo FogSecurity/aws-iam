@@ -12,10 +12,23 @@ For resources
 
 ### Full List of Tagging Actions in AWS
 
+[json file of actions with 'tag' in the action](tagging/tagging_actions.json)
+json structure: {service, action, access_level, description}
+
+#### Explanation
+
+
+
+#### Methodology
+
+
+
+
 
 ### Resources with support for aws:ResourceTag
 
 [Resources with support for aws:ResourceTag](tagging/resources_with_aws:ResourceTag_support.json)
+json structure: {service, resource, arn}
 
 #### Explanation
 
@@ -35,6 +48,7 @@ Use this condition key when ensuring that an action is only permitted on resourc
 ### Resources with support for aws:TagKeys 
 
 [Resources with support for aws:TagKeys](tagging/resources_with_tagKeys_support.json)
+json structure: {service, resource, arn}
 
 #### Explanation
 
