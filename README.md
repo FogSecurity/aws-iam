@@ -33,7 +33,7 @@ This file contains all the AWS IAM Actions in a json file that have "tag" in the
 
 We programmatically scanned through all AWS service authorization pages for each AWS service and pulled a list of actions that contained "Tag" (case insensitive).  We then removed actions that are not directly tied to "tagging".
 
-Exclusions:
+Removals:
 * Cost Explorer CostAllocationTag
 * Actions that contain references to staging (stage, staging)
 * Resource Groups TagSyncTask
