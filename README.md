@@ -6,9 +6,12 @@ Contact info@fogsecurity.io for help and feedback. Additions or feedback can be 
 
 This repository contains information to help with tagging and tag compliance in AWS.   
 
-## Tagging
+## Tagging in AWS
 
 For resources
+
+### Full List of Tagging Actions in AWS
+
 
 ### Resources with support for aws:ResourceTag
 
@@ -29,13 +32,15 @@ We programmatically scanned through the Service Authorization pages of AWS IAM (
 Use this condition key when ensuring that an action is only permitted on resources with a certain tag.  For example, only allowing an IAM principal permission to stop ec2 instances with a specific tag.
 
 
-### Resources with support for aws:TagKeys
+### Resources with support for aws:TagKeys 
 
 [Resources with support for aws:TagKeys](tagging/resources_with_tagKeys_support.json)
 
 #### Explanation
 
 **aws:TagKeys** is a property of the request and not necessarily a property of the resouce in question.  An example of this is when creating a resource, `aws:TagKeys` can be used to limit which tags can be used when creating a resource.  
+
+Note: We have seen inconsistencies for whether this is supported in certain AWS IAM Actions.  In some cases, `aws:TagKeys` is listed in the condition keys table on a service authorization page but is not present in the IAM Actions table.
 
 #### Methodology 
 
