@@ -8,21 +8,69 @@ This repository contains information to help with tagging and tag compliance in 
 
 ## Tagging in AWS
 
-For resources
+Certain resources in AWS can be tagged (assigning metadata) to help with security, architecture, visibility, and more.  We won't go into much detail on benefits of tagging here.  AWS provides guidance [here](https://aws.amazon.com/solutions/guidance/tagging-on-aws)
 
 ### Full List of Tagging Actions in AWS
 
-[json file of actions with 'tag' in the action](tagging/tagging_actions.json) \
-json structure: {service, action, access_level, description}
+[json file of actions with 'tag' in the action](tagging/tagging_actions.json) 
+
+Example action:
+```
+{
+        "service": "Amazon S3",
+        "action": "PutObjectTagging",
+        "access_level": "Tagging",
+        "description": "Grants permission to set the supplied tag-set to an object that already exists in a bucket",
+        "service_prefix": "s3"
+},
+```
 
 #### Explanation
 
-
+This file contains all the AWS IAM Actions in a json file that have "tag" in the action.  
 
 #### Methodology
 
+We programmatically scanned through all AWS service authorization pages for each AWS service and pulled a list of actions that contained "Tag" (case insensitive).  We then removed actions that are not directly tied to "tagging".
+
+Exclusions:
+* Cost Explorer CostAllocationTag
+* Actions that contain references to staging (stage, staging)
+* Resource Groups TagSyncTask
+* Cloudfront CreateStreamingDistributionWithTags
+* Cognito PrincipalTagAttributeMap
+* Lake Formation TagExpression
+* Service Catalog TagOption
 
 
+### IAM Actions with Tag
+
+[txt file of IAM Actions with tag](tagging/iam_actions_with_tag.txt)
+
+#### Explanation
+
+* 1010 distinct IAM actions for tagging.
+
+This is a stripped down version of the full list of tagging actions above.  It contains a listing of tag actions without additional information.  The full list of tagging actions does not fit within an IAM policy.
+
+#### Methodology
+
+We removed other information to get <service_prefix>:<action> in a txt file.
+
+
+### View Tagging IAM Actions (Read or List Classifications)
+
+[txt file of View IAM Actions with tag](tagging/view_tag_actions.txt)
+
+#### Explanation
+
+* 331 Read or List classified IAM actions for tagging.
+
+Similar to above, this is a stripped down version of tagging actions above.  It contains a listing of tag actions that are classified either read or list.  Note: the full list of read or list tagging actions also does not fit within an IAM policy.
+
+#### Methodology
+
+We removed other information to get <service_prefix>:<action> in a txt file.
 
 
 ### Resources with support for aws:ResourceTag
