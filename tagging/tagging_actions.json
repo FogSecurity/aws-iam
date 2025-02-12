@@ -876,13 +876,6 @@
     },
     {
         "service": "Amazon CloudFront",
-        "action": "CreateStreamingDistributionWithTags",
-        "access_level": "Write",
-        "description": "Grants permission to create a new RTMP distribution with tags",
-        "service_prefix": "cloudfront"
-    },
-    {
-        "service": "Amazon CloudFront",
         "action": "ListTagsForResource",
         "access_level": "Read",
         "description": "Grants permission to list tags for a CloudFront resource",
@@ -900,13 +893,6 @@
         "action": "UntagResource",
         "access_level": "Tagging",
         "description": "Grants permission to remove tags from a CloudFront resource",
-        "service_prefix": "cloudfront"
-    },
-    {
-        "service": "Amazon CloudFront",
-        "action": "UpdateDistributionWithStagingConfig",
-        "access_level": "Write",
-        "description": "Grants permission to copy the configuration from a staging web distribution to its corresponding primary web distribution",
         "service_prefix": "cloudfront"
     },
     {
@@ -1387,44 +1373,9 @@
     },
     {
         "service": "AWS CodePipeline",
-        "action": "DisableStageTransition",
-        "access_level": "Write",
-        "description": "Grants permission to prevent revisions from transitioning to the next stage in a pipeline",
-        "service_prefix": "codepipeline"
-    },
-    {
-        "service": "AWS CodePipeline",
-        "action": "EnableStageTransition",
-        "access_level": "Write",
-        "description": "Grants permission to allow revisions to transition to the next stage in a pipeline",
-        "service_prefix": "codepipeline"
-    },
-    {
-        "service": "AWS CodePipeline",
         "action": "ListTagsForResource",
         "access_level": "Read",
         "description": "Grants permission to list tags for a CodePipeline resource",
-        "service_prefix": "codepipeline"
-    },
-    {
-        "service": "AWS CodePipeline",
-        "action": "OverrideStageCondition",
-        "access_level": "Write",
-        "description": "Grants permission to resume the pipeline execution by overriding a condition in a stage",
-        "service_prefix": "codepipeline"
-    },
-    {
-        "service": "AWS CodePipeline",
-        "action": "RetryStageExecution",
-        "access_level": "Write",
-        "description": "Grants permission to resume the pipeline execution by retrying the last failed actions in a stage",
-        "service_prefix": "codepipeline"
-    },
-    {
-        "service": "AWS CodePipeline",
-        "action": "RollbackStage",
-        "access_level": "Write",
-        "description": "Grants permission to rollback the stage to a previous successful execution",
         "service_prefix": "codepipeline"
     },
     {
@@ -1527,23 +1478,9 @@
     },
     {
         "service": "Amazon Cognito Identity",
-        "action": "GetPrincipalTagAttributeMap",
-        "access_level": "Read",
-        "description": "Grants permission to get the principal tags for an identity pool and provider",
-        "service_prefix": "cognito-identity"
-    },
-    {
-        "service": "Amazon Cognito Identity",
         "action": "ListTagsForResource",
         "access_level": "Read",
         "description": "Grants permission to list the tags that are assigned to an Amazon Cognito identity pool",
-        "service_prefix": "cognito-identity"
-    },
-    {
-        "service": "Amazon Cognito Identity",
-        "action": "SetPrincipalTagAttributeMap",
-        "access_level": "Write",
-        "description": "Grants permission to set the principal tags for an identity pool and provider. These tags are used when making calls to GetOpenIdToken action",
         "service_prefix": "cognito-identity"
     },
     {
@@ -1800,30 +1737,9 @@
     },
     {
         "service": "AWS Cost Explorer Service",
-        "action": "ListCostAllocationTagBackfillHistory",
-        "access_level": "List",
-        "description": "Grants permission to list Cost Allocation Tag backfill history",
-        "service_prefix": "ce"
-    },
-    {
-        "service": "AWS Cost Explorer Service",
-        "action": "ListCostAllocationTags",
-        "access_level": "List",
-        "description": "Grants permission to list Cost Allocation Tags",
-        "service_prefix": "ce"
-    },
-    {
-        "service": "AWS Cost Explorer Service",
         "action": "ListTagsForResource",
         "access_level": "Read",
         "description": "Grants permission to list tags for a Cost Explorer resource",
-        "service_prefix": "ce"
-    },
-    {
-        "service": "AWS Cost Explorer Service",
-        "action": "StartCostAllocationTagBackfill",
-        "access_level": "Write",
-        "description": "Grants permission to request a Cost Allocation Tag backfill",
         "service_prefix": "ce"
     },
     {
@@ -1838,13 +1754,6 @@
         "action": "UntagResource",
         "access_level": "Tagging",
         "description": "Grants permission to remove tags from a Cost Explorer resource",
-        "service_prefix": "ce"
-    },
-    {
-        "service": "AWS Cost Explorer Service",
-        "action": "UpdateCostAllocationTagsStatus",
-        "access_level": "Write",
-        "description": "Grants permission to update existing Cost Allocation Tags status",
         "service_prefix": "ce"
     },
     {
@@ -2364,13 +2273,6 @@
         "access_level": "Tagging",
         "description": "Grants permission to untag the specified resource",
         "service_prefix": "ecs"
-    },
-    {
-        "service": "AWS Elastic Disaster Recovery",
-        "action": "ListStagingAccounts",
-        "access_level": "Read",
-        "description": "Grants permission to list staging accounts",
-        "service_prefix": "drs"
     },
     {
         "service": "AWS Elastic Disaster Recovery",
@@ -3081,55 +2983,6 @@
     },
     {
         "service": "AWS Glue",
-        "action": "BatchGetStageFiles",
-        "access_level": "Permissions management",
-        "description": "Grants permission to batch get stage files for SparkUI",
-        "service_prefix": "glue"
-    },
-    {
-        "service": "AWS Glue",
-        "action": "GetStage",
-        "access_level": "Permissions management",
-        "description": "Grants permission to get a stage for SparkUI",
-        "service_prefix": "glue"
-    },
-    {
-        "service": "AWS Glue",
-        "action": "GetStageAttempt",
-        "access_level": "Permissions management",
-        "description": "Grants permission to get a stage attempt for SparkUI",
-        "service_prefix": "glue"
-    },
-    {
-        "service": "AWS Glue",
-        "action": "GetStageAttemptTaskList",
-        "access_level": "Permissions management",
-        "description": "Grants permission to get the task list for a stage attempt for SparkUI",
-        "service_prefix": "glue"
-    },
-    {
-        "service": "AWS Glue",
-        "action": "GetStageAttemptTaskSummary",
-        "access_level": "Permissions management",
-        "description": "Grants permission to get the task summary for a stage attempt for SparkUI",
-        "service_prefix": "glue"
-    },
-    {
-        "service": "AWS Glue",
-        "action": "GetStageFiles",
-        "access_level": "Permissions management",
-        "description": "Grants permission to get stage files for SparkUI",
-        "service_prefix": "glue"
-    },
-    {
-        "service": "AWS Glue",
-        "action": "GetStages",
-        "access_level": "Permissions management",
-        "description": "Grants permission to get stages for SparkUI",
-        "service_prefix": "glue"
-    },
-    {
-        "service": "AWS Glue",
         "action": "GetTags",
         "access_level": "Read",
         "description": "Grants permission to retrieve all tags associated with a resource",
@@ -3564,48 +3417,6 @@
     },
     {
         "service": "Amazon Interactive Video Service",
-        "action": "CreateStage",
-        "access_level": "Write",
-        "description": "Grants permission to create a stage",
-        "service_prefix": "ivs"
-    },
-    {
-        "service": "Amazon Interactive Video Service",
-        "action": "DeleteStage",
-        "access_level": "Write",
-        "description": "Grants permission to delete the stage for a specified ARN",
-        "service_prefix": "ivs"
-    },
-    {
-        "service": "Amazon Interactive Video Service",
-        "action": "GetStage",
-        "access_level": "Read",
-        "description": "Grants permission to get stage information for a specified ARN",
-        "service_prefix": "ivs"
-    },
-    {
-        "service": "Amazon Interactive Video Service",
-        "action": "GetStageSession",
-        "access_level": "Read",
-        "description": "Grants permission to get stage session information for a specified stage ARN and session",
-        "service_prefix": "ivs"
-    },
-    {
-        "service": "Amazon Interactive Video Service",
-        "action": "ListStageSessions",
-        "access_level": "List",
-        "description": "Grants permission to list stage sessions for a specified stage ARN",
-        "service_prefix": "ivs"
-    },
-    {
-        "service": "Amazon Interactive Video Service",
-        "action": "ListStages",
-        "access_level": "List",
-        "description": "Grants permission to get summary information about stages",
-        "service_prefix": "ivs"
-    },
-    {
-        "service": "Amazon Interactive Video Service",
         "action": "ListTagsForResource",
         "access_level": "Read",
         "description": "Grants permission to get information about the tags for a specified ARN",
@@ -3623,13 +3434,6 @@
         "action": "UntagResource",
         "access_level": "Tagging",
         "description": "Grants permission to remove tags for a resource with a specified ARN",
-        "service_prefix": "ivs"
-    },
-    {
-        "service": "Amazon Interactive Video Service",
-        "action": "UpdateStage",
-        "access_level": "Write",
-        "description": "Grants permission to update a stage's configuration",
         "service_prefix": "ivs"
     },
     {
@@ -4138,23 +3942,9 @@
     },
     {
         "service": "AWS Lake Formation",
-        "action": "CreateLFTagExpression",
-        "access_level": "Write",
-        "description": "Grants permission to create a Lake Formation tag expression",
-        "service_prefix": "lakeformation"
-    },
-    {
-        "service": "AWS Lake Formation",
         "action": "DeleteLFTag",
         "access_level": "Write",
         "description": "Grants permission to delete a Lake Formation tag",
-        "service_prefix": "lakeformation"
-    },
-    {
-        "service": "AWS Lake Formation",
-        "action": "DeleteLFTagExpression",
-        "access_level": "Write",
-        "description": "Grants permission to delete a Lake Formation expression",
         "service_prefix": "lakeformation"
     },
     {
@@ -4166,23 +3956,9 @@
     },
     {
         "service": "AWS Lake Formation",
-        "action": "GetLFTagExpression",
-        "access_level": "Read",
-        "description": "Grants permission to retrieve a Lake Formation tag expression",
-        "service_prefix": "lakeformation"
-    },
-    {
-        "service": "AWS Lake Formation",
         "action": "GetResourceLFTags",
         "access_level": "Read",
         "description": "Grants permission to retrieve lakeformation tags on a catalog resource",
-        "service_prefix": "lakeformation"
-    },
-    {
-        "service": "AWS Lake Formation",
-        "action": "ListLFTagExpressions",
-        "access_level": "Read",
-        "description": "Grants permission to list Lake Foramtion tag expressions",
         "service_prefix": "lakeformation"
     },
     {
@@ -4218,13 +3994,6 @@
         "action": "UpdateLFTag",
         "access_level": "Write",
         "description": "Grants permission to update a Lake Formation tag",
-        "service_prefix": "lakeformation"
-    },
-    {
-        "service": "AWS Lake Formation",
-        "action": "UpdateLFTagExpression",
-        "access_level": "Write",
-        "description": "Grants permission to update a Lake Formation expression",
         "service_prefix": "lakeformation"
     },
     {
@@ -4288,13 +4057,6 @@
         "action": "UntagResource",
         "access_level": "Tagging",
         "description": "Removes tags from a Lex resource",
-        "service_prefix": "lex"
-    },
-    {
-        "service": "Amazon Lex V2",
-        "action": "ListIntentStageMetrics",
-        "access_level": "List",
-        "description": "Grants permission to list intentStage analytics metrics for a bot",
         "service_prefix": "lex"
     },
     {
@@ -5635,13 +5397,6 @@
         "service_prefix": "redshift"
     },
     {
-        "service": "Amazon Redshift Data API",
-        "action": "GetStagingBucketLocation",
-        "access_level": "Read",
-        "description": "Grants permission to get staging bucket location for a given managed workgroup",
-        "service_prefix": "redshift-data"
-    },
-    {
         "service": "Amazon Redshift Serverless",
         "action": "ListTagsForResource",
         "access_level": "List",
@@ -5790,37 +5545,9 @@
     },
     {
         "service": "AWS Resource Groups",
-        "action": "CancelTagSyncTask",
-        "access_level": "Write",
-        "description": "Grants permission to cancel a tag-sync task for an application group",
-        "service_prefix": "resource-groups"
-    },
-    {
-        "service": "AWS Resource Groups",
-        "action": "GetTagSyncTask",
-        "access_level": "Read",
-        "description": "Grants permission to get information of a specified tag-sync task",
-        "service_prefix": "resource-groups"
-    },
-    {
-        "service": "AWS Resource Groups",
         "action": "GetTags",
         "access_level": "Read",
         "description": "Grants permission to get the tags associated with a specified resource group",
-        "service_prefix": "resource-groups"
-    },
-    {
-        "service": "AWS Resource Groups",
-        "action": "ListTagSyncTasks",
-        "access_level": "List",
-        "description": "Grants permission to list all tag-sync tasks in your account",
-        "service_prefix": "resource-groups"
-    },
-    {
-        "service": "AWS Resource Groups",
-        "action": "StartTagSyncTask",
-        "access_level": "Write",
-        "description": "Grants permission to create a tag-sync task for an application group",
         "service_prefix": "resource-groups"
     },
     {
@@ -6245,20 +5972,6 @@
     },
     {
         "service": "Amazon SageMaker",
-        "action": "CreateEdgeDeploymentStage",
-        "access_level": "Write",
-        "description": "Grants permission to create an edge deployment stage",
-        "service_prefix": "sagemaker"
-    },
-    {
-        "service": "Amazon SageMaker",
-        "action": "DeleteEdgeDeploymentStage",
-        "access_level": "Write",
-        "description": "Grants permission to delete an edge deployment stage",
-        "service_prefix": "sagemaker"
-    },
-    {
-        "service": "Amazon SageMaker",
         "action": "DeleteTags",
         "access_level": "Tagging",
         "description": "Grants permission to delete the specified set of tags from an Amazon SageMaker resource",
@@ -6266,30 +5979,9 @@
     },
     {
         "service": "Amazon SageMaker",
-        "action": "ListStageDevices",
-        "access_level": "List",
-        "description": "Grants permission to list stage devices",
-        "service_prefix": "sagemaker"
-    },
-    {
-        "service": "Amazon SageMaker",
         "action": "ListTags",
         "access_level": "List",
         "description": "Grants permission to list the tag set associated with the specified resource",
-        "service_prefix": "sagemaker"
-    },
-    {
-        "service": "Amazon SageMaker",
-        "action": "StartEdgeDeploymentStage",
-        "access_level": "Write",
-        "description": "Grants permission to start an edge deployment stage",
-        "service_prefix": "sagemaker"
-    },
-    {
-        "service": "Amazon SageMaker",
-        "action": "StopEdgeDeploymentStage",
-        "access_level": "Write",
-        "description": "Grants permission to stop an edge deployment stage",
         "service_prefix": "sagemaker"
     },
     {
@@ -6377,13 +6069,6 @@
         "service_prefix": "sagemaker-mlflow"
     },
     {
-        "service": "Amazon SageMaker with MLflow",
-        "action": "TransitionModelVersionStage",
-        "access_level": "Write",
-        "description": "Grants permission to transition a model version to a particular stage",
-        "service_prefix": "sagemaker-mlflow"
-    },
-    {
         "service": "AWS Savings Plans",
         "action": "ListTagsForResource",
         "access_level": "List",
@@ -6416,13 +6101,6 @@
         "action": "UntagResource",
         "access_level": "Tagging",
         "description": "Grants permission to remove tags from a secret",
-        "service_prefix": "secretsmanager"
-    },
-    {
-        "service": "AWS Secrets Manager",
-        "action": "UpdateSecretVersionStage",
-        "access_level": "Write",
-        "description": "Grants permission to move a stage from one secret to another",
         "service_prefix": "secretsmanager"
     },
     {
@@ -6497,55 +6175,6 @@
     },
     {
         "service": "AWS Service Catalog",
-        "action": "AssociateTagOptionWithResource",
-        "access_level": "Write",
-        "description": "Grants permission to associate the specified TagOption with the specified portfolio or product",
-        "service_prefix": "servicecatalog"
-    },
-    {
-        "service": "AWS Service Catalog",
-        "action": "CreateTagOption",
-        "access_level": "Write",
-        "description": "Grants permission to create a TagOption",
-        "service_prefix": "servicecatalog"
-    },
-    {
-        "service": "AWS Service Catalog",
-        "action": "DeleteTagOption",
-        "access_level": "Write",
-        "description": "Grants permission to delete the specified TagOption",
-        "service_prefix": "servicecatalog"
-    },
-    {
-        "service": "AWS Service Catalog",
-        "action": "DescribeTagOption",
-        "access_level": "Read",
-        "description": "Grants permission to get information about the specified TagOption",
-        "service_prefix": "servicecatalog"
-    },
-    {
-        "service": "AWS Service Catalog",
-        "action": "DisassociateTagOptionFromResource",
-        "access_level": "Write",
-        "description": "Grants permission to disassociate the specified TagOption from the specified resource",
-        "service_prefix": "servicecatalog"
-    },
-    {
-        "service": "AWS Service Catalog",
-        "action": "ListResourcesForTagOption",
-        "access_level": "List",
-        "description": "Grants permission to list the resources associated with the specified TagOption",
-        "service_prefix": "servicecatalog"
-    },
-    {
-        "service": "AWS Service Catalog",
-        "action": "ListTagOptions",
-        "access_level": "List",
-        "description": "Grants permission to list the specified TagOptions or all TagOptions",
-        "service_prefix": "servicecatalog"
-    },
-    {
-        "service": "AWS Service Catalog",
         "action": "ListTagsForResource",
         "access_level": "Read",
         "description": "Grants permission to list the tags for a service catalog appregistry resource",
@@ -6563,13 +6192,6 @@
         "action": "UntagResource",
         "access_level": "Tagging",
         "description": "Grants permission to remove a tag from a service catalog appregistry resource",
-        "service_prefix": "servicecatalog"
-    },
-    {
-        "service": "AWS Service Catalog",
-        "action": "UpdateTagOption",
-        "access_level": "Write",
-        "description": "Grants permission to update the specified TagOption",
         "service_prefix": "servicecatalog"
     },
     {
