@@ -14,6 +14,8 @@ Certain resources in AWS can be tagged (assigning metadata) to help with securit
 
 [json file of actions with 'tag' in the action](tagging/tagging_actions.json) 
 
+* 1010 distinct IAM actions for tagging.
+
 Example action:
 ```
 {
