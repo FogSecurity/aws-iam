@@ -60,7 +60,7 @@ Removals:
 
 ### IAM Actions with Tag
 
-File: [txt file of IAM Actions with tag](tagging/iam_actions_with_tag.txt)
+File: [txt file of IAM Actions with tag](iam_actions_with_tag.txt)
 
 #### Explanation
 
@@ -75,7 +75,7 @@ We removed other information to get <service_prefix>:<action> in a txt file.
 
 ### View Tagging IAM Actions (Read or List Classifications)
 
-File: [txt file of View IAM Actions with tag](tagging/view_tag_actions.txt)
+File: [txt file of View IAM Actions with tag](view_tag_actions.txt)
 
 #### Explanation
 
@@ -90,7 +90,7 @@ We removed other information to get <service_prefix>:<action> in a txt file.
 
 ### Resources with support for aws:ResourceTag
 
-File: [Resources with support for aws:ResourceTag](tagging/resources_with_resource_tag_support.json) \
+File: [Resources with support for aws:ResourceTag](resources_with_resource_tag_support.json) \
 json structure: {service, resource, arn}
 
 #### Explanation
@@ -110,7 +110,7 @@ Use this condition key when ensuring that an action is only permitted on resourc
 
 ### Resources with support for aws:TagKeys 
 
-File: [Resources with support for aws:TagKeys](tagging/resources_with_tag_keys_support.json) \
+File: [Resources with support for aws:TagKeys](resources_with_tag_keys_support.json) \
 json structure: {service, resource, arn}
 
 #### Explanation
