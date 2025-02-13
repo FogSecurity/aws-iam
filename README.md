@@ -123,7 +123,7 @@ Note: We have seen inconsistencies for whether this is supported in certain AWS 
 
 We programmatically scanned through the Service Authorization pages of AWS IAM ([Actions, resources, and condition keys for AWS services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)) and looked for at resource tables and pulled resource types that support `aws:TagKeys`.
 
-`aws:TagKeys` -> IAM Action -> Supported Resources
+`aws:TagKeys` -> Supported Resources
 
 #### When to use
 
@@ -133,7 +133,3 @@ Use this condition key when tags are required.  For example, ensuring that requi
 ### References
 
 [AWS IAM: AWS Global Condition Context Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html)
-
-## References
-
-https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys
