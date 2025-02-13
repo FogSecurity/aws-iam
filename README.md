@@ -8,13 +8,26 @@ This repository contains information to help with tagging and tag compliance in 
 
 ## Tagging in AWS
 
-Certain resources in AWS can be tagged (assigning metadata) to help with security, architecture, visibility, and more.  We won't go into much detail on benefits of tagging here.  AWS provides guidance [here](https://aws.amazon.com/solutions/guidance/tagging-on-aws)
+Certain resources in AWS can be tagged (assigning metadata) to help with security, architecture, visibility, and more.  We won't go into much detail on benefits of tagging here.  AWS provides guidance [here](https://aws.amazon.com/solutions/guidance/tagging-on-aws).
+
+### Statistics
+
+IAM Actions
+* 1010 distinct IAM actions for tagging.
+
+AWS classifies IAM actions in 5 categories: read, list, write, permissions management, or tagging.
+* 331 IAM actions classified as read or list.
+* 17 IAM actions classified as write.
+* 662 IAM actions classified as tagging.
+
+AWS Resources
+* 1439 Resources that support Resource Tags on an IAM Action.
+        
 
 ### Full List of Tagging Actions in AWS
 
 [json file of actions with 'tag' in the action](tagging/tagging_actions.json) 
 
-* 1010 distinct IAM actions for tagging.
 
 Example action:
 ```
@@ -47,7 +60,7 @@ Removals:
 
 ### IAM Actions with Tag
 
-[txt file of IAM Actions with tag](tagging/iam_actions_with_tag.txt)
+File: [txt file of IAM Actions with tag](tagging/iam_actions_with_tag.txt)
 
 #### Explanation
 
@@ -62,7 +75,7 @@ We removed other information to get <service_prefix>:<action> in a txt file.
 
 ### View Tagging IAM Actions (Read or List Classifications)
 
-[txt file of View IAM Actions with tag](tagging/view_tag_actions.txt)
+File: [txt file of View IAM Actions with tag](tagging/view_tag_actions.txt)
 
 #### Explanation
 
@@ -77,7 +90,7 @@ We removed other information to get <service_prefix>:<action> in a txt file.
 
 ### Resources with support for aws:ResourceTag
 
-[Resources with support for aws:ResourceTag](tagging/resources_with_aws:ResourceTag_support.json) \
+File: [Resources with support for aws:ResourceTag](tagging/resources_with_resource_tag_support.json) \
 json structure: {service, resource, arn}
 
 #### Explanation
@@ -97,7 +110,7 @@ Use this condition key when ensuring that an action is only permitted on resourc
 
 ### Resources with support for aws:TagKeys 
 
-[Resources with support for aws:TagKeys](tagging/resources_with_tagKeys_support.json) \
+File: [Resources with support for aws:TagKeys](tagging/resources_with_tag_keys_support.json) \
 json structure: {service, resource, arn}
 
 #### Explanation
