@@ -26,7 +26,7 @@ AWS Resources
 
 ### Full List of Tagging Actions in AWS
 
-File: [json file of actions with 'tag' in the action](tagging/tagging_actions.json) 
+File: [json file of actions with 'tag' in the action](tagging_actions.json) 
 
 
 Example action:
