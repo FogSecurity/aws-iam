@@ -6,6 +6,9 @@ Contact info@fogsecurity.io for help and feedback. Additions or feedback can be 
 
 This repository contains information to help with AWS Identity and Access Management (IAM)
 
-## [Tagging in AWS](tagging/)
+## Tagging in AWS
 
 Certain resources in AWS can be tagged (assigning metadata) to help with security, architecture, visibility, and more.  This folder contains information on IAM Permissions for tagging, which AWS resources support tagging, and more.
+
+[Tagging](tagging/)
+
