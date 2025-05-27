@@ -1,4 +1,4 @@
-# AWS IAM Data and Resources
+# AWS IAM Tagging Data and Resources
 
 Fog Security: https://www.fogsecurity.io/ 
 
