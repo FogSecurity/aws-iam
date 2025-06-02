@@ -7,7 +7,7 @@ Contact info@fogsecurity.io for help and feedback. Additions or feedback can be 
 This folder contains a listing of AWS IAM ARNs found in AWS's Service Authorization Reference pages.  These pages are used as IAM references with IAM actions, resources, condition keys, and more.  This can help in least privilege and scoping permissions as well as understanding how IAM actions and AWS APIs can affect resources in AWS.
 
 Current statistics:
-- 1,929 ARN Formats
+- 1,929 Distinct Resource ARN Formats 
 
 Searchable table: https://fogsecurity.io/aws-resources
 
