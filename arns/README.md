@@ -14,3 +14,4 @@ We programmatically went through each service's authorization reference (SRA) on
 
 ### [AWS Service Prefixes](service_prefixes.json)
 
+Listing of 441 AWS Services and the corresponding prefixes for those services.  These service prefixes are used in AWS IAM policies, documentation, and more.
