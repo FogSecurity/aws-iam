@@ -12,3 +12,5 @@ This folder contains a listing of AWS IAM ARNs found in Service Authorization Re
 
 We programmatically went through each service's authorization reference (SRA) on AWS's Documentation.  There is also a programmatic reference listing for each service [provided by AWS here](https://docs.aws.amazon.com/service-authorization/latest/reference/service-reference.html).
 
+### [AWS Service Prefixes](service_prefixes.json)
+
