@@ -1,4 +1,4 @@
-# AWS IAM ARNs (Resource Identifier) Reference
+# AWS ARNs (Resource Identifier) Reference
 
 Contact info@fogsecurity.io for help and feedback. Additions or feedback can be submitted here as well.
 
