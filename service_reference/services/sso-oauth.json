@@ -1,0 +1,30 @@
+{
+    "Name": "sso-oauth",
+    "Actions": [
+        {
+            "Name": "CreateTokenWithIAM",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Application"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Application",
+            "ARNFormats": [
+                "arn:${Partition}:sso::${AccountId}:application/${InstanceId}/${ApplicationId}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

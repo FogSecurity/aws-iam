@@ -1,0 +1,3661 @@
+{
+    "Name": "rds",
+    "Actions": [
+        {
+            "Name": "AddRoleToDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "AddRoleToDBInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "AddSourceIdentifierToSubscription",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "es"
+                }
+            ]
+        },
+        {
+            "Name": "AddTagsToResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cev"
+                },
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-endpoint"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "deployment"
+                },
+                {
+                    "Name": "es"
+                },
+                {
+                    "Name": "integration"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "proxy"
+                },
+                {
+                    "Name": "proxy-endpoint"
+                },
+                {
+                    "Name": "ri"
+                },
+                {
+                    "Name": "secgrp"
+                },
+                {
+                    "Name": "shardgrp"
+                },
+                {
+                    "Name": "snapshot"
+                },
+                {
+                    "Name": "snapshot-tenant-database"
+                },
+                {
+                    "Name": "subgrp"
+                },
+                {
+                    "Name": "target-group"
+                },
+                {
+                    "Name": "tenant-database"
+                }
+            ]
+        },
+        {
+            "Name": "ApplyPendingMaintenanceAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "AuthorizeDBSecurityGroupIngress",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "secgrp"
+                }
+            ]
+        },
+        {
+            "Name": "BacktrackDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "CancelExportTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CopyCustomDBEngineVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cev"
+                }
+            ]
+        },
+        {
+            "Name": "CopyDBClusterParameterGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-pg"
+                }
+            ]
+        },
+        {
+            "Name": "CopyDBClusterSnapshot",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "CopyDBParameterGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "CopyDBSnapshot",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:CopyOptionGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "CopyOptionGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "og"
+                }
+            ]
+        },
+        {
+            "Name": "CreateBlueGreenDeployment",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:DatabaseClass",
+                "rds:DatabaseEngine",
+                "rds:DatabaseName",
+                "rds:MultiAz",
+                "rds:Piops",
+                "rds:StorageEncrypted",
+                "rds:StorageSize",
+                "rds:Vpc",
+                "rds:cluster-pg-tag/${TagKey}",
+                "rds:cluster-tag/${TagKey}",
+                "rds:db-tag/${TagKey}",
+                "rds:pg-tag/${TagKey}",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "deployment"
+                },
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCustomDBEngineVersion",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cev"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBCluster",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:DatabaseClass",
+                "rds:DatabaseEngine",
+                "rds:DatabaseName",
+                "rds:ManageMasterUserPassword",
+                "rds:Piops",
+                "rds:StorageEncrypted",
+                "rds:StorageSize",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "global-cluster"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBClusterEndpoint",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:EndpointType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBClusterParameterGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-pg"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBClusterSnapshot",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBInstance",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:BackupTarget",
+                "rds:ManageMasterUserPassword",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "secgrp"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBInstanceReadReplica",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBParameterGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBProxy",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateDBProxyEndpoint",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy"
+                },
+                {
+                    "Name": "proxy-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBSecurityGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "secgrp"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBShardGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "shardgrp"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBSnapshot",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:BackupTarget",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDBSubnetGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "CreateEventSubscription",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "es"
+                }
+            ]
+        },
+        {
+            "Name": "CreateGlobalCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "global-cluster"
+                }
+            ]
+        },
+        {
+            "Name": "CreateIntegration",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "CreateOptionGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "og"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTenantDatabase",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:ManageMasterUserPassword",
+                "rds:TenantDatabaseName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "tenant-database"
+                }
+            ]
+        },
+        {
+            "Name": "CrossRegionCommunication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteBlueGreenDeployment",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "deployment"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCustomDBEngineVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cev"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBClusterAutomatedBackup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-auto-backup"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBClusterEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBClusterParameterGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-pg"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBClusterSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBInstanceAutomatedBackup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auto-backup"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBParameterGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBProxy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBProxyEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBSecurityGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "secgrp"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBShardGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "shardgrp"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDBSubnetGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEventSubscription",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "es"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteGlobalCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-cluster"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteIntegration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteOptionGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "og"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTenantDatabase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "tenant-database"
+                }
+            ]
+        },
+        {
+            "Name": "DeregisterDBProxyTargets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "proxy"
+                },
+                {
+                    "Name": "target-group"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeAccountAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeBlueGreenDeployments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "deployment"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeCertificates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeDBClusterAutomatedBackups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-auto-backup"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBClusterBacktracks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBClusterEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBClusterParameterGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-pg"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBClusterParameters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-pg"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBClusterSnapshotAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBClusterSnapshots",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBClusters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBEngineVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeDBInstanceAutomatedBackups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auto-backup"
+                },
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBLogFiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBMajorEngineVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeDBParameterGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBParameters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBProxies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBProxyEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy"
+                },
+                {
+                    "Name": "proxy-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBProxyTargetGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBProxyTargets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy"
+                },
+                {
+                    "Name": "target-group"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBRecommendations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeDBSecurityGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "secgrp"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBShardGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "shardgrp"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBSnapshotAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBSnapshotTenantDatabases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "snapshot"
+                },
+                {
+                    "Name": "snapshot-tenant-database"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBSnapshots",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDBSubnetGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEngineDefaultClusterParameters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEngineDefaultParameters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEventCategories",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEventSubscriptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "es"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEvents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeExportTasks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                },
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeGlobalClusters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-cluster"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeIntegrations",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeOptionGroupOptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeOptionGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "og"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeOrderableDBInstanceOptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribePendingMaintenanceActions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeRecommendationGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeRecommendations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeReservedDBInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ri"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeReservedDBInstancesOfferings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeSourceRegions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTenantDatabases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "tenant-database"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeValidDBInstanceModifications",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "DisableHttpEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "DownloadCompleteDBLogFile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "DownloadDBLogFilePortion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "EnableHttpEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "FailoverDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "FailoverGlobalCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "global-cluster"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cev"
+                },
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-endpoint"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "es"
+                },
+                {
+                    "Name": "integration"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "proxy"
+                },
+                {
+                    "Name": "proxy-endpoint"
+                },
+                {
+                    "Name": "ri"
+                },
+                {
+                    "Name": "secgrp"
+                },
+                {
+                    "Name": "shardgrp"
+                },
+                {
+                    "Name": "snapshot"
+                },
+                {
+                    "Name": "snapshot-tenant-database"
+                },
+                {
+                    "Name": "subgrp"
+                },
+                {
+                    "Name": "target-group"
+                },
+                {
+                    "Name": "tenant-database"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyActivityStream",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyCertificates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ModifyCurrentDBClusterCapacity",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyCustomDBEngineVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cev"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBCluster",
+            "ActionConditionKeys": [
+                "rds:DatabaseClass",
+                "rds:ManageMasterUserPassword",
+                "rds:Piops",
+                "rds:StorageSize"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBClusterEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBClusterParameterGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-pg"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBClusterSnapshotAttribute",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBInstance",
+            "ActionConditionKeys": [
+                "rds:ManageMasterUserPassword"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "secgrp"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBParameterGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBProxy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBProxyEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proxy-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBProxyTargetGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "target-group"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBRecommendation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ModifyDBShardGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "shardgrp"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBSnapshotAttribute",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDBSubnetGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyEventSubscription",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "es"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyGlobalCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-cluster"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyIntegration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyOptionGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "og"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyRecommendation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ModifyTenantDatabase",
+            "ActionConditionKeys": [
+                "rds:ManageMasterUserPassword",
+                "rds:TenantDatabaseName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "tenant-database"
+                }
+            ]
+        },
+        {
+            "Name": "PromoteReadReplica",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "PromoteReadReplicaDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "PurchaseReservedDBInstancesOffering",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ri"
+                }
+            ]
+        },
+        {
+            "Name": "RebootDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "RebootDBInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "RebootDBShardGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "shardgrp"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterDBProxyTargets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "target-group"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveFromGlobalCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "global-cluster"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveRoleFromDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveRoleFromDBInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveSourceIdentifierFromSubscription",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "es"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveTagsFromResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cev"
+                },
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-endpoint"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "deployment"
+                },
+                {
+                    "Name": "es"
+                },
+                {
+                    "Name": "integration"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "proxy"
+                },
+                {
+                    "Name": "proxy-endpoint"
+                },
+                {
+                    "Name": "ri"
+                },
+                {
+                    "Name": "secgrp"
+                },
+                {
+                    "Name": "shardgrp"
+                },
+                {
+                    "Name": "snapshot"
+                },
+                {
+                    "Name": "snapshot-tenant-database"
+                },
+                {
+                    "Name": "subgrp"
+                },
+                {
+                    "Name": "target-group"
+                },
+                {
+                    "Name": "tenant-database"
+                }
+            ]
+        },
+        {
+            "Name": "ResetDBClusterParameterGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-pg"
+                }
+            ]
+        },
+        {
+            "Name": "ResetDBParameterGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pg"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreDBClusterFromS3",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:DatabaseEngine",
+                "rds:DatabaseName",
+                "rds:ManageMasterUserPassword",
+                "rds:StorageEncrypted",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreDBClusterFromSnapshot",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:DatabaseClass",
+                "rds:Piops",
+                "rds:StorageSize",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "snapshot"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreDBClusterToPointInTime",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:DatabaseClass",
+                "rds:Piops",
+                "rds:StorageSize",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-auto-backup"
+                },
+                {
+                    "Name": "cluster-pg"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreDBInstanceFromDBSnapshot",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:BackupTarget",
+                "rds:ManageMasterUserPassword",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster-snapshot"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "snapshot"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreDBInstanceFromS3",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:ManageMasterUserPassword",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "secgrp"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreDBInstanceToPointInTime",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "rds:BackupTarget",
+                "rds:ManageMasterUserPassword",
+                "rds:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auto-backup"
+                },
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "og"
+                },
+                {
+                    "Name": "pg"
+                },
+                {
+                    "Name": "subgrp"
+                }
+            ]
+        },
+        {
+            "Name": "RevokeDBSecurityGroupIngress",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "secgrp"
+                }
+            ]
+        },
+        {
+            "Name": "StartActivityStream",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "StartDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "StartDBInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "StartDBInstanceAutomatedBackupsReplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auto-backup"
+                },
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "StartExportTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "cluster-snapshot"
+                },
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "StopActivityStream",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "StopDBCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "StopDBInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                },
+                {
+                    "Name": "snapshot"
+                }
+            ]
+        },
+        {
+            "Name": "StopDBInstanceAutomatedBackupsReplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        },
+        {
+            "Name": "SwitchoverBlueGreenDeployment",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "deployment"
+                }
+            ]
+        },
+        {
+            "Name": "SwitchoverGlobalCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "global-cluster"
+                }
+            ]
+        },
+        {
+            "Name": "SwitchoverReadReplica",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "rds:BackupTarget",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:CopyOptionGroup",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "rds:DatabaseClass",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:DatabaseEngine",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:DatabaseName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:EndpointType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:ManageMasterUserPassword",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "rds:MultiAz",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "rds:Piops",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "rds:StorageEncrypted",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "rds:StorageSize",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "rds:TenantDatabaseName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:Vpc",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "rds:cluster-pg-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:cluster-snapshot-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:cluster-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:db-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:es-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:og-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:pg-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:req-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:ri-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:secgrp-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:snapshot-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "rds:subgrp-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "auto-backup",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:auto-backup:${DbInstanceAutomatedBackupId}"
+            ]
+        },
+        {
+            "Name": "cev",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:cev:${Engine}/${EngineVersion}/${CustomDbEngineVersionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "cluster",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:cluster:${DbClusterInstanceName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:cluster-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "cluster-auto-backup",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:cluster-auto-backup:${DbClusterAutomatedBackupId}"
+            ]
+        },
+        {
+            "Name": "cluster-endpoint",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:cluster-endpoint:${DbClusterEndpoint}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "cluster-pg",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:cluster-pg:${ClusterParameterGroupName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:cluster-pg-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "cluster-snapshot",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:cluster-snapshot:${ClusterSnapshotName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:cluster-snapshot-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "db",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:db:${DbInstanceName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:DatabaseClass",
+                "rds:DatabaseEngine",
+                "rds:DatabaseName",
+                "rds:MultiAz",
+                "rds:Piops",
+                "rds:StorageEncrypted",
+                "rds:StorageSize",
+                "rds:Vpc",
+                "rds:db-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "deployment",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:deployment:${BlueGreenDeploymentIdentifier}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "es",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:es:${SubscriptionName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:es-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "global-cluster",
+            "ARNFormats": [
+                "arn:${Partition}:rds::${Account}:global-cluster:${GlobalCluster}"
+            ]
+        },
+        {
+            "Name": "integration",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:integration:${IntegrationIdentifier}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "og",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:og:${OptionGroupName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:og-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "pg",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:pg:${ParameterGroupName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:pg-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "proxy",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:db-proxy:${DbProxyId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "proxy-endpoint",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:db-proxy-endpoint:${DbProxyEndpointId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "ri",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:ri:${ReservedDbInstanceName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:ri-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "secgrp",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:secgrp:${SecurityGroupName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:secgrp-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "shardgrp",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:shard-group:${DbShardGroupResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "snapshot",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:snapshot:${SnapshotName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:snapshot-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "snapshot-tenant-database",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:snapshot-tenant-database:${SnapshotName}:${TenantResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "subgrp",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:subgrp:${SubnetGroupName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "rds:subgrp-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "target-group",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:target-group:${TargetGroupId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "tenant-database",
+            "ARNFormats": [
+                "arn:${Partition}:rds:${Region}:${Account}:tenant-database:${TenantResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

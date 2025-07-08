@@ -1,0 +1,5251 @@
+{
+    "Name": "glue",
+    "Actions": [
+        {
+            "Name": "AuthorizeInboundIntegration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "BatchCreatePartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "BatchDeleteConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "BatchDeletePartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "BatchDeleteTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "BatchDeleteTableVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetBlueprints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetCrawlers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "crawler"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetCustomEntityTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "BatchGetDevEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "devendpoint"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetPartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetStageFiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "BatchGetTableOptimizer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetTriggers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trigger"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetWorkflows",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "BatchStopJobRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "BatchUpdatePartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CancelDataQualityRuleRecommendationRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "CancelDataQualityRulesetEvaluationRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "CancelMLTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "CancelStatement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "CheckSchemaVersionValidity",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "CreateBlueprint",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCatalog",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "CreateClassifier",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateColumnStatisticsTaskSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateConnection",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCrawler",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateCustomEntityType",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateDataQualityRuleset",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateDatabase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDevEndpoint",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateInboundIntegration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateIntegration",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "CreateIntegrationResourceProperty",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "database"
+                }
+            ]
+        },
+        {
+            "Name": "CreateIntegrationTableProperties",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "database"
+                }
+            ]
+        },
+        {
+            "Name": "CreateJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "glue:SecurityGroupIds",
+                "glue:SubnetIds",
+                "glue:VpcIds"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "CreateMLTransform",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreatePartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePartitionIndex",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateRegistry",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSchema",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "CreateScript",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateSecurityConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateSession",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "glue:SecurityGroupIds",
+                "glue:SubnetIds",
+                "glue:VpcIds"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTableOptimizer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTrigger",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trigger"
+                }
+            ]
+        },
+        {
+            "Name": "CreateUsageProfile",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "usageProfile"
+                }
+            ]
+        },
+        {
+            "Name": "CreateUserDefinedFunction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "CreateWorkflow",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteBlueprint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCatalog",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteClassifier",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteColumnStatisticsForPartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteColumnStatisticsForTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteColumnStatisticsTaskSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCrawler",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "crawler"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCustomEntityType",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteDataQualityRuleset",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDatabase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                },
+                {
+                    "Name": "userdefinedfunction"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDevEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "devendpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteIntegration",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteIntegrationTableProperties",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "database"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteMLTransform",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePartitionIndex",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRegistry",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSchema",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSchemaVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSecurityConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTableOptimizer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTableVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trigger"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteUsageProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "usageProfile"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteUserDefinedFunction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "userdefinedfunction"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "DeregisterDataPreview",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DescribeConnectionType",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DescribeEntity",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeInboundIntegrations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeIntegrations",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "GetBlueprint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "GetBlueprintRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "GetBlueprintRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "GetCatalog",
+            "ActionConditionKeys": [
+                "glue:EnabledForRedshiftAutoDiscovery"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetCatalogImportStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetCatalogs",
+            "ActionConditionKeys": [
+                "glue:EnabledForRedshiftAutoDiscovery"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetClassifier",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetClassifiers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetColumnStatisticsForPartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetColumnStatisticsForTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetColumnStatisticsTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetColumnStatisticsTaskRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetColumnStatisticsTaskSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetCompletion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "completion"
+                }
+            ]
+        },
+        {
+            "Name": "GetConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetConnections",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetCrawler",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "crawler"
+                }
+            ]
+        },
+        {
+            "Name": "GetCrawlerMetrics",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetCrawlers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetCustomEntityType",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetDashboardUrl",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataCatalogEncryptionSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataPreviewStatement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetDataQualityModel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                },
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataQualityModelResult",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                },
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataQualityResult",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataQualityRuleRecommendationRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataQualityRuleset",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataQualityRulesetEvaluationRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "GetDatabase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetDatabases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataflowGraph",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetDevEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "devendpoint"
+                }
+            ]
+        },
+        {
+            "Name": "GetDevEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetEntityRecords",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "GetEnvironment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetExecutors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetExecutorsThreads",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetGeneratedCode",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetIntegrationResourceProperty",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "database"
+                }
+            ]
+        },
+        {
+            "Name": "GetIntegrationTableProperties",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "database"
+                }
+            ]
+        },
+        {
+            "Name": "GetJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "GetJobBookmark",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetJobRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "GetJobRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "GetJobUpgradeAnalysis",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "GetJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetLogParsingStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetMLTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "GetMLTaskRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "GetMLTransform",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "GetMLTransforms",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "GetMapping",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetNotebookInstanceStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetPartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetPartitionIndexes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetPartitions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetPlan",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetQueries",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetQuery",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetRecipeAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetRegistry",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourcePolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetSchema",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "GetSchemaByDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "GetSchemaVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "GetSchemaVersionsDiff",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "GetSecurityConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetSecurityConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "GetStage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetStageAttempt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetStageAttemptTaskList",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetStageAttemptTaskSummary",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetStageFiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetStages",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetStatement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "GetStorage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetStorageUnit",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableOptimizer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTags",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                },
+                {
+                    "Name": "crawler"
+                },
+                {
+                    "Name": "customEntityType"
+                },
+                {
+                    "Name": "devendpoint"
+                },
+                {
+                    "Name": "job"
+                },
+                {
+                    "Name": "trigger"
+                },
+                {
+                    "Name": "usageProfile"
+                },
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "GetTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trigger"
+                }
+            ]
+        },
+        {
+            "Name": "GetTriggers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetUsageProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "usageProfile"
+                }
+            ]
+        },
+        {
+            "Name": "GetUserDefinedFunction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "userdefinedfunction"
+                }
+            ]
+        },
+        {
+            "Name": "GetUserDefinedFunctions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "userdefinedfunction"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflowRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflowRunProperties",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflowRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "GlueNotebookAuthorize",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GlueNotebookRefreshCredentials",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ImportCatalogToGlue",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "ListBlueprints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListColumnStatisticsTaskRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListConnectionTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ListCrawlers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListCrawls",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "crawler"
+                }
+            ]
+        },
+        {
+            "Name": "ListCustomEntityTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListDataQualityResults",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "ListDataQualityRuleRecommendationRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "ListDataQualityRulesetEvaluationRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "ListDataQualityRulesets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "ListDevEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEntities",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "ListJobUpgradeAnalyses",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "ListJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListMLTransforms",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "ListRegistries",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListSchemaVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "ListSchemas",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                }
+            ]
+        },
+        {
+            "Name": "ListSessions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListStatements",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "ListTableOptimizerRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "ListTriggers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListUsageProfiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListWorkflows",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ModifyIntegration",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "integration"
+                }
+            ]
+        },
+        {
+            "Name": "NotifyEvent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "PassConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "PublishDataQuality",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "PutDataCatalogEncryptionSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "PutDataQualityProfileAnnotation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                },
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "PutDataQualityStatisticAnnotation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                },
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "PutResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "PutSchemaVersionMetadata",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "PutWorkflowRunProperties",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "QuerySchemaVersionMetadata",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "RefreshOAuth2Tokens",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterSchemaVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveSchemaVersionMetadata",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "RequestLogParsing",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ResetJobBookmark",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ResumeWorkflowRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "RunDataPreviewStatement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "RunStatement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "SearchTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "SendFeedback",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "SendRecipeAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartBlueprintRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "StartColumnStatisticsTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "StartColumnStatisticsTaskRunSchedule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "StartCompletion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartCrawler",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "crawler"
+                }
+            ]
+        },
+        {
+            "Name": "StartCrawlerSchedule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartDataQualityRuleRecommendationRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "StartDataQualityRulesetEvaluationRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "StartExportLabelsTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "StartImportLabelsTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "StartJobRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "StartJobUpgradeAnalysis",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "StartMLEvaluationTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "StartMLLabelingSetGenerationTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "StartNotebook",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trigger"
+                }
+            ]
+        },
+        {
+            "Name": "StartWorkflowRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "StopColumnStatisticsTaskRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "StopColumnStatisticsTaskRunSchedule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "StopCrawler",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "crawler"
+                }
+            ]
+        },
+        {
+            "Name": "StopCrawlerSchedule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StopJobUpgradeAnalysis",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "StopSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "StopTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trigger"
+                }
+            ]
+        },
+        {
+            "Name": "StopWorkflowRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "crawler"
+                },
+                {
+                    "Name": "customEntityType"
+                },
+                {
+                    "Name": "dataQualityRuleset"
+                },
+                {
+                    "Name": "devendpoint"
+                },
+                {
+                    "Name": "integration"
+                },
+                {
+                    "Name": "job"
+                },
+                {
+                    "Name": "mlTransform"
+                },
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                },
+                {
+                    "Name": "session"
+                },
+                {
+                    "Name": "trigger"
+                },
+                {
+                    "Name": "usageProfile"
+                },
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "TerminateNotebook",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "TestConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "crawler"
+                },
+                {
+                    "Name": "customEntityType"
+                },
+                {
+                    "Name": "dataQualityRuleset"
+                },
+                {
+                    "Name": "devendpoint"
+                },
+                {
+                    "Name": "integration"
+                },
+                {
+                    "Name": "job"
+                },
+                {
+                    "Name": "mlTransform"
+                },
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                },
+                {
+                    "Name": "session"
+                },
+                {
+                    "Name": "trigger"
+                },
+                {
+                    "Name": "usageProfile"
+                },
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBlueprint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCatalog",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateClassifier",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UpdateColumnStatisticsForPartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateColumnStatisticsForTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateColumnStatisticsTaskSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCrawler",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "crawler"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCrawlerSchedule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UpdateDataQualityRuleset",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "dataQualityRuleset"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDatabase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDevEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "devendpoint"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateIntegrationResourceProperty",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "database"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateIntegrationTableProperties",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "database"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateJob",
+            "ActionConditionKeys": [
+                "glue:SecurityGroupIds",
+                "glue:SubnetIds",
+                "glue:VpcIds"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateJobFromSourceControl",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateMLTransform",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        },
+        {
+            "Name": "UpdatePartition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRegistry",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSchema",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "registry"
+                },
+                {
+                    "Name": "schema"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSourceControlFromJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTableOptimizer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trigger"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUsageProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "usageProfile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserDefinedFunction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "catalog"
+                },
+                {
+                    "Name": "database"
+                },
+                {
+                    "Name": "rootcatalog"
+                },
+                {
+                    "Name": "userdefinedfunction"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "UpgradeJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "UseGlueStudio",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UseMLTransforms",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "mlTransform"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "glue:CredentialIssuingService",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "glue:EnabledForRedshiftAutoDiscovery",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "glue:RoleAssumedBy",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "glue:SecurityGroupIds",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "glue:SubnetIds",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "glue:VpcIds",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "blueprint",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:blueprint/${BlueprintName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "catalog",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:catalog/${CatalogName}"
+            ]
+        },
+        {
+            "Name": "completion",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:completion/${CompletionId}"
+            ]
+        },
+        {
+            "Name": "connection",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:connection/${ConnectionName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "crawler",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:crawler/${CrawlerName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "customEntityType",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:customEntityType/${CustomEntityTypeId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "dataQualityRuleset",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:dataQualityRuleset/${RulesetName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "database",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:database/${DatabaseName}"
+            ]
+        },
+        {
+            "Name": "devendpoint",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "integration",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:integration:${IntegrationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "job",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:job/${JobName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "mlTransform",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:mlTransform/${TransformId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "registry",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:registry/${RegistryName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "rootcatalog",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:catalog"
+            ]
+        },
+        {
+            "Name": "schema",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:schema/${SchemaName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "session",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:session/${SessionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "table",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}"
+            ]
+        },
+        {
+            "Name": "tableversion",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:tableVersion/${DatabaseName}/${TableName}/${TableVersionName}"
+            ]
+        },
+        {
+            "Name": "trigger",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:trigger/${TriggerName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "usageProfile",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:usageProfile/${UsageProfileId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "userdefinedfunction",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}"
+            ]
+        },
+        {
+            "Name": "workflow",
+            "ARNFormats": [
+                "arn:${Partition}:glue:${Region}:${Account}:workflow/${WorkflowName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

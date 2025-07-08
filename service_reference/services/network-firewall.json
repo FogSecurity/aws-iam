@@ -1,0 +1,1142 @@
+{
+    "Name": "network-firewall",
+    "Actions": [
+        {
+            "Name": "AcceptNetworkFirewallTransitGatewayAttachment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateAvailabilityZones",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateFirewallPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "FirewallPolicy"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateSubnets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "CreateFirewall",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "FirewallPolicy"
+                }
+            ]
+        },
+        {
+            "Name": "CreateFirewallPolicy",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                },
+                {
+                    "Name": "TLSInspectionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "CreateRuleGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTLSInspectionConfiguration",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TLSInspectionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "CreateVpcEndpointAssociation",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "VpcEndpointAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteFirewall",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteFirewallPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "FirewallPolicy"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteNetworkFirewallTransitGatewayAttachment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRuleGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTLSInspectionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TLSInspectionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVpcEndpointAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VpcEndpointAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeFirewall",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeFirewallMetadata",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeFirewallPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                },
+                {
+                    "Name": "TLSInspectionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeFlowOperation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeLoggingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeRuleGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeRuleGroupMetadata",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeRuleGroupSummary",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeTLSInspectionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TLSInspectionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeVpcEndpointAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VpcEndpointAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateAvailabilityZones",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateSubnets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "GetAnalysisReportResults",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "ListAnalysisReports",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "ListFirewallPolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "FirewallPolicy"
+                }
+            ]
+        },
+        {
+            "Name": "ListFirewalls",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "ListFlowOperationResults",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "ListFlowOperations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "ListRuleGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTLSInspectionConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TLSInspectionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                },
+                {
+                    "Name": "TLSInspectionConfiguration"
+                },
+                {
+                    "Name": "VpcEndpointAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "ListVpcEndpointAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VpcEndpointAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "PutResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "RejectNetworkFirewallTransitGatewayAttachment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "StartAnalysisReport",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "StartFlowCapture",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "StartFlowFlush",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                },
+                {
+                    "Name": "TLSInspectionConfiguration"
+                },
+                {
+                    "Name": "VpcEndpointAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                },
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                },
+                {
+                    "Name": "TLSInspectionConfiguration"
+                },
+                {
+                    "Name": "VpcEndpointAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAvailabilityZoneChangeProtection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFirewallAnalysisSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFirewallDeleteProtection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFirewallDescription",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFirewallEncryptionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFirewallPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "FirewallPolicy"
+                },
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                },
+                {
+                    "Name": "TLSInspectionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFirewallPolicyChangeProtection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateLoggingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRuleGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "StatefulRuleGroup"
+                },
+                {
+                    "Name": "StatelessRuleGroup"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSubnetChangeProtection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Firewall"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTLSInspectionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TLSInspectionConfiguration"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Firewall",
+            "ARNFormats": [
+                "arn:${Partition}:network-firewall:${Region}:${Account}:firewall/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "FirewallPolicy",
+            "ARNFormats": [
+                "arn:${Partition}:network-firewall:${Region}:${Account}:firewall-policy/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "StatefulRuleGroup",
+            "ARNFormats": [
+                "arn:${Partition}:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "StatelessRuleGroup",
+            "ARNFormats": [
+                "arn:${Partition}:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "TLSInspectionConfiguration",
+            "ARNFormats": [
+                "arn:${Partition}:network-firewall:${Region}:${Account}:tls-configuration/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "VpcEndpointAssociation",
+            "ARNFormats": [
+                "arn:${Partition}:network-firewall:${Region}:${Account}:vpc-endpoint-association/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

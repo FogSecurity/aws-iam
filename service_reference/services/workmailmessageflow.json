@@ -1,0 +1,46 @@
+{
+    "Name": "workmailmessageflow",
+    "Actions": [
+        {
+            "Name": "GetRawMessageContent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RawMessage"
+                }
+            ]
+        },
+        {
+            "Name": "PutRawMessageContent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RawMessage"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "RawMessage",
+            "ARNFormats": [
+                "arn:${Partition}:workmailmessageflow:${Region}:${Account}:message/${OrganizationId}/${Context}/${MessageId}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

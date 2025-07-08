@@ -1,0 +1,87 @@
+{
+    "Name": "route53-recovery-cluster",
+    "Actions": [
+        {
+            "Name": "GetRoutingControlState",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routingcontrol"
+                }
+            ]
+        },
+        {
+            "Name": "ListRoutingControls",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "UpdateRoutingControlState",
+            "ActionConditionKeys": [
+                "route53-recovery-cluster:AllowSafetyRulesOverrides"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routingcontrol"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRoutingControlStates",
+            "ActionConditionKeys": [
+                "route53-recovery-cluster:AllowSafetyRulesOverrides"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routingcontrol"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "route53-recovery-cluster:AllowSafetyRulesOverrides",
+            "Types": [
+                "Bool"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "routingcontrol",
+            "ARNFormats": [
+                "arn:${Partition}:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

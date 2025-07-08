@@ -1,0 +1,30 @@
+{
+    "Name": "finspace-api",
+    "Actions": [
+        {
+            "Name": "GetProgrammaticAccessCredentials",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "credential"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "credential",
+            "ARNFormats": [
+                "arn:${Partition}:finspace-api:${Region}:${Account}:/credentials/programmatic"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

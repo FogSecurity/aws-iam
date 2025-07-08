@@ -1,0 +1,1601 @@
+{
+    "Name": "imagebuilder",
+    "Actions": [
+        {
+            "Name": "CancelImageCreation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                }
+            ]
+        },
+        {
+            "Name": "CancelLifecycleExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "lifecycleExecution"
+                }
+            ]
+        },
+        {
+            "Name": "CreateComponent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateContainerRecipe",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "containerRecipe",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateDistributionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "distributionConfiguration",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateImage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateImagePipeline",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imagePipeline",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateImageRecipe",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imageRecipe",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateInfrastructureConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "infrastructureConfiguration",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys",
+                        "imagebuilder:CreatedResourceTag/<key>",
+                        "imagebuilder:CreatedResourceTagKeys",
+                        "imagebuilder:Ec2MetadataHttpTokens",
+                        "imagebuilder:StatusTopicArn"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateLifecyclePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "lifecyclePolicy",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys",
+                        "imagebuilder:LifecyclePolicyResourceType"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteComponent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteContainerRecipe",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "containerRecipe"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDistributionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "distributionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteImage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteImagePipeline",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imagePipeline"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteImageRecipe",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imageRecipe"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteInfrastructureConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "infrastructureConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteLifecyclePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "lifecyclePolicy"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "GetComponent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component"
+                }
+            ]
+        },
+        {
+            "Name": "GetComponentPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component"
+                }
+            ]
+        },
+        {
+            "Name": "GetContainerRecipe",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "containerRecipe"
+                }
+            ]
+        },
+        {
+            "Name": "GetContainerRecipePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "containerRecipe"
+                }
+            ]
+        },
+        {
+            "Name": "GetDistributionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "distributionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "GetImage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "GetImagePipeline",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imagePipeline"
+                }
+            ]
+        },
+        {
+            "Name": "GetImagePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                }
+            ]
+        },
+        {
+            "Name": "GetImageRecipe",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imageRecipe"
+                }
+            ]
+        },
+        {
+            "Name": "GetImageRecipePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imageRecipe"
+                }
+            ]
+        },
+        {
+            "Name": "GetInfrastructureConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "infrastructureConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "GetLifecycleExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "lifecycleExecution"
+                }
+            ]
+        },
+        {
+            "Name": "GetLifecyclePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "lifecyclePolicy"
+                }
+            ]
+        },
+        {
+            "Name": "GetMarketplaceResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflow"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflowExecution"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflowStepExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflowStepExecution"
+                }
+            ]
+        },
+        {
+            "Name": "ImportComponent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ImportDiskImage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imageVersion",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ImportVmImage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imageVersion",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ListComponentBuildVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "componentVersion"
+                }
+            ]
+        },
+        {
+            "Name": "ListComponents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListContainerRecipes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListDistributionConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListImageBuildVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imageVersion"
+                }
+            ]
+        },
+        {
+            "Name": "ListImagePackages",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ListImagePipelineImages",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imagePipeline"
+                }
+            ]
+        },
+        {
+            "Name": "ListImagePipelines",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListImageRecipes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListImageScanFindingAggregations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                },
+                {
+                    "Name": "imagePipeline"
+                }
+            ]
+        },
+        {
+            "Name": "ListImageScanFindings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                },
+                {
+                    "Name": "imagePipeline"
+                }
+            ]
+        },
+        {
+            "Name": "ListImages",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListInfrastructureConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListLifecycleExecutionResources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "lifecycleExecution"
+                }
+            ]
+        },
+        {
+            "Name": "ListLifecycleExecutions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                },
+                {
+                    "Name": "lifecyclePolicy"
+                }
+            ]
+        },
+        {
+            "Name": "ListLifecyclePolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                },
+                {
+                    "Name": "containerRecipe",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                },
+                {
+                    "Name": "distributionConfiguration",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                },
+                {
+                    "Name": "image",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                },
+                {
+                    "Name": "imagePipeline",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                },
+                {
+                    "Name": "imageRecipe",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                },
+                {
+                    "Name": "infrastructureConfiguration",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                },
+                {
+                    "Name": "lifecyclePolicy",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                },
+                {
+                    "Name": "workflow",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ListWaitingWorkflowSteps",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListWorkflowBuildVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflowVersion"
+                }
+            ]
+        },
+        {
+            "Name": "ListWorkflowExecutions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                }
+            ]
+        },
+        {
+            "Name": "ListWorkflowStepExecutions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workflowExecution"
+                }
+            ]
+        },
+        {
+            "Name": "ListWorkflows",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "PutComponentPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component"
+                }
+            ]
+        },
+        {
+            "Name": "PutContainerRecipePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "containerRecipe"
+                }
+            ]
+        },
+        {
+            "Name": "PutImagePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                }
+            ]
+        },
+        {
+            "Name": "PutImageRecipePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imageRecipe"
+                }
+            ]
+        },
+        {
+            "Name": "SendWorkflowStepAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                },
+                {
+                    "Name": "workflowStepExecution"
+                }
+            ]
+        },
+        {
+            "Name": "StartImagePipelineExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imagePipeline"
+                }
+            ]
+        },
+        {
+            "Name": "StartResourceStateUpdate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "image"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "containerRecipe",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "distributionConfiguration",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "image",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "imagePipeline",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "imageRecipe",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "infrastructureConfiguration",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "lifecyclePolicy",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "workflow",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "component",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "containerRecipe",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "distributionConfiguration",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "image",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "imagePipeline",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "imageRecipe",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "infrastructureConfiguration",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "lifecyclePolicy",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "workflow",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDistributionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "distributionConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateImagePipeline",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imagePipeline"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateInfrastructureConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "infrastructureConfiguration",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "imagebuilder:CreatedResourceTag/<key>",
+                        "imagebuilder:CreatedResourceTagKeys",
+                        "imagebuilder:Ec2MetadataHttpTokens",
+                        "imagebuilder:StatusTopicArn"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateLifecyclePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "lifecyclePolicy",
+                    "ConditionKeys": [
+                        "imagebuilder:LifecyclePolicyResourceType"
+                    ]
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "imagebuilder:CreatedResourceTag/<key>",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "imagebuilder:CreatedResourceTagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "imagebuilder:Ec2MetadataHttpTokens",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "imagebuilder:LifecyclePolicyResourceType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "imagebuilder:StatusTopicArn",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "component",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "componentVersion",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "containerRecipe",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:container-recipe/${ContainerRecipeName}/${ContainerRecipeVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "distributionConfiguration",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:distribution-configuration/${DistributionConfigurationName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "image",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "imagePipeline",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "imageRecipe",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "imageVersion",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "infrastructureConfiguration",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:infrastructure-configuration/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "kmsKey",
+            "ARNFormats": [
+                "arn:${Partition}:kms:${Region}:${Account}:key/${KeyId}"
+            ]
+        },
+        {
+            "Name": "lifecycleExecution",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:lifecycle-execution/${LifecycleExecutionId}"
+            ]
+        },
+        {
+            "Name": "lifecyclePolicy",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:lifecycle-policy/${LifecyclePolicyName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "workflow",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow/${WorkflowType}/${WorkflowName}/${WorkflowVersion}/${WorkflowBuildVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "workflowExecution",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow-execution/${WorkflowExecutionId}"
+            ]
+        },
+        {
+            "Name": "workflowStepExecution",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow-step-execution/${WorkflowStepExecutionId}"
+            ]
+        },
+        {
+            "Name": "workflowVersion",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow/${WorkflowType}/${WorkflowName}/${WorkflowVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

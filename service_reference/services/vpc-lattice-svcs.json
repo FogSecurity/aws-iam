@@ -1,0 +1,118 @@
+{
+    "Name": "vpc-lattice-svcs",
+    "Actions": [
+        {
+            "Name": "Connect",
+            "ActionConditionKeys": [
+                "vpc-lattice-svcs:Port",
+                "vpc-lattice-svcs:ServiceArn",
+                "vpc-lattice-svcs:ServiceNetworkArn",
+                "vpc-lattice-svcs:SourceVpc",
+                "vpc-lattice-svcs:SourceVpcOwnerAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TCP Service"
+                }
+            ]
+        },
+        {
+            "Name": "Invoke",
+            "ActionConditionKeys": [
+                "vpc-lattice-svcs:Port",
+                "vpc-lattice-svcs:RequestHeader/${HeaderName}",
+                "vpc-lattice-svcs:RequestQueryString/${QueryStringKey}",
+                "vpc-lattice-svcs:ServiceArn",
+                "vpc-lattice-svcs:ServiceNetworkArn",
+                "vpc-lattice-svcs:SourceVpc",
+                "vpc-lattice-svcs:SourceVpcOwnerAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Service"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "vpc-lattice-svcs:Port",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "vpc-lattice-svcs:RequestHeader/${HeaderName}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "vpc-lattice-svcs:RequestMethod",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "vpc-lattice-svcs:RequestQueryString/${QueryStringKey}",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "vpc-lattice-svcs:ServiceArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "vpc-lattice-svcs:ServiceNetworkArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "vpc-lattice-svcs:SourceVpc",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "vpc-lattice-svcs:SourceVpcOwnerAccount",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Service",
+            "ARNFormats": [
+                "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}/${RequestPath}"
+            ]
+        },
+        {
+            "Name": "TCP Service",
+            "ARNFormats": [
+                "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

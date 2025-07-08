@@ -1,0 +1,870 @@
+{
+    "Name": "cases",
+    "Actions": [
+        {
+            "Name": "BatchGetCaseRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "CaseRule"
+                },
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetField",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                }
+            ]
+        },
+        {
+            "Name": "BatchPutFieldOptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCase",
+            "ActionConditionKeys": [
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                },
+                {
+                    "Name": "Template"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCaseRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "CaseRule"
+                },
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateField",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                }
+            ]
+        },
+        {
+            "Name": "CreateLayout",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Layout"
+                }
+            ]
+        },
+        {
+            "Name": "CreateRelatedItem",
+            "ActionConditionKeys": [
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "RelatedItem"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Layout"
+                },
+                {
+                    "Name": "Template"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCaseRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "CaseRule"
+                },
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteField",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteLayout",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Layout"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRelatedItem",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "RelatedItem"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Template"
+                }
+            ]
+        },
+        {
+            "Name": "GetCase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                }
+            ]
+        },
+        {
+            "Name": "GetCaseAuditEvents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "GetCaseEventConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "GetDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "GetLayout",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Layout"
+                }
+            ]
+        },
+        {
+            "Name": "GetTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Template"
+                }
+            ]
+        },
+        {
+            "Name": "ListCaseRules",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListCasesForContact",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListDomains",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListFieldOptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                }
+            ]
+        },
+        {
+            "Name": "ListFields",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListLayouts",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "PutCaseEventConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "SearchCases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "SearchRelatedItems",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "CaseRule"
+                },
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                },
+                {
+                    "Name": "Layout"
+                },
+                {
+                    "Name": "RelatedItem"
+                },
+                {
+                    "Name": "Template"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "CaseRule"
+                },
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                },
+                {
+                    "Name": "Layout"
+                },
+                {
+                    "Name": "RelatedItem"
+                },
+                {
+                    "Name": "Template"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCase",
+            "ActionConditionKeys": [
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Case"
+                },
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCaseRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "CaseRule"
+                },
+                {
+                    "Name": "Domain"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateField",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Field"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateLayout",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Layout"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Domain"
+                },
+                {
+                    "Name": "Template"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "connect:UserArn",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Case",
+            "ARNFormats": [
+                "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/case/${CaseId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "CaseRule",
+            "ARNFormats": [
+                "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/case-rule/${CaseRuleId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Domain",
+            "ARNFormats": [
+                "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Field",
+            "ARNFormats": [
+                "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/field/${FieldId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Layout",
+            "ARNFormats": [
+                "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/layout/${LayoutId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "RelatedItem",
+            "ARNFormats": [
+                "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/case/${CaseId}/related-item/${RelatedItemId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Template",
+            "ARNFormats": [
+                "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/template/${TemplateId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

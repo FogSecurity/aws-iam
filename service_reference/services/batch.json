@@ -1,0 +1,751 @@
+{
+    "Name": "batch",
+    "Actions": [
+        {
+            "Name": "CancelJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "CreateComputeEnvironment",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "compute-environment"
+                }
+            ]
+        },
+        {
+            "Name": "CreateConsumableResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "consumable-resource"
+                }
+            ]
+        },
+        {
+            "Name": "CreateJobQueue",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "compute-environment"
+                },
+                {
+                    "Name": "job-queue",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "scheduling-policy"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSchedulingPolicy",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "scheduling-policy"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteComputeEnvironment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "compute-environment"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConsumableResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "consumable-resource"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteJobQueue",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job-queue"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSchedulingPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "scheduling-policy"
+                }
+            ]
+        },
+        {
+            "Name": "DeregisterJobDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job-definition-revision"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeComputeEnvironments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeConsumableResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "consumable-resource"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeJobDefinitions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeJobQueues",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeSchedulingPolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetJobQueueSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job-queue"
+                }
+            ]
+        },
+        {
+            "Name": "ListConsumableResources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListJobsByConsumableResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "consumable-resource"
+                }
+            ]
+        },
+        {
+            "Name": "ListSchedulingPolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "compute-environment"
+                },
+                {
+                    "Name": "consumable-resource"
+                },
+                {
+                    "Name": "job"
+                },
+                {
+                    "Name": "job-definition-revision"
+                },
+                {
+                    "Name": "job-queue"
+                },
+                {
+                    "Name": "scheduling-policy"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterJobDefinition",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "batch:AWSLogsCreateGroup",
+                "batch:AWSLogsGroup",
+                "batch:AWSLogsRegion",
+                "batch:AWSLogsStreamPrefix",
+                "batch:EKSImage",
+                "batch:EKSNamespace",
+                "batch:EKSPrivileged",
+                "batch:EKSRunAsGroup",
+                "batch:EKSRunAsUser",
+                "batch:EKSServiceAccountName",
+                "batch:Image",
+                "batch:LogDriver",
+                "batch:Privileged",
+                "batch:User"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "consumable-resource"
+                },
+                {
+                    "Name": "job-definition"
+                }
+            ]
+        },
+        {
+            "Name": "SubmitJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "consumable-resource"
+                },
+                {
+                    "Name": "job",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys",
+                        "batch:EKSImage",
+                        "batch:EKSNamespace",
+                        "batch:ShareIdentifier"
+                    ]
+                },
+                {
+                    "Name": "job-definition"
+                },
+                {
+                    "Name": "job-queue"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "compute-environment"
+                },
+                {
+                    "Name": "consumable-resource"
+                },
+                {
+                    "Name": "job"
+                },
+                {
+                    "Name": "job-definition-revision"
+                },
+                {
+                    "Name": "job-queue"
+                },
+                {
+                    "Name": "scheduling-policy"
+                }
+            ]
+        },
+        {
+            "Name": "TerminateJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "compute-environment"
+                },
+                {
+                    "Name": "consumable-resource"
+                },
+                {
+                    "Name": "job"
+                },
+                {
+                    "Name": "job-definition-revision"
+                },
+                {
+                    "Name": "job-queue"
+                },
+                {
+                    "Name": "scheduling-policy"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateComputeEnvironment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "compute-environment"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConsumableResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "consumable-resource"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateJobQueue",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "compute-environment"
+                },
+                {
+                    "Name": "job-queue"
+                },
+                {
+                    "Name": "scheduling-policy"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSchedulingPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "scheduling-policy"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "batch:AWSLogsCreateGroup",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "batch:AWSLogsGroup",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:AWSLogsRegion",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:AWSLogsStreamPrefix",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:EKSImage",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:EKSNamespace",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:EKSPrivileged",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "batch:EKSRunAsGroup",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "batch:EKSRunAsUser",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "batch:EKSServiceAccountName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:Image",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:LogDriver",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:Privileged",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "batch:ShareIdentifier",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "batch:User",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "compute-environment",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "consumable-resource",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:consumable-resource/${ConsumableResourceName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "job",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:job/${JobId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "job-definition",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:job-definition/${JobDefinitionName}"
+            ]
+        },
+        {
+            "Name": "job-definition-revision",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:job-definition/${JobDefinitionName}:${Revision}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "job-queue",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:job-queue/${JobQueueName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "scheduling-policy",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

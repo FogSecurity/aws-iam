@@ -1,0 +1,430 @@
+{
+    "Name": "datapipeline",
+    "Actions": [
+        {
+            "Name": "ActivatePipeline",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}",
+                "datapipeline:workerGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "AddTags",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePipeline",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeactivatePipeline",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}",
+                "datapipeline:workerGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePipeline",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeObjects",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "DescribePipelines",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "EvaluateExpression",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "GetAccountLimits",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetPipelineDefinition",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}",
+                "datapipeline:workerGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "ListPipelines",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "PollForTask",
+            "ActionConditionKeys": [
+                "datapipeline:workerGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutAccountLimits",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutPipelineDefinition",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}",
+                "datapipeline:workerGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "QueryObjects",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveTags",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "ReportTaskProgress",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "ReportTaskRunnerHeartbeat",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "SetStatus",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "SetTaskStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "ValidatePipelineDefinition",
+            "ActionConditionKeys": [
+                "datapipeline:PipelineCreator",
+                "datapipeline:Tag/${TagKey}",
+                "datapipeline:workerGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "datapipeline:PipelineCreator",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "datapipeline:Tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "datapipeline:workerGroup",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "pipeline",
+            "ARNFormats": [
+                "arn:${Partition}:datapipeline:${Region}:${Account}:pipeline/${PipelineId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

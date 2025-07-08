@@ -1,0 +1,232 @@
+{
+    "Name": "identity-sync",
+    "Actions": [
+        {
+            "Name": "AllowVendedLogDeliveryForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSyncFilter",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSyncProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateSyncTarget",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSyncFilter",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSyncProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSyncTarget",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                },
+                {
+                    "Name": "SyncTargetResource"
+                }
+            ]
+        },
+        {
+            "Name": "GetSyncProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "GetSyncTarget",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                },
+                {
+                    "Name": "SyncTargetResource"
+                }
+            ]
+        },
+        {
+            "Name": "ListSyncFilters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "StartSync",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "StopSync",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSyncTarget",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "SyncProfileResource"
+                },
+                {
+                    "Name": "SyncTargetResource"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "SyncProfileResource",
+            "ARNFormats": [
+                "arn:${Partition}:identity-sync:${Region}:${Account}:profile/${SyncProfileName}"
+            ]
+        },
+        {
+            "Name": "SyncTargetResource",
+            "ARNFormats": [
+                "arn:${Partition}:identity-sync:${Region}:${Account}:target/${SyncProfileName}/${SyncTargetName}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

@@ -1,0 +1,243 @@
+{
+    "Name": "artifact",
+    "Actions": [
+        {
+            "Name": "AcceptAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agreement"
+                }
+            ]
+        },
+        {
+            "Name": "AcceptNdaForAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agreement"
+                }
+            ]
+        },
+        {
+            "Name": "GetAccountSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agreement"
+                }
+            ]
+        },
+        {
+            "Name": "GetCustomerAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "customer-agreement"
+                }
+            ]
+        },
+        {
+            "Name": "GetNdaForAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agreement"
+                }
+            ]
+        },
+        {
+            "Name": "GetReport",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "report"
+                }
+            ]
+        },
+        {
+            "Name": "GetReportMetadata",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "report"
+                }
+            ]
+        },
+        {
+            "Name": "GetTermForReport",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "report"
+                }
+            ]
+        },
+        {
+            "Name": "ListAgreements",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListCustomerAgreements",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListReports",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "PutAccountSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "TerminateAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "customer-agreement"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "artifact:ReportCategory",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "artifact:ReportSeries",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "agreement",
+            "ARNFormats": [
+                "arn:${Partition}:artifact:::agreement/*"
+            ]
+        },
+        {
+            "Name": "customer-agreement",
+            "ARNFormats": [
+                "arn:${Partition}:artifact::${Account}:customer-agreement/*"
+            ]
+        },
+        {
+            "Name": "report",
+            "ARNFormats": [
+                "arn:${Partition}:artifact:${Region}::report/${ReportId}:${Version}"
+            ],
+            "ConditionKeys": [
+                "artifact:ReportCategory",
+                "artifact:ReportSeries"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

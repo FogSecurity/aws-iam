@@ -1,0 +1,1046 @@
+{
+    "Name": "swf",
+    "Actions": [
+        {
+            "Name": "CancelTimer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "CancelWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "CompleteWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "ContinueAsNewWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "CountClosedWorkflowExecutions",
+            "ActionConditionKeys": [
+                "swf:tagFilter.tag",
+                "swf:typeFilter.name",
+                "swf:typeFilter.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "CountOpenWorkflowExecutions",
+            "ActionConditionKeys": [
+                "swf:tagFilter.tag",
+                "swf:typeFilter.name",
+                "swf:typeFilter.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "CountPendingActivityTasks",
+            "ActionConditionKeys": [
+                "swf:taskList.name"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "CountPendingDecisionTasks",
+            "ActionConditionKeys": [
+                "swf:taskList.name"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteActivityType",
+            "ActionConditionKeys": [
+                "swf:activityType.name",
+                "swf:activityType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteWorkflowType",
+            "ActionConditionKeys": [
+                "swf:workflowType.name",
+                "swf:workflowType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DeprecateActivityType",
+            "ActionConditionKeys": [
+                "swf:activityType.name",
+                "swf:activityType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DeprecateDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DeprecateWorkflowType",
+            "ActionConditionKeys": [
+                "swf:workflowType.name",
+                "swf:workflowType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeActivityType",
+            "ActionConditionKeys": [
+                "swf:activityType.name",
+                "swf:activityType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeWorkflowType",
+            "ActionConditionKeys": [
+                "swf:workflowType.name",
+                "swf:workflowType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "FailWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflowExecutionHistory",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListActivityTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListClosedWorkflowExecutions",
+            "ActionConditionKeys": [
+                "swf:tagFilter.tag",
+                "swf:typeFilter.name",
+                "swf:typeFilter.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListDomains",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListOpenWorkflowExecutions",
+            "ActionConditionKeys": [
+                "swf:tagFilter.tag",
+                "swf:typeFilter.name",
+                "swf:typeFilter.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "ListWorkflowTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "PollForActivityTask",
+            "ActionConditionKeys": [
+                "swf:taskList.name"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "PollForDecisionTask",
+            "ActionConditionKeys": [
+                "swf:taskList.name"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RecordActivityTaskHeartbeat",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RecordMarker",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterActivityType",
+            "ActionConditionKeys": [
+                "swf:defaultTaskList.name",
+                "swf:name",
+                "swf:version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterDomain",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "RegisterWorkflowType",
+            "ActionConditionKeys": [
+                "swf:defaultTaskList.name",
+                "swf:name",
+                "swf:version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RequestCancelActivityTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RequestCancelExternalWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RequestCancelWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RespondActivityTaskCanceled",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RespondActivityTaskCompleted",
+            "ActionConditionKeys": [
+                "swf:activityType.name",
+                "swf:activityType.version",
+                "swf:tagList.member.0",
+                "swf:tagList.member.1",
+                "swf:tagList.member.2",
+                "swf:tagList.member.3",
+                "swf:tagList.member.4",
+                "swf:taskList.name",
+                "swf:workflowType.name",
+                "swf:workflowType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RespondActivityTaskFailed",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "RespondDecisionTaskCompleted",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "ScheduleActivityTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "SignalExternalWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "SignalWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "StartChildWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "StartTimer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "StartWorkflowExecution",
+            "ActionConditionKeys": [
+                "swf:tagList.member.0",
+                "swf:tagList.member.1",
+                "swf:tagList.member.2",
+                "swf:tagList.member.3",
+                "swf:tagList.member.4",
+                "swf:taskList.name",
+                "swf:workflowType.name",
+                "swf:workflowType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "TerminateWorkflowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "UndeprecateActivityType",
+            "ActionConditionKeys": [
+                "swf:activityType.name",
+                "swf:activityType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "UndeprecateDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "UndeprecateWorkflowType",
+            "ActionConditionKeys": [
+                "swf:workflowType.name",
+                "swf:workflowType.version"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domain"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "swf:activityType.name",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:activityType.version",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:defaultTaskList.name",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:name",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:tagFilter.tag",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:tagList.member.0",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:tagList.member.1",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:tagList.member.2",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:tagList.member.3",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:tagList.member.4",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:taskList.name",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:typeFilter.name",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:typeFilter.version",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:version",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:workflowType.name",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "swf:workflowType.version",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "domain",
+            "ARNFormats": [
+                "arn:${Partition}:swf::${Account}:/domain/${DomainName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

@@ -1,0 +1,30 @@
+{
+    "Name": "rds-db",
+    "Actions": [
+        {
+            "Name": "connect",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "db-user"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "db-user",
+            "ARNFormats": [
+                "arn:${Partition}:rds-db:${Region}:${Account}:dbuser:${DbiResourceId}/${DbUserName}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

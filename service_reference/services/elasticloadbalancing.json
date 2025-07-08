@@ -1,0 +1,1623 @@
+{
+    "Name": "elasticloadbalancing",
+    "Actions": [
+        {
+            "Name": "AddListenerCertificates",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener/app"
+                },
+                {
+                    "Name": "listener/net"
+                }
+            ]
+        },
+        {
+            "Name": "AddTags",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticloadbalancing:CreateAction",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener-rule/app"
+                },
+                {
+                    "Name": "listener-rule/net"
+                },
+                {
+                    "Name": "listener/app"
+                },
+                {
+                    "Name": "listener/gwy"
+                },
+                {
+                    "Name": "listener/net"
+                },
+                {
+                    "Name": "loadbalancer"
+                },
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                },
+                {
+                    "Name": "targetgroup"
+                },
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "AddTrustStoreRevocations",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "ApplySecurityGroupsToLoadBalancer",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:SecurityGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "AttachLoadBalancerToSubnets",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:Subnet"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "ConfigureHealthCheck",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAppCookieStickinessPolicy",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "CreateLBCookieStickinessPolicy",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "CreateListener",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticloadbalancing:ListenerProtocol",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:SecurityPolicy"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                }
+            ]
+        },
+        {
+            "Name": "CreateLoadBalancer",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticloadbalancing:ListenerProtocol",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:Scheme",
+                "elasticloadbalancing:SecurityGroup",
+                "elasticloadbalancing:Subnet"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                },
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                }
+            ]
+        },
+        {
+            "Name": "CreateLoadBalancerListeners",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ListenerProtocol",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "CreateLoadBalancerPolicy",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:SecurityPolicy"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "CreateRule",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener/app"
+                },
+                {
+                    "Name": "listener/net"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTargetGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "targetgroup"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTrustStore",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteListener",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener/app"
+                },
+                {
+                    "Name": "listener/gwy"
+                },
+                {
+                    "Name": "listener/net"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteLoadBalancer",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                },
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteLoadBalancerListeners",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteLoadBalancerPolicy",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRule",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener-rule/app"
+                },
+                {
+                    "Name": "listener-rule/net"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSharedTrustStoreAssociation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTargetGroup",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "targetgroup"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTrustStore",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "DeregisterInstancesFromLoadBalancer",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "DeregisterTargets",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "targetgroup"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeAccountLimits",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeCapacityReservation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeInstanceHealth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeListenerAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeListenerCertificates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeListeners",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLoadBalancerAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLoadBalancerPolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLoadBalancerPolicyTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLoadBalancers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeRules",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeSSLPolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTags",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTargetGroupAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTargetGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTargetHealth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTrustStoreAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTrustStoreRevocations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTrustStores",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DetachLoadBalancerFromSubnets",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "DisableAvailabilityZonesForLoadBalancer",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "EnableAvailabilityZonesForLoadBalancer",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourcePolicy",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "GetTrustStoreCaCertificatesBundle",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "GetTrustStoreRevocationContent",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyCapacityReservation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyIpPools",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer/app/"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyListener",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ListenerProtocol",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:SecurityPolicy"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener/app"
+                },
+                {
+                    "Name": "listener/gwy"
+                },
+                {
+                    "Name": "listener/net"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyListenerAttributes",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener/app"
+                },
+                {
+                    "Name": "listener/gwy"
+                },
+                {
+                    "Name": "listener/net"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyLoadBalancerAttributes",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                },
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyRule",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener-rule/app"
+                },
+                {
+                    "Name": "listener-rule/net"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyTargetGroup",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "targetgroup"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyTargetGroupAttributes",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "targetgroup"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyTrustStore",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterInstancesWithLoadBalancer",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterTargets",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "targetgroup"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveListenerCertificates",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener/app"
+                },
+                {
+                    "Name": "listener/net"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveTags",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener-rule/app"
+                },
+                {
+                    "Name": "listener-rule/net"
+                },
+                {
+                    "Name": "listener/app"
+                },
+                {
+                    "Name": "listener/gwy"
+                },
+                {
+                    "Name": "listener/net"
+                },
+                {
+                    "Name": "loadbalancer"
+                },
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                },
+                {
+                    "Name": "targetgroup"
+                },
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveTrustStoreRevocations",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "truststore"
+                }
+            ]
+        },
+        {
+            "Name": "SetIpAddressType",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                }
+            ]
+        },
+        {
+            "Name": "SetLoadBalancerListenerSSLCertificate",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "SetLoadBalancerPoliciesForBackendServer",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "SetLoadBalancerPoliciesOfListener",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:SecurityPolicy"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer"
+                }
+            ]
+        },
+        {
+            "Name": "SetRulePriorities",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "listener-rule/app"
+                },
+                {
+                    "Name": "listener-rule/net"
+                }
+            ]
+        },
+        {
+            "Name": "SetSecurityGroups",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:SecurityGroup"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                }
+            ]
+        },
+        {
+            "Name": "SetSubnets",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}",
+                "elasticloadbalancing:Subnet"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "loadbalancer/app/"
+                },
+                {
+                    "Name": "loadbalancer/gwy/"
+                },
+                {
+                    "Name": "loadbalancer/net/"
+                }
+            ]
+        },
+        {
+            "Name": "SetWebAcl",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "elasticloadbalancing:CreateAction",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "elasticloadbalancing:ListenerProtocol",
+            "Types": [
+                "ArrayOfString",
+                "String"
+            ]
+        },
+        {
+            "Name": "elasticloadbalancing:ResourceTag/",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "elasticloadbalancing:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "elasticloadbalancing:Scheme",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "elasticloadbalancing:SecurityGroup",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "elasticloadbalancing:SecurityPolicy",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "elasticloadbalancing:Subnet",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "listener-rule/app",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:listener-rule/app/${LoadBalancerName}/${LoadBalancerId}/${ListenerId}/${ListenerRuleId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "listener-rule/net",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:listener-rule/net/${LoadBalancerName}/${LoadBalancerId}/${ListenerId}/${ListenerRuleId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "listener/app",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:listener/app/${LoadBalancerName}/${LoadBalancerId}/${ListenerId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "listener/gwy",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:listener/gwy/${LoadBalancerName}/${LoadBalancerId}/${ListenerId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "listener/net",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:listener/net/${LoadBalancerName}/${LoadBalancerId}/${ListenerId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "loadbalancer",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "loadbalancer/app/",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/app/${LoadBalancerName}/${LoadBalancerId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "loadbalancer/gwy/",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/gwy/${LoadBalancerName}/${LoadBalancerId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "loadbalancer/net/",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/net/${LoadBalancerName}/${LoadBalancerId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "targetgroup",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:targetgroup/${TargetGroupName}/${TargetGroupId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "truststore",
+            "ARNFormats": [
+                "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:truststore/${TrustStoreName}/${TrustStoreId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticloadbalancing:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

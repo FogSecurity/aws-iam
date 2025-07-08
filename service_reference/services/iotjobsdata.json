@@ -1,0 +1,92 @@
+{
+    "Name": "iotjobsdata",
+    "Actions": [
+        {
+            "Name": "DescribeJobExecution",
+            "ActionConditionKeys": [
+                "iot:JobId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "thing"
+                }
+            ]
+        },
+        {
+            "Name": "GetPendingJobExecutions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "thing"
+                }
+            ]
+        },
+        {
+            "Name": "StartNextPendingJobExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "thing"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateJobExecution",
+            "ActionConditionKeys": [
+                "iot:JobId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "thing"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "iot:JobId",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "thing",
+            "ARNFormats": [
+                "arn:${Partition}:iot:${Region}:${Account}:thing/${ThingName}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}
