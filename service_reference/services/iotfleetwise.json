@@ -1,0 +1,1089 @@
+{
+    "Name": "iotfleetwise",
+    "Actions": [
+        {
+            "Name": "AssociateVehicleFleet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "fleet"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCampaign",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "iotfleetwise:DestinationArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "campaign"
+                },
+                {
+                    "Name": "fleet"
+                },
+                {
+                    "Name": "signalcatalog"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDecoderManifest",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                },
+                {
+                    "Name": "modelmanifest"
+                }
+            ]
+        },
+        {
+            "Name": "CreateFleet",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "fleet"
+                },
+                {
+                    "Name": "signalcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "CreateModelManifest",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "modelmanifest"
+                },
+                {
+                    "Name": "signalcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSignalCatalog",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "signalcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "CreateStateTemplate",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "signalcatalog"
+                },
+                {
+                    "Name": "statetemplate"
+                }
+            ]
+        },
+        {
+            "Name": "CreateVehicle",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                },
+                {
+                    "Name": "modelmanifest"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCampaign",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "campaign"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDecoderManifest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteFleet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "fleet"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteModelManifest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "modelmanifest"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSignalCatalog",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "signalcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteStateTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "statetemplate"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVehicle",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateVehicleFleet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "fleet"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "GenerateCommandPayload",
+            "ActionConditionKeys": [
+                "iotfleetwise:Signals"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "statetemplate"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "GetCampaign",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "campaign"
+                }
+            ]
+        },
+        {
+            "Name": "GetDecoderManifest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                }
+            ]
+        },
+        {
+            "Name": "GetEncryptionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetFleet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "fleet"
+                }
+            ]
+        },
+        {
+            "Name": "GetLoggingOptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetModelManifest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "modelmanifest"
+                }
+            ]
+        },
+        {
+            "Name": "GetRegisterAccountStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetSignalCatalog",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "signalcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "GetStateTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "statetemplate"
+                }
+            ]
+        },
+        {
+            "Name": "GetVehicle",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "GetVehicleStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "ImportDecoderManifest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                }
+            ]
+        },
+        {
+            "Name": "ImportSignalCatalog",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "signalcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "ListCampaigns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListDecoderManifestNetworkInterfaces",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                }
+            ]
+        },
+        {
+            "Name": "ListDecoderManifestSignals",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                }
+            ]
+        },
+        {
+            "Name": "ListDecoderManifests",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListFleets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListFleetsForVehicle",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "ListModelManifestNodes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "modelmanifest"
+                }
+            ]
+        },
+        {
+            "Name": "ListModelManifests",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListSignalCatalogNodes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "signalcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "ListSignalCatalogs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListStateTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "campaign"
+                },
+                {
+                    "Name": "decodermanifest"
+                },
+                {
+                    "Name": "fleet"
+                },
+                {
+                    "Name": "modelmanifest"
+                },
+                {
+                    "Name": "signalcatalog"
+                },
+                {
+                    "Name": "statetemplate"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "ListVehicles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListVehiclesInFleet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "fleet"
+                }
+            ]
+        },
+        {
+            "Name": "PutEncryptionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutLoggingOptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "RegisterAccount",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "campaign"
+                },
+                {
+                    "Name": "decodermanifest"
+                },
+                {
+                    "Name": "fleet"
+                },
+                {
+                    "Name": "modelmanifest"
+                },
+                {
+                    "Name": "signalcatalog"
+                },
+                {
+                    "Name": "statetemplate"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "campaign"
+                },
+                {
+                    "Name": "decodermanifest"
+                },
+                {
+                    "Name": "fleet"
+                },
+                {
+                    "Name": "modelmanifest"
+                },
+                {
+                    "Name": "signalcatalog"
+                },
+                {
+                    "Name": "statetemplate"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCampaign",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "campaign"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDecoderManifest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFleet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "fleet"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateModelManifest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "modelmanifest"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSignalCatalog",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "signalcatalog"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateStateTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "statetemplate"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateVehicle",
+            "ActionConditionKeys": [
+                "iotfleetwise:UpdateToDecoderManifestArn",
+                "iotfleetwise:UpdateToModelManifestArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "decodermanifest"
+                },
+                {
+                    "Name": "modelmanifest"
+                },
+                {
+                    "Name": "vehicle"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "iotfleetwise:DestinationArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "iotfleetwise:Signals",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "iotfleetwise:UpdateToDecoderManifestArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "iotfleetwise:UpdateToModelManifestArn",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "campaign",
+            "ARNFormats": [
+                "arn:${Partition}:iotfleetwise:${Region}:${Account}:campaign/${CampaignName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "decodermanifest",
+            "ARNFormats": [
+                "arn:${Partition}:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "fleet",
+            "ARNFormats": [
+                "arn:${Partition}:iotfleetwise:${Region}:${Account}:fleet/${FleetId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "modelmanifest",
+            "ARNFormats": [
+                "arn:${Partition}:iotfleetwise:${Region}:${Account}:model-manifest/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "signalcatalog",
+            "ARNFormats": [
+                "arn:${Partition}:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "statetemplate",
+            "ARNFormats": [
+                "arn:${Partition}:iotfleetwise:${Region}:${Account}:state-template/${StateTemplateId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "vehicle",
+            "ARNFormats": [
+                "arn:${Partition}:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

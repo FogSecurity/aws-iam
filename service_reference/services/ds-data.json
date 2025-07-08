@@ -1,0 +1,410 @@
+{
+    "Name": "ds-data",
+    "Actions": [
+        {
+            "Name": "AddGroupMember",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:MemberName",
+                "ds-data:MemberRealm",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "CreateGroup",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "CreateUser",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteGroup",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteUser",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeGroup",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeUser",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "DisableUser",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "ListGroupMembers",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:MemberRealm",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "ListGroups",
+            "ActionConditionKeys": [
+                "ds-data:Realm"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "ListGroupsForMember",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:MemberRealm",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "ListUsers",
+            "ActionConditionKeys": [
+                "ds-data:Realm"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveGroupMember",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:MemberName",
+                "ds-data:MemberRealm",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "SearchGroups",
+            "ActionConditionKeys": [
+                "ds-data:Realm"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "SearchUsers",
+            "ActionConditionKeys": [
+                "ds-data:Realm"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateGroup",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUser",
+            "ActionConditionKeys": [
+                "ds-data:Identifier",
+                "ds-data:Realm",
+                "ds-data:SAMAccountName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "directory"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ds-data:Identifier",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ds-data:MemberName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ds-data:MemberRealm",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ds-data:Realm",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ds-data:SAMAccountName",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "directory",
+            "ARNFormats": [
+                "arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

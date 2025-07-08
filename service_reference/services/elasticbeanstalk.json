@@ -1,0 +1,1131 @@
+{
+    "Name": "elasticbeanstalk",
+    "Actions": [
+        {
+            "Name": "AbortEnvironmentUpdate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "AddTags",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                },
+                {
+                    "Name": "applicationversion"
+                },
+                {
+                    "Name": "configurationtemplate"
+                },
+                {
+                    "Name": "environment"
+                },
+                {
+                    "Name": "platform"
+                }
+            ]
+        },
+        {
+            "Name": "ApplyEnvironmentManagedAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "AssociateEnvironmentOperationsRole",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "CheckDNSAvailability",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ComposeEnvironments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                },
+                {
+                    "Name": "applicationversion",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateApplication",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                }
+            ]
+        },
+        {
+            "Name": "CreateApplicationVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                },
+                {
+                    "Name": "applicationversion",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys",
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateConfigurationTemplate",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticbeanstalk:FromApplication",
+                "elasticbeanstalk:FromApplicationVersion",
+                "elasticbeanstalk:FromConfigurationTemplate",
+                "elasticbeanstalk:FromEnvironment",
+                "elasticbeanstalk:FromPlatform",
+                "elasticbeanstalk:FromSolutionStack"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configurationtemplate",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateEnvironment",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "elasticbeanstalk:FromApplicationVersion",
+                "elasticbeanstalk:FromConfigurationTemplate",
+                "elasticbeanstalk:FromPlatform",
+                "elasticbeanstalk:FromSolutionStack"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreatePlatformVersion",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "platform"
+                }
+            ]
+        },
+        {
+            "Name": "CreateStorageLocation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteApplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteApplicationVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applicationversion",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConfigurationTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configurationtemplate",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEnvironmentConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeletePlatformVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "platform"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeAccountAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeApplicationVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applicationversion",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeApplications",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeConfigurationOptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configurationtemplate",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                },
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                },
+                {
+                    "Name": "solutionstack"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeConfigurationSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configurationtemplate",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                },
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEnvironmentHealth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEnvironmentManagedActionHistory",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEnvironmentManagedActions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEnvironmentResources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEnvironments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEvents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                },
+                {
+                    "Name": "applicationversion",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                },
+                {
+                    "Name": "configurationtemplate",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                },
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeInstancesHealth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "DescribePlatformVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "platform"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateEnvironmentOperationsRole",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "ListAvailableSolutionStacks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "solutionstack"
+                }
+            ]
+        },
+        {
+            "Name": "ListPlatformBranches",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListPlatformVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "platform"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                },
+                {
+                    "Name": "applicationversion"
+                },
+                {
+                    "Name": "configurationtemplate"
+                },
+                {
+                    "Name": "environment"
+                },
+                {
+                    "Name": "platform"
+                }
+            ]
+        },
+        {
+            "Name": "PutInstanceStatistics",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "RebuildEnvironment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "RemoveTags",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                },
+                {
+                    "Name": "applicationversion"
+                },
+                {
+                    "Name": "configurationtemplate"
+                },
+                {
+                    "Name": "environment"
+                },
+                {
+                    "Name": "platform"
+                }
+            ]
+        },
+        {
+            "Name": "RequestEnvironmentInfo",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "RestartAppServer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "RetrieveEnvironmentInfo",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "SwapEnvironmentCNAMEs",
+            "ActionConditionKeys": [
+                "elasticbeanstalk:FromEnvironment"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "TerminateEnvironment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateApplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateApplicationResourceLifecycle",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateApplicationVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applicationversion",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConfigurationTemplate",
+            "ActionConditionKeys": [
+                "elasticbeanstalk:FromApplication",
+                "elasticbeanstalk:FromApplicationVersion",
+                "elasticbeanstalk:FromConfigurationTemplate",
+                "elasticbeanstalk:FromEnvironment",
+                "elasticbeanstalk:FromPlatform",
+                "elasticbeanstalk:FromSolutionStack"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configurationtemplate",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateEnvironment",
+            "ActionConditionKeys": [
+                "elasticbeanstalk:FromApplicationVersion",
+                "elasticbeanstalk:FromConfigurationTemplate",
+                "elasticbeanstalk:FromPlatform",
+                "elasticbeanstalk:FromSolutionStack"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTagsForResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                },
+                {
+                    "Name": "applicationversion"
+                },
+                {
+                    "Name": "configurationtemplate"
+                },
+                {
+                    "Name": "environment"
+                },
+                {
+                    "Name": "platform"
+                }
+            ]
+        },
+        {
+            "Name": "ValidateConfigurationSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configurationtemplate",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                },
+                {
+                    "Name": "environment",
+                    "ConditionKeys": [
+                        "elasticbeanstalk:InApplication"
+                    ]
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "elasticbeanstalk:FromApplication",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "elasticbeanstalk:FromApplicationVersion",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "elasticbeanstalk:FromConfigurationTemplate",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "elasticbeanstalk:FromEnvironment",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "elasticbeanstalk:FromPlatform",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "elasticbeanstalk:FromSolutionStack",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "elasticbeanstalk:InApplication",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "application",
+            "ARNFormats": [
+                "arn:${Partition}:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "applicationversion",
+            "ARNFormats": [
+                "arn:${Partition}:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticbeanstalk:InApplication"
+            ]
+        },
+        {
+            "Name": "configurationtemplate",
+            "ARNFormats": [
+                "arn:${Partition}:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticbeanstalk:InApplication"
+            ]
+        },
+        {
+            "Name": "environment",
+            "ARNFormats": [
+                "arn:${Partition}:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "elasticbeanstalk:InApplication"
+            ]
+        },
+        {
+            "Name": "platform",
+            "ARNFormats": [
+                "arn:${Partition}:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}"
+            ]
+        },
+        {
+            "Name": "solutionstack",
+            "ARNFormats": [
+                "arn:${Partition}:elasticbeanstalk:${Region}::solutionstack/${SolutionStackName}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

@@ -1,0 +1,644 @@
+{
+    "Name": "managedblockchain",
+    "Actions": [
+        {
+            "Name": "CreateAccessor",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateMember",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "network"
+                }
+            ]
+        },
+        {
+            "Name": "CreateNetwork",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateNode",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "member"
+                },
+                {
+                    "Name": "network"
+                }
+            ]
+        },
+        {
+            "Name": "CreateProposal",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "network"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAccessor",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "accessor"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteMember",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "member"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteNode",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "node"
+                }
+            ]
+        },
+        {
+            "Name": "GET",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetAccessor",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "accessor"
+                }
+            ]
+        },
+        {
+            "Name": "GetMember",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "member"
+                }
+            ]
+        },
+        {
+            "Name": "GetNetwork",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "network"
+                }
+            ]
+        },
+        {
+            "Name": "GetNode",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "node"
+                }
+            ]
+        },
+        {
+            "Name": "GetProposal",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proposal"
+                }
+            ]
+        },
+        {
+            "Name": "Invoke",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "InvokeRpcBitcoinMainnet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "InvokeRpcBitcoinTestnet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "InvokeRpcPolygonMainnet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "InvokeRpcPolygonMumbaiTestnet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListAccessors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListInvitations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListMembers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "network"
+                }
+            ]
+        },
+        {
+            "Name": "ListNetworks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListNodes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "member"
+                },
+                {
+                    "Name": "network"
+                }
+            ]
+        },
+        {
+            "Name": "ListProposalVotes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proposal"
+                }
+            ]
+        },
+        {
+            "Name": "ListProposals",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "network"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "accessor"
+                },
+                {
+                    "Name": "invitation"
+                },
+                {
+                    "Name": "member"
+                },
+                {
+                    "Name": "network"
+                },
+                {
+                    "Name": "node"
+                },
+                {
+                    "Name": "proposal"
+                }
+            ]
+        },
+        {
+            "Name": "POST",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "RejectInvitation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "invitation"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "accessor"
+                },
+                {
+                    "Name": "invitation"
+                },
+                {
+                    "Name": "member"
+                },
+                {
+                    "Name": "network"
+                },
+                {
+                    "Name": "node"
+                },
+                {
+                    "Name": "proposal"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "accessor"
+                },
+                {
+                    "Name": "invitation"
+                },
+                {
+                    "Name": "member"
+                },
+                {
+                    "Name": "network"
+                },
+                {
+                    "Name": "node"
+                },
+                {
+                    "Name": "proposal"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateMember",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "member"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateNode",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "node"
+                }
+            ]
+        },
+        {
+            "Name": "VoteOnProposal",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "proposal"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "accessor",
+            "ARNFormats": [
+                "arn:${Partition}:managedblockchain:${Region}:${Account}:accessors/${AccessorId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "invitation",
+            "ARNFormats": [
+                "arn:${Partition}:managedblockchain:${Region}:${Account}:invitations/${InvitationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "member",
+            "ARNFormats": [
+                "arn:${Partition}:managedblockchain:${Region}:${Account}:members/${MemberId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "network",
+            "ARNFormats": [
+                "arn:${Partition}:managedblockchain:${Region}::networks/${NetworkId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "node",
+            "ARNFormats": [
+                "arn:${Partition}:managedblockchain:${Region}:${Account}:nodes/${NodeId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "proposal",
+            "ARNFormats": [
+                "arn:${Partition}:managedblockchain:${Region}::proposals/${ProposalId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

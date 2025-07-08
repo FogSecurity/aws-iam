@@ -1,0 +1,656 @@
+{
+    "Name": "s3tables",
+    "Actions": [
+        {
+            "Name": "CreateNamespace",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTable",
+            "ActionConditionKeys": [
+                "s3tables:KMSKeyArn",
+                "s3tables:SSEAlgorithm",
+                "s3tables:namespace"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTableBucket",
+            "ActionConditionKeys": [
+                "s3tables:KMSKeyArn",
+                "s3tables:SSEAlgorithm"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteNamespace",
+            "ActionConditionKeys": [
+                "s3tables:namespace"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTable",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTableBucket",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTableBucketEncryption",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTableBucketPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTablePolicy",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "GetNamespace",
+            "ActionConditionKeys": [
+                "s3tables:namespace"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "GetTable",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableBucket",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableBucketEncryption",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableBucketMaintenanceConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableBucketPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableData",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableEncryption",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableMaintenanceConfiguration",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableMaintenanceJobStatus",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTableMetadataLocation",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "GetTablePolicy",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "ListNamespaces",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "ListTableBuckets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTables",
+            "ActionConditionKeys": [
+                "s3tables:namespace"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "PutTableBucketEncryption",
+            "ActionConditionKeys": [
+                "s3tables:KMSKeyArn",
+                "s3tables:SSEAlgorithm"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "PutTableBucketMaintenanceConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "PutTableBucketPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "TableBucket"
+                }
+            ]
+        },
+        {
+            "Name": "PutTableData",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "PutTableEncryption",
+            "ActionConditionKeys": [
+                "s3tables:KMSKeyArn",
+                "s3tables:SSEAlgorithm",
+                "s3tables:namespace"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "PutTableMaintenanceConfiguration",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "PutTablePolicy",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "RenameTable",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTableMetadataLocation",
+            "ActionConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Table"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "s3tables:KMSKeyArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "s3tables:SSEAlgorithm",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "s3tables:namespace",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "s3tables:tableName",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Table",
+            "ARNFormats": [
+                "arn:${Partition}:s3tables:${Region}:${Account}:bucket/${TableBucketName}/table/${TableID}"
+            ],
+            "ConditionKeys": [
+                "s3tables:namespace",
+                "s3tables:tableName"
+            ]
+        },
+        {
+            "Name": "TableBucket",
+            "ARNFormats": [
+                "arn:${Partition}:s3tables:${Region}:${Account}:bucket/${TableBucketName}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

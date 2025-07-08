@@ -1,0 +1,6568 @@
+{
+    "Name": "connect",
+    "Actions": [
+        {
+            "Name": "ActivateEvaluationForm",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-form"
+                }
+            ]
+        },
+        {
+            "Name": "AdminGetEmergencyAccessToken",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateAnalyticsDataSet",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateApprovedOrigin",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateBot",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateCustomerProfilesDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateDefaultVocabulary",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateFlow",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateInstanceStorageConfig",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:StorageResourceType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateLambdaFunction",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateLexBot",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociatePhoneNumberContactFlow",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateQueueQuickConnects",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "quick-connect"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateRoutingProfileQueues",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateSecurityKey",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateTrafficDistributionGroupUser",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "traffic-distribution-group"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateUserProficiencies",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "BatchAssociateAnalyticsDataSet",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "BatchDisassociateAnalyticsDataSet",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetAttachedFileMetadata",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "attached-file"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetFlowAssociation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "BatchPutContact",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "ClaimPhoneNumber",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "traffic-distribution-group"
+                },
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "CompleteAttachedFileUpload",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "attached-file"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAgentStatus",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-status"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAuthenticationProfile",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "authentication-profile"
+                }
+            ]
+        },
+        {
+            "Name": "CreateContact",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:ContactInitiationMethod",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "CreateContactFlow",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "CreateContactFlowModule",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow-module"
+                }
+            ]
+        },
+        {
+            "Name": "CreateContactFlowVersion",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "CreateEmailAddress",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "CreateEvaluationForm",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-form"
+                }
+            ]
+        },
+        {
+            "Name": "CreateHoursOfOperation",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                }
+            ]
+        },
+        {
+            "Name": "CreateHoursOfOperationOverride",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "CreateInstance",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateIntegrationAssociation",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "integration-association"
+                }
+            ]
+        },
+        {
+            "Name": "CreateParticipant",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePersistentContactAssociation",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePredefinedAttribute",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePrompt",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePushNotificationRegistration",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "CreateQueue",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "phone-number"
+                },
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "quick-connect"
+                }
+            ]
+        },
+        {
+            "Name": "CreateQuickConnect",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "quick-connect"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "CreateRoutingProfile",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "CreateRule",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSecurityProfile",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "security-profile"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTaskTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-template"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTrafficDistributionGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "traffic-distribution-group"
+                }
+            ]
+        },
+        {
+            "Name": "CreateUseCase",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "integration-association"
+                },
+                {
+                    "Name": "use-case"
+                }
+            ]
+        },
+        {
+            "Name": "CreateUser",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hierarchy-group"
+                },
+                {
+                    "Name": "routing-profile"
+                },
+                {
+                    "Name": "security-profile"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "CreateUserHierarchyGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hierarchy-group"
+                }
+            ]
+        },
+        {
+            "Name": "CreateView",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "customer-managed-view"
+                }
+            ]
+        },
+        {
+            "Name": "CreateViewVersion",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "customer-managed-view"
+                }
+            ]
+        },
+        {
+            "Name": "CreateVocabulary",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vocabulary"
+                }
+            ]
+        },
+        {
+            "Name": "DeactivateEvaluationForm",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-form"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAttachedFile",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "attached-file"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteContactEvaluation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-evaluation"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteContactFlow",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteContactFlowModule",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow-module"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteContactFlowVersion",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEmailAddress",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "email-address"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEvaluationForm",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-form"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteHoursOfOperation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteHoursOfOperationOverride",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteInstance",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteIntegrationAssociation",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "integration-association"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePredefinedAttribute",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePrompt",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePushNotificationRegistration",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteQueue",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteQuickConnect",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "quick-connect"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRoutingProfile",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRule",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSecurityProfile",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "security-profile"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTaskTemplate",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-template"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTrafficDistributionGroup",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "traffic-distribution-group"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteUseCase",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "use-case"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteUser",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteUserHierarchyGroup",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hierarchy-group"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteView",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "customer-managed-view"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteViewVersion",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "customer-managed-view-version"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVocabulary",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vocabulary"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeAgentStatus",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-status"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeAuthenticationProfile",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "authentication-profile"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeContact",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeContactEvaluation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-evaluation"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeContactFlow",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeContactFlowModule",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow-module"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEmailAddress",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "email-address"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEvaluationForm",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-form"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeForecastingPlanningSchedulingIntegration",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeHoursOfOperation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeHoursOfOperationOverride",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeInstance",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeInstanceAttribute",
+            "ActionConditionKeys": [
+                "connect:AttributeType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeInstanceStorageConfig",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:StorageResourceType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribePhoneNumber",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "DescribePredefinedAttribute",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribePrompt",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeQueue",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeQuickConnect",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "quick-connect"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeRoutingProfile",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeRule",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeSecurityProfile",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "security-profile"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeTrafficDistributionGroup",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "traffic-distribution-group"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeUser",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeUserHierarchyGroup",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hierarchy-group"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeUserHierarchyStructure",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeView",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "aws-managed-view"
+                },
+                {
+                    "Name": "customer-managed-view"
+                },
+                {
+                    "Name": "qualified-aws-managed-view"
+                },
+                {
+                    "Name": "qualified-customer-managed-view"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeVocabulary",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vocabulary"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateAnalyticsDataSet",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateApprovedOrigin",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateBot",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateCustomerProfilesDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateFlow",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateInstanceStorageConfig",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:StorageResourceType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateLambdaFunction",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateLexBot",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociatePhoneNumberContactFlow",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateQueueQuickConnects",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "quick-connect"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateRoutingProfileQueues",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateSecurityKey",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateTrafficDistributionGroupUser",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "traffic-distribution-group"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateUserProficiencies",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "DismissUserContact",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "GetAttachedFile",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "attached-file"
+                }
+            ]
+        },
+        {
+            "Name": "GetContactAttributes",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "GetCurrentMetricData",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "GetCurrentUserData",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hierarchy-group"
+                },
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "routing-profile"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "GetEffectiveHoursOfOperations",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "GetFederationToken",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "GetFlowAssociation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "GetMetricData",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "GetMetricDataV2",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hierarchy-group"
+                },
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "routing-profile"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "GetPromptFile",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                }
+            ]
+        },
+        {
+            "Name": "GetTaskTemplate",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-template"
+                }
+            ]
+        },
+        {
+            "Name": "GetTrafficDistribution",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "traffic-distribution-group"
+                }
+            ]
+        },
+        {
+            "Name": "ImportPhoneNumber",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "ListAgentStatuses",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-agent-status"
+                }
+            ]
+        },
+        {
+            "Name": "ListAnalyticsDataAssociations",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListAnalyticsDataLakeDataSets",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListApprovedOrigins",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListAssociatedContacts",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "ListAuthenticationProfiles",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListBots",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListContactEvaluations",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListContactFlowModules",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListContactFlowVersions",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "ListContactFlows",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "ListContactReferences",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "ListDefaultVocabularies",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListEvaluationFormVersions",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-form"
+                }
+            ]
+        },
+        {
+            "Name": "ListEvaluationForms",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListFlowAssociations",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListHoursOfOperationOverrides",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListHoursOfOperations",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListInstanceAttributes",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListInstanceStorageConfigs",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListIntegrationAssociations",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListLambdaFunctions",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListLexBots",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListPhoneNumbers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-legacy-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "ListPhoneNumbersV2",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "ListPredefinedAttributes",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListPrompts",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListQueueQuickConnects",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "ListQueues",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-queue"
+                }
+            ]
+        },
+        {
+            "Name": "ListQuickConnects",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-quick-connect"
+                }
+            ]
+        },
+        {
+            "Name": "ListRealtimeContactAnalysisSegments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "ListRealtimeContactAnalysisSegmentsV2",
+            "ActionConditionKeys": [
+                "connect:ListRealtimeContactAnalysisSegmentsByOutputType",
+                "connect:ListRealtimeContactAnalysisSegmentsBySegmentType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "ListRoutingProfileQueues",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "ListRoutingProfiles",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListRules",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListSecurityKeys",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListSecurityProfileApplications",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "security-profile"
+                }
+            ]
+        },
+        {
+            "Name": "ListSecurityProfilePermissions",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "security-profile"
+                }
+            ]
+        },
+        {
+            "Name": "ListSecurityProfiles",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-status"
+                },
+                {
+                    "Name": "contact-evaluation"
+                },
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "contact-flow-module"
+                },
+                {
+                    "Name": "evaluation-form"
+                },
+                {
+                    "Name": "hierarchy-group"
+                },
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "integration-association"
+                },
+                {
+                    "Name": "phone-number"
+                },
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "quick-connect"
+                },
+                {
+                    "Name": "routing-profile"
+                },
+                {
+                    "Name": "rule"
+                },
+                {
+                    "Name": "security-profile"
+                },
+                {
+                    "Name": "traffic-distribution-group"
+                },
+                {
+                    "Name": "use-case"
+                },
+                {
+                    "Name": "user"
+                },
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "ListTaskTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListTrafficDistributionGroupUsers",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "traffic-distribution-group"
+                }
+            ]
+        },
+        {
+            "Name": "ListTrafficDistributionGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "traffic-distribution-group"
+                }
+            ]
+        },
+        {
+            "Name": "ListUseCases",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListUserHierarchyGroups",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListUserProficiencies",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "ListUsers",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ListViewVersions",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "aws-managed-view"
+                },
+                {
+                    "Name": "customer-managed-view"
+                }
+            ]
+        },
+        {
+            "Name": "ListViews",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "MonitorContact",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId",
+                "connect:MonitorCapabilities"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "PauseContact",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "PutUserStatus",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-status"
+                },
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "ReleasePhoneNumber",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "ReplicateInstance",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ResumeContact",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "ResumeContactRecording",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "SearchAgentStatuses",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchAvailablePhoneNumbers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "SearchContactFlowModules",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchContactFlows",
+            "ActionConditionKeys": [
+                "connect:FlowType",
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchContacts",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchContactsByContactAnalysis"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchEmailAddresses",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchHoursOfOperationOverrides",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchHoursOfOperations",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchPredefinedAttributes",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchPrompts",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchQueues",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchQuickConnects",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchResourceTags",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchRoutingProfiles",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchSecurityProfiles",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchUserHierarchyGroups",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchUsers",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:SearchTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SearchVocabularies",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vocabulary"
+                }
+            ]
+        },
+        {
+            "Name": "SendChatIntegrationEvent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "SendIntegrationEvent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "SendOutboundEmail",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "StartAttachedFileUpload",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "attached-file"
+                }
+            ]
+        },
+        {
+            "Name": "StartChatContact",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "StartContactEvaluation",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "contact-evaluation"
+                },
+                {
+                    "Name": "evaluation-form"
+                }
+            ]
+        },
+        {
+            "Name": "StartContactRecording",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "StartContactStreaming",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "StartEmailContact",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "StartForecastingPlanningSchedulingIntegration",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "StartOutboundChatContact",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:Subtype"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "StartOutboundEmailContact",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "StartOutboundVoiceContact",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "StartScreenSharing",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "StartTaskContact",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:AssignmentType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "quick-connect"
+                },
+                {
+                    "Name": "task-template"
+                }
+            ]
+        },
+        {
+            "Name": "StartWebRTCContact",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "StopContact",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "StopContactRecording",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "StopContactStreaming",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "StopForecastingPlanningSchedulingIntegration",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "SubmitContactEvaluation",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-evaluation"
+                }
+            ]
+        },
+        {
+            "Name": "SuspendContactRecording",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "TagContact",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-status"
+                },
+                {
+                    "Name": "contact-evaluation"
+                },
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "contact-flow-module"
+                },
+                {
+                    "Name": "customer-managed-view"
+                },
+                {
+                    "Name": "evaluation-form"
+                },
+                {
+                    "Name": "hierarchy-group"
+                },
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "integration-association"
+                },
+                {
+                    "Name": "phone-number"
+                },
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "quick-connect"
+                },
+                {
+                    "Name": "routing-profile"
+                },
+                {
+                    "Name": "rule"
+                },
+                {
+                    "Name": "security-profile"
+                },
+                {
+                    "Name": "task-template"
+                },
+                {
+                    "Name": "traffic-distribution-group"
+                },
+                {
+                    "Name": "use-case"
+                },
+                {
+                    "Name": "user"
+                },
+                {
+                    "Name": "vocabulary"
+                },
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "TransferContact",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "UntagContact",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-status"
+                },
+                {
+                    "Name": "contact-evaluation"
+                },
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "contact-flow-module"
+                },
+                {
+                    "Name": "customer-managed-view"
+                },
+                {
+                    "Name": "evaluation-form"
+                },
+                {
+                    "Name": "hierarchy-group"
+                },
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "integration-association"
+                },
+                {
+                    "Name": "phone-number"
+                },
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "quick-connect"
+                },
+                {
+                    "Name": "routing-profile"
+                },
+                {
+                    "Name": "rule"
+                },
+                {
+                    "Name": "security-profile"
+                },
+                {
+                    "Name": "task-template"
+                },
+                {
+                    "Name": "traffic-distribution-group"
+                },
+                {
+                    "Name": "use-case"
+                },
+                {
+                    "Name": "user"
+                },
+                {
+                    "Name": "vocabulary"
+                },
+                {
+                    "Name": "wildcard-phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAgentStatus",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-status"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAuthenticationProfile",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "authentication-profile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContact",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactAttributes",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactEvaluation",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-evaluation"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactFlowContent",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactFlowMetadata",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactFlowModuleContent",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow-module"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactFlowModuleMetadata",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow-module"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactFlowName",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:FlowType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactRoutingData",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContactSchedule",
+            "ActionConditionKeys": [
+                "connect:Channel",
+                "connect:ContactAssociationId",
+                "connect:InstanceId",
+                "connect:UserArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateEmailAddressMetadata",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "email-address"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateEvaluationForm",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-form"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateHoursOfOperation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateHoursOfOperationOverride",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateInstanceAttribute",
+            "ActionConditionKeys": [
+                "connect:AttributeType",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateInstanceStorageConfig",
+            "ActionConditionKeys": [
+                "connect:InstanceId",
+                "connect:StorageResourceType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateParticipantAuthentication",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateParticipantRoleConfig",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdatePhoneNumber",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "phone-number"
+                },
+                {
+                    "Name": "traffic-distribution-group"
+                }
+            ]
+        },
+        {
+            "Name": "UpdatePhoneNumberMetadata",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "phone-number"
+                }
+            ]
+        },
+        {
+            "Name": "UpdatePredefinedAttribute",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdatePrompt",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQueueHoursOfOperation",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hours-of-operation"
+                },
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQueueMaxContacts",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQueueName",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQueueOutboundCallerConfig",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "phone-number"
+                },
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQueueOutboundEmailConfig",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQueueStatus",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQuickConnectConfig",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact-flow"
+                },
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "quick-connect"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQuickConnectName",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "quick-connect"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRoutingProfileAgentAvailabilityTimer",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRoutingProfileConcurrency",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRoutingProfileDefaultOutboundQueue",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queue"
+                },
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRoutingProfileName",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRoutingProfileQueues",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRule",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSecurityProfile",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "security-profile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTaskTemplate",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-template"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTrafficDistribution",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "traffic-distribution-group"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserHierarchy",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hierarchy-group"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserHierarchyGroupName",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hierarchy-group"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserHierarchyStructure",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserIdentityInfo",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserPhoneConfig",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserProficiencies",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "instance"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserRoutingProfile",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "routing-profile"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateUserSecurityProfiles",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "security-profile"
+                },
+                {
+                    "Name": "user"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateViewContent",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "customer-managed-view"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateViewMetadata",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "customer-managed-view"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "connect:AssignmentType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:AttributeType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:Channel",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:ContactAssociationId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:ContactInitiationMethod",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:FlowType",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "connect:InstanceId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:ListRealtimeContactAnalysisSegmentsByOutputType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:ListRealtimeContactAnalysisSegmentsBySegmentType",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "connect:MonitorCapabilities",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "connect:SearchContactsByContactAnalysis",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "connect:SearchTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:StorageResourceType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:Subtype",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "connect:UserArn",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "agent-status",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/agent-state/${AgentStatusId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "attached-file",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/file/${FileId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "authentication-profile",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/authentication-profile/${AuthenticationProfileId}"
+            ]
+        },
+        {
+            "Name": "aws-managed-view",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:aws:view/${ViewId}"
+            ]
+        },
+        {
+            "Name": "contact",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/contact/${ContactId}"
+            ]
+        },
+        {
+            "Name": "contact-evaluation",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/contact-evaluation/${EvaluationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "contact-flow",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/contact-flow/${ContactFlowId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "contact-flow-module",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/flow-module/${ContactFlowModuleId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "customer-managed-view",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/view/${ViewId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "customer-managed-view-version",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/view/${ViewId}:${ViewVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "email-address",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/email-address/${EmailAddressId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "evaluation-form",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/evaluation-form/${FormId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "hierarchy-group",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/agent-group/${HierarchyGroupId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "hours-of-operation",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/operating-hours/${HoursOfOperationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "instance",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "integration-association",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/integration-association/${IntegrationAssociationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "legacy-phone-number",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/phone-number/${PhoneNumberId}"
+            ]
+        },
+        {
+            "Name": "phone-number",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:phone-number/${PhoneNumberId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "prompt",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/prompt/${PromptId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "qualified-aws-managed-view",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:aws:view/${ViewId}:${ViewQualifier}"
+            ]
+        },
+        {
+            "Name": "qualified-customer-managed-view",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/view/${ViewId}:${ViewQualifier}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "queue",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/queue/${QueueId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "quick-connect",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/transfer-destination/${QuickConnectId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "routing-profile",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/routing-profile/${RoutingProfileId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "rule",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/rule/${RuleId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "security-profile",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/security-profile/${SecurityProfileId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "task-template",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/task-template/${TaskTemplateId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "traffic-distribution-group",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:traffic-distribution-group/${TrafficDistributionGroupId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "use-case",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/use-case/${UseCaseId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "user",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/agent/${UserId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "vocabulary",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/vocabulary/${VocabularyId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "wildcard-agent-status",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/agent-state/*"
+            ]
+        },
+        {
+            "Name": "wildcard-contact-flow",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/contact-flow/*"
+            ]
+        },
+        {
+            "Name": "wildcard-legacy-phone-number",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/phone-number/*"
+            ]
+        },
+        {
+            "Name": "wildcard-phone-number",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:phone-number/*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "wildcard-queue",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/queue/*"
+            ]
+        },
+        {
+            "Name": "wildcard-quick-connect",
+            "ARNFormats": [
+                "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/transfer-destination/*"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

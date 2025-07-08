@@ -1,0 +1,1538 @@
+{
+    "Name": "ecs",
+    "Actions": [
+        {
+            "Name": "CreateCapacityProvider",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateCluster",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "ecs:capacity-provider",
+                "ecs:fargate-ephemeral-storage-kms-key"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateService",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "ecs:auto-assign-public-ip",
+                "ecs:capacity-provider",
+                "ecs:enable-ebs-volumes",
+                "ecs:enable-ecs-managed-tags",
+                "ecs:enable-execute-command",
+                "ecs:enable-service-connect",
+                "ecs:enable-vpc-lattice",
+                "ecs:namespace",
+                "ecs:propagate-tags",
+                "ecs:subnet",
+                "ecs:task-cpu",
+                "ecs:task-definition",
+                "ecs:task-memory"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateTaskSet",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "ecs:capacity-provider",
+                "ecs:cluster",
+                "ecs:service",
+                "ecs:task-definition"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteAccountSetting",
+            "ActionConditionKeys": [
+                "ecs:account-setting"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteAttributes",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "container-instance"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCapacityProvider",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "capacity-provider"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteService",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTaskDefinitions",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-definition"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTaskSet",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster",
+                "ecs:service"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-set"
+                }
+            ]
+        },
+        {
+            "Name": "DeregisterContainerInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeregisterTaskDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DescribeCapacityProviders",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "capacity-provider"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeClusters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeContainerInstances",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "container-instance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeServiceDeployments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster"
+                    ]
+                },
+                {
+                    "Name": "service-deployment",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster",
+                        "ecs:service"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeServiceRevisions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster"
+                    ]
+                },
+                {
+                    "Name": "service-revision",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster",
+                        "ecs:service"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeServices",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeTaskDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTaskSets",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster",
+                "ecs:service"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-set"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeTasks",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task"
+                }
+            ]
+        },
+        {
+            "Name": "DiscoverPollEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ExecuteCommand",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster",
+                "ecs:container-name",
+                "ecs:task"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "task"
+                }
+            ]
+        },
+        {
+            "Name": "GetTaskProtection",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task"
+                }
+            ]
+        },
+        {
+            "Name": "ListAccountSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ListClusters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListContainerInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ListServiceDeployments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ListServices",
+            "ActionConditionKeys": [
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListServicesByNamespace",
+            "ActionConditionKeys": [
+                "ecs:namespace"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "capacity-provider"
+                },
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "container-instance"
+                },
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "task"
+                },
+                {
+                    "Name": "task-definition"
+                },
+                {
+                    "Name": "task-set"
+                }
+            ]
+        },
+        {
+            "Name": "ListTaskDefinitionFamilies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTaskDefinitions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTasks",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "container-instance"
+                }
+            ]
+        },
+        {
+            "Name": "Poll",
+            "ActionConditionKeys": [
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "container-instance"
+                }
+            ]
+        },
+        {
+            "Name": "PutAccountSetting",
+            "ActionConditionKeys": [
+                "ecs:account-setting"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutAccountSettingDefault",
+            "ActionConditionKeys": [
+                "ecs:account-setting"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutAttributes",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "container-instance"
+                }
+            ]
+        },
+        {
+            "Name": "PutClusterCapacityProviders",
+            "ActionConditionKeys": [
+                "ecs:capacity-provider"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "RegisterContainerInstance",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "RegisterTaskDefinition",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "ecs:compute-compatibility",
+                "ecs:privileged",
+                "ecs:task-cpu",
+                "ecs:task-memory"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-definition",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "RunTask",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "ecs:capacity-provider",
+                "ecs:cluster",
+                "ecs:enable-ebs-volumes",
+                "ecs:enable-execute-command"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-definition"
+                }
+            ]
+        },
+        {
+            "Name": "StartTask",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "ecs:cluster",
+                "ecs:container-instances",
+                "ecs:enable-ebs-volumes",
+                "ecs:enable-execute-command"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-definition"
+                }
+            ]
+        },
+        {
+            "Name": "StartTelemetrySession",
+            "ActionConditionKeys": [
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "container-instance"
+                }
+            ]
+        },
+        {
+            "Name": "StopServiceDeployment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster"
+                    ]
+                },
+                {
+                    "Name": "service-deployment",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster",
+                        "ecs:service"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "StopTask",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task"
+                }
+            ]
+        },
+        {
+            "Name": "SubmitAttachmentStateChanges",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "SubmitContainerStateChange",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "SubmitTaskStateChange",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "ecs:CreateAction"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "capacity-provider"
+                },
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "container-instance"
+                },
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "task"
+                },
+                {
+                    "Name": "task-definition"
+                },
+                {
+                    "Name": "task-set"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "capacity-provider"
+                },
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "container-instance"
+                },
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "task"
+                },
+                {
+                    "Name": "task-definition"
+                },
+                {
+                    "Name": "task-set"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCapacityProvider",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "capacity-provider"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCluster",
+            "ActionConditionKeys": [
+                "ecs:fargate-ephemeral-storage-kms-key"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateClusterSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContainerAgent",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "container-instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContainerInstancesState",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "container-instance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateService",
+            "ActionConditionKeys": [
+                "ecs:auto-assign-public-ip",
+                "ecs:capacity-provider",
+                "ecs:enable-ebs-volumes",
+                "ecs:enable-ecs-managed-tags",
+                "ecs:enable-execute-command",
+                "ecs:enable-service-connect",
+                "ecs:enable-vpc-lattice",
+                "ecs:namespace",
+                "ecs:propagate-tags",
+                "ecs:subnet",
+                "ecs:task-cpu",
+                "ecs:task-definition",
+                "ecs:task-memory"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service",
+                    "ConditionKeys": [
+                        "aws:ResourceTag/${TagKey}",
+                        "ecs:cluster"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateServicePrimaryTaskSet",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTaskProtection",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTaskSet",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster",
+                "ecs:service"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "task-set"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "ecs:CreateAction",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:account-setting",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:auto-assign-public-ip",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "ecs:capacity-provider",
+            "Types": [
+                "ArrayOfARN"
+            ]
+        },
+        {
+            "Name": "ecs:cluster",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "ecs:compute-compatibility",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "ecs:container-instances",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "ecs:container-name",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:enable-ebs-volumes",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:enable-ecs-managed-tags",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "ecs:enable-execute-command",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:enable-service-connect",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:enable-vpc-lattice",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:fargate-ephemeral-storage-kms-key",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:namespace",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "ecs:privileged",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:propagate-tags",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "ecs:service",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "ecs:subnet",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "ecs:task",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "ecs:task-cpu",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "ecs:task-definition",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "ecs:task-memory",
+            "Types": [
+                "Numeric"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "capacity-provider",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:capacity-provider/${CapacityProviderName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "cluster",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:cluster/${ClusterName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "container-instance",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "service",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "service-deployment",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:service-deployment/${ClusterName}/${ServiceName}/${ServiceDeploymentId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster",
+                "ecs:service"
+            ]
+        },
+        {
+            "Name": "service-revision",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:service-revision/${ClusterName}/${ServiceName}/${ServiceRevisionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:cluster",
+                "ecs:service"
+            ]
+        },
+        {
+            "Name": "task",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "task-definition",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:task-definition/${TaskDefinitionFamilyName}:${TaskDefinitionRevisionNumber}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "task-set",
+            "ARNFormats": [
+                "arn:${Partition}:ecs:${Region}:${Account}:task-set/${ClusterName}/${ServiceName}/${TaskSetId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "ecs:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

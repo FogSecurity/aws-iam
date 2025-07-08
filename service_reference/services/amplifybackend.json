@@ -1,0 +1,673 @@
+{
+    "Name": "amplifybackend",
+    "Actions": [
+        {
+            "Name": "CloneBackend",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                }
+            ]
+        },
+        {
+            "Name": "CreateBackend",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "created-backend"
+                }
+            ]
+        },
+        {
+            "Name": "CreateBackendAPI",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "CreateBackendAuth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auth"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "CreateBackendConfig",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "config"
+                }
+            ]
+        },
+        {
+            "Name": "CreateBackendStorage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                },
+                {
+                    "Name": "storage"
+                }
+            ]
+        },
+        {
+            "Name": "CreateToken",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "token"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteBackend",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteBackendAPI",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteBackendAuth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auth"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteBackendStorage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                },
+                {
+                    "Name": "storage"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteToken",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "token"
+                }
+            ]
+        },
+        {
+            "Name": "GenerateBackendAPIModels",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "GetBackend",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "GetBackendAPI",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "GetBackendAPIModels",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "GetBackendAuth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auth"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "GetBackendJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "GetBackendStorage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "GetToken",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "token"
+                }
+            ]
+        },
+        {
+            "Name": "ImportBackendAuth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auth"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "ImportBackendStorage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                },
+                {
+                    "Name": "storage"
+                }
+            ]
+        },
+        {
+            "Name": "ListBackendJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "ListS3Buckets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "RemoveAllBackends",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveBackendConfig",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "config"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBackendAPI",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBackendAuth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "auth"
+                },
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBackendConfig",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "config"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBackendJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "job"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBackendStorage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backend"
+                },
+                {
+                    "Name": "environment"
+                },
+                {
+                    "Name": "storage"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "api",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/${AppId}/api/*"
+            ]
+        },
+        {
+            "Name": "auth",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/${AppId}/auth/*"
+            ]
+        },
+        {
+            "Name": "backend",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/${AppId}/*"
+            ]
+        },
+        {
+            "Name": "config",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/${AppId}/config/*"
+            ]
+        },
+        {
+            "Name": "created-backend",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/*"
+            ]
+        },
+        {
+            "Name": "environment",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/${AppId}/environments/*"
+            ]
+        },
+        {
+            "Name": "job",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/${AppId}/job/*"
+            ]
+        },
+        {
+            "Name": "storage",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/${AppId}/storage/*"
+            ]
+        },
+        {
+            "Name": "token",
+            "ARNFormats": [
+                "arn:${Partition}:amplifybackend:${Region}:${Account}:/backend/${AppId}/challenge/*"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

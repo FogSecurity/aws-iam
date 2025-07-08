@@ -1,0 +1,68 @@
+{
+    "Name": "ssmmessages",
+    "Actions": [
+        {
+            "Name": "CreateControlChannel",
+            "ActionConditionKeys": [
+                "ec2:SourceInstanceARN",
+                "ssm:SourceInstanceARN"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateDataChannel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "OpenControlChannel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "OpenDataChannel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "ec2:SourceInstanceARN",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "ssm:SourceInstanceARN",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

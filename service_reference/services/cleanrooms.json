@@ -1,0 +1,1744 @@
+{
+    "Name": "cleanrooms",
+    "Actions": [
+        {
+            "Name": "BatchGetCollaborationAnalysisTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                },
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetSchema",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                },
+                {
+                    "Name": "idmappingtable"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetSchemaAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                },
+                {
+                    "Name": "idmappingtable"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAnalysisTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "membership",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateCollaboration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateConfiguredAudienceModelAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredaudiencemodelassociation",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "membership",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateConfiguredTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateConfiguredTableAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable"
+                }
+            ]
+        },
+        {
+            "Name": "CreateConfiguredTableAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "configuredtableassociation",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "membership",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateConfiguredTableAssociationAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtableassociation",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateIdMappingTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idmappingtable",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "membership",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateIdNamespaceAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idnamespaceassociation",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "membership",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateMembership",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "membership",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreatePrivacyBudgetTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "privacybudgettemplate",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAnalysisTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCollaboration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConfiguredAudienceModelAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredaudiencemodelassociation"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConfiguredTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConfiguredTableAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConfiguredTableAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtableassociation"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConfiguredTableAssociationAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtableassociation"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteIdMappingTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idmappingtable"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteIdNamespaceAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idnamespaceassociation"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteMember",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteMembership",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePrivacyBudgetTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "privacybudgettemplate"
+                }
+            ]
+        },
+        {
+            "Name": "GetAnalysisTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                }
+            ]
+        },
+        {
+            "Name": "GetCollaboration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "GetCollaborationAnalysisTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                },
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "GetCollaborationConfiguredAudienceModelAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "configuredaudiencemodelassociation"
+                }
+            ]
+        },
+        {
+            "Name": "GetCollaborationIdNamespaceAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "idnamespaceassociation"
+                }
+            ]
+        },
+        {
+            "Name": "GetCollaborationPrivacyBudgetTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "privacybudgettemplate"
+                }
+            ]
+        },
+        {
+            "Name": "GetConfiguredAudienceModelAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredaudiencemodelassociation"
+                }
+            ]
+        },
+        {
+            "Name": "GetConfiguredTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable"
+                }
+            ]
+        },
+        {
+            "Name": "GetConfiguredTableAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable"
+                }
+            ]
+        },
+        {
+            "Name": "GetConfiguredTableAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtableassociation"
+                }
+            ]
+        },
+        {
+            "Name": "GetConfiguredTableAssociationAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtableassociation"
+                }
+            ]
+        },
+        {
+            "Name": "GetIdMappingTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idmappingtable"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "GetIdNamespaceAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idnamespaceassociation"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "GetMembership",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "GetPrivacyBudgetTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "privacybudgettemplate"
+                }
+            ]
+        },
+        {
+            "Name": "GetProtectedJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "GetProtectedQuery",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "GetSchema",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                }
+            ]
+        },
+        {
+            "Name": "GetSchemaAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                }
+            ]
+        },
+        {
+            "Name": "ListAnalysisTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "ListCollaborationAnalysisTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "ListCollaborationConfiguredAudienceModelAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "ListCollaborationIdNamespaceAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "ListCollaborationPrivacyBudgetTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "ListCollaborationPrivacyBudgets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "ListCollaborations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListConfiguredAudienceModelAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredaudiencemodelassociation"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "ListConfiguredTableAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtableassociation"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "ListConfiguredTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListIdMappingTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idmappingtable"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "ListIdNamespaceAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idnamespaceassociation"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "ListMembers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "ListMemberships",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListPrivacyBudgetTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                },
+                {
+                    "Name": "privacybudgettemplate"
+                }
+            ]
+        },
+        {
+            "Name": "ListPrivacyBudgets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "ListProtectedJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "ListProtectedQueries",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "ListSchemas",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                },
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "configuredaudiencemodelassociation"
+                },
+                {
+                    "Name": "configuredtable"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                },
+                {
+                    "Name": "membership"
+                },
+                {
+                    "Name": "privacybudgettemplate"
+                }
+            ]
+        },
+        {
+            "Name": "PassCollaboration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "PassMembership",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "PopulateIdMappingTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idmappingtable"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "PreviewPrivacyImpact",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "StartProtectedJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "StartProtectedQuery",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                },
+                {
+                    "Name": "idmappingtable"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                },
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "configuredaudiencemodelassociation"
+                },
+                {
+                    "Name": "configuredtable"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                },
+                {
+                    "Name": "idmappingtable"
+                },
+                {
+                    "Name": "idnamespaceassociation"
+                },
+                {
+                    "Name": "membership"
+                },
+                {
+                    "Name": "privacybudgettemplate"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                },
+                {
+                    "Name": "collaboration"
+                },
+                {
+                    "Name": "configuredaudiencemodelassociation"
+                },
+                {
+                    "Name": "configuredtable"
+                },
+                {
+                    "Name": "configuredtableassociation"
+                },
+                {
+                    "Name": "idmappingtable"
+                },
+                {
+                    "Name": "idnamespaceassociation"
+                },
+                {
+                    "Name": "membership"
+                },
+                {
+                    "Name": "privacybudgettemplate"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAnalysisTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "analysistemplate"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCollaboration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConfiguredAudienceModelAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredaudiencemodelassociation"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConfiguredTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConfiguredTableAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtable"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConfiguredTableAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtableassociation"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConfiguredTableAssociationAnalysisRule",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "configuredtableassociation"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateIdMappingTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idmappingtable"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateIdNamespaceAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "idnamespaceassociation"
+                },
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateMembership",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "UpdatePrivacyBudgetTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "privacybudgettemplate"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateProtectedJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateProtectedQuery",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "membership"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "analysistemplate",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/analysistemplate/${AnalysisTemplateId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "collaboration",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:collaboration/${CollaborationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "configuredaudiencemodelassociation",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/configuredaudiencemodelassociation/${ConfiguredAudienceModelAssociationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "configuredtable",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:configuredtable/${ConfiguredTableId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "configuredtableassociation",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/configuredtableassociation/${ConfiguredTableAssociationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "idmappingtable",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/idmappingtable/${IdMappingTableId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "idnamespaceassociation",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/idnamespaceassociation/${IdNamespaceAssociationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "membership",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "privacybudgettemplate",
+            "ARNFormats": [
+                "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/privacybudgettemplate/${PrivacyBudgetTemplateId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

@@ -1,0 +1,1616 @@
+{
+    "Name": "profile",
+    "Actions": [
+        {
+            "Name": "AddProfileKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetCalculatedAttributeForProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes"
+                },
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "BatchGetProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCalculatedAttributeDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                },
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateDomainLayout",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "layouts",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateEventStream",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-streams",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateEventTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-triggers",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateIntegrationWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "integrations",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSegmentDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "segment-definitions",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateSegmentEstimate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSegmentSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "segment-definitions"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "CreateUploadJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCalculatedAttributeDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes"
+                },
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDomainLayout",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "layouts"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEventStream",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-streams"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEventTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-triggers"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteIntegration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "integrations"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteProfileKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteProfileObject",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "object-types"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteProfileObjectType",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "object-types"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSegmentDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "segment-definitions"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "DetectProfileObjectType",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetAutoMergingPreview",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetCalculatedAttributeDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes"
+                },
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetCalculatedAttributeForProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes"
+                },
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetDomainLayout",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "layouts"
+                }
+            ]
+        },
+        {
+            "Name": "GetEventStream",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-streams"
+                }
+            ]
+        },
+        {
+            "Name": "GetEventTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-triggers"
+                }
+            ]
+        },
+        {
+            "Name": "GetIdentityResolutionJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetIntegration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "integrations"
+                }
+            ]
+        },
+        {
+            "Name": "GetMatches",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetProfileObjectType",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "object-types"
+                }
+            ]
+        },
+        {
+            "Name": "GetProfileObjectTypeTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetSegmentDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "segment-definitions"
+                }
+            ]
+        },
+        {
+            "Name": "GetSegmentEstimate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetSegmentMembership",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "segment-definitions"
+                }
+            ]
+        },
+        {
+            "Name": "GetSegmentSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "segment-definitions"
+                }
+            ]
+        },
+        {
+            "Name": "GetSimilarProfiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetUploadJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetUploadJobPath",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "GetWorkflowSteps",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListAccountIntegrations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListCalculatedAttributeDefinitions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListCalculatedAttributesForProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListDomainLayouts",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListDomains",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEventStreams",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListEventTriggers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListIdentityResolutionJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListIntegrations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListObjectTypeAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "object-types"
+                }
+            ]
+        },
+        {
+            "Name": "ListProfileAttributeValues",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListProfileObjectTypeTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListProfileObjectTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListProfileObjects",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "object-types"
+                }
+            ]
+        },
+        {
+            "Name": "ListRuleBasedMatches",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListSegmentDefinitions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes"
+                },
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-streams"
+                },
+                {
+                    "Name": "event-triggers"
+                },
+                {
+                    "Name": "integrations"
+                },
+                {
+                    "Name": "layouts"
+                },
+                {
+                    "Name": "object-types"
+                },
+                {
+                    "Name": "segment-definitions"
+                }
+            ]
+        },
+        {
+            "Name": "ListUploadJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "ListWorkflows",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "MergeProfiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "PutIntegration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "integrations",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "PutProfileObject",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "object-types"
+                }
+            ]
+        },
+        {
+            "Name": "PutProfileObjectType",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "object-types",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "SearchProfiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "StartUploadJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "StopUploadJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes"
+                },
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-streams"
+                },
+                {
+                    "Name": "event-triggers"
+                },
+                {
+                    "Name": "integrations"
+                },
+                {
+                    "Name": "layouts"
+                },
+                {
+                    "Name": "object-types"
+                },
+                {
+                    "Name": "segment-definitions"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes"
+                },
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-streams"
+                },
+                {
+                    "Name": "event-triggers"
+                },
+                {
+                    "Name": "integrations"
+                },
+                {
+                    "Name": "layouts"
+                },
+                {
+                    "Name": "object-types"
+                },
+                {
+                    "Name": "segment-definitions"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCalculatedAttributeDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "calculated-attributes"
+                },
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDomainLayout",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "layouts"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateEventTrigger",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                },
+                {
+                    "Name": "event-triggers"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "domains"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "calculated-attributes",
+            "ARNFormats": [
+                "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/calculated-attributes/${CalculatedAttributeName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "domains",
+            "ARNFormats": [
+                "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "event-streams",
+            "ARNFormats": [
+                "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/event-streams/${EventStreamName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "event-triggers",
+            "ARNFormats": [
+                "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/event-triggers/${EventTriggerName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "integrations",
+            "ARNFormats": [
+                "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/integrations/${Uri}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "layouts",
+            "ARNFormats": [
+                "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/layouts/${LayoutDefinitionName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "object-types",
+            "ARNFormats": [
+                "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/object-types/${ObjectTypeName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "segment-definitions",
+            "ARNFormats": [
+                "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/segment-definitions/${SegmentDefinitionName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

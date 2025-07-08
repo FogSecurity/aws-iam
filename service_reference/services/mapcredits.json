@@ -1,0 +1,62 @@
+{
+    "Name": "mapcredits",
+    "Actions": [
+        {
+            "Name": "ListAssociatedPrograms",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agreement"
+                }
+            ]
+        },
+        {
+            "Name": "ListQuarterCredits",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agreement"
+                }
+            ]
+        },
+        {
+            "Name": "ListQuarterSpend",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agreement"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "agreement",
+            "ARNFormats": [
+                "arn:${Partition}:mapcredits:::${Agreement}/${AgreementId}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

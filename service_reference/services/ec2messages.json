@@ -1,0 +1,94 @@
+{
+    "Name": "ec2messages",
+    "Actions": [
+        {
+            "Name": "AcknowledgeMessage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteMessage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "FailMessage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetMessages",
+            "ActionConditionKeys": [
+                "ec2:SourceInstanceARN",
+                "ssm:SourceInstanceARN"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "SendReply",
+            "ActionConditionKeys": [
+                "ec2:SourceInstanceARN",
+                "ssm:SourceInstanceARN"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "ec2:SourceInstanceARN",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "ssm:SourceInstanceARN",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

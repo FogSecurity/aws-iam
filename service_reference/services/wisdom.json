@@ -1,0 +1,1842 @@
+{
+    "Name": "wisdom",
+    "Actions": [
+        {
+            "Name": "ActivateMessageTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "AllowVendedLogDeliveryForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAIAgent",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAIAgentVersion",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIAgent"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAIGuardrail",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAIGuardrailVersion",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIGuardrail"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAIPrompt",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAIPromptVersion",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIPrompt"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAssistant",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateAssistantAssociation",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "CreateContent",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "CreateContentAssociation",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "CreateKnowledgeBase",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateMessageTemplate",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "CreateMessageTemplateAttachment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "CreateMessageTemplateVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "CreateQuickResponse",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateSession",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeactivateMessageTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAIAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIAgent"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAIAgentVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIAgent"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAIGuardrail",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIGuardrail"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAIGuardrailVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIGuardrail"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAIPrompt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIPrompt"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAIPromptVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIPrompt"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAssistant",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAssistantAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "AssistantAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteContent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteContentAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "ContentAssociation"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteImportJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteMessageTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteMessageTemplateAttachment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteQuickResponse",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "QuickResponse"
+                }
+            ]
+        },
+        {
+            "Name": "GetAIAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIAgent"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "GetAIGuardrail",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIGuardrail"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "GetAIPrompt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIPrompt"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "GetAssistant",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "GetAssistantAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "AssistantAssociation"
+                }
+            ]
+        },
+        {
+            "Name": "GetContent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "GetContentAssociation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "ContentAssociation"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "GetContentSummary",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "GetImportJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "GetKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "GetMessageTemplate",
+            "ActionConditionKeys": [
+                "wisdom:MessageTemplate/RoutingProfileArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "GetNextMessage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "Session"
+                }
+            ]
+        },
+        {
+            "Name": "GetQuickResponse",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "QuickResponse"
+                }
+            ]
+        },
+        {
+            "Name": "GetRecommendations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "GetSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "Session"
+                }
+            ]
+        },
+        {
+            "Name": "ListAIAgentVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIAgent"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "ListAIAgents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "ListAIGuardrailVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIGuardrail"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "ListAIGuardrails",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "ListAIPromptVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIPrompt"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "ListAIPrompts",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "ListAssistantAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListAssistants",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListContentAssociations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "ListContents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "ListImportJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "ListKnowledgeBases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListMessageTemplateVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "ListMessageTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "ListMessages",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "Session"
+                }
+            ]
+        },
+        {
+            "Name": "ListQuickResponses",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "NotifyRecommendationsReceived",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutFeedback",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "QueryAssistant",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveAssistantAIAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveKnowledgeBaseTemplateUri",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "RenderMessageTemplate",
+            "ActionConditionKeys": [
+                "wisdom:MessageTemplate/RoutingProfileArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "SearchContent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "SearchMessageTemplates",
+            "ActionConditionKeys": [
+                "wisdom:SearchFilter/Qualifier",
+                "wisdom:SearchFilter/RoutingProfileArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "SearchQuickResponses",
+            "ActionConditionKeys": [
+                "wisdom:SearchFilter/RoutingProfileArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "SearchSessions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "SendMessage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "Session"
+                }
+            ]
+        },
+        {
+            "Name": "StartContentUpload",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "StartImportJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "AssistantAssociation"
+                },
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "ContentAssociation"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                },
+                {
+                    "Name": "QuickResponse"
+                },
+                {
+                    "Name": "Session"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "AssistantAssociation"
+                },
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "ContentAssociation"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                },
+                {
+                    "Name": "QuickResponse"
+                },
+                {
+                    "Name": "Session"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAIAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIAgent"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAIGuardrail",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIGuardrail"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAIPrompt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "AIPrompt"
+                },
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAssistantAIAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Content"
+                },
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateKnowledgeBaseTemplateUri",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateMessageTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateMessageTemplateMetadata",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "MessageTemplate"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateQuickResponse",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "KnowledgeBase"
+                },
+                {
+                    "Name": "QuickResponse"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "Session"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSessionData",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Assistant"
+                },
+                {
+                    "Name": "Session"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "wisdom:MessageTemplate/RoutingProfileArn",
+            "Types": [
+                "ArrayOfARN"
+            ]
+        },
+        {
+            "Name": "wisdom:SearchFilter/Qualifier",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "wisdom:SearchFilter/RoutingProfileArn",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "AIAgent",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:ai-agent/${AssistantId}/${AIAgentId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "AIGuardrail",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:ai-guardrail/${AssistantId}/${AIGuardrailId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "AIPrompt",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:ai-prompt/${AssistantId}/${AIPromptId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Assistant",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:assistant/${AssistantId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "AssistantAssociation",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:association/${AssistantId}/${AssistantAssociationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Content",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:content/${KnowledgeBaseId}/${ContentId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "ContentAssociation",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:content-association/${KnowledgeBaseId}/${ContentId}/${ContentAssociationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "KnowledgeBase",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "MessageTemplate",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:message-template/${KnowledgeBaseId}/${MessageTemplateId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "wisdom:MessageTemplate/RoutingProfileArn"
+            ]
+        },
+        {
+            "Name": "QuickResponse",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:quick-response/${KnowledgeBaseId}/${QuickResponseId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Session",
+            "ARNFormats": [
+                "arn:${Partition}:wisdom:${Region}:${Account}:session/${AssistantId}/${SessionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

@@ -1,0 +1,252 @@
+{
+    "Name": "redshift-data",
+    "Actions": [
+        {
+            "Name": "BatchExecuteStatement",
+            "ActionConditionKeys": [
+                "redshift-data:glue-catalog-arn",
+                "redshift-data:session-owner-iam-userid"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "workgroup"
+                }
+            ]
+        },
+        {
+            "Name": "CancelStatement",
+            "ActionConditionKeys": [
+                "redshift-data:statement-owner-iam-userid"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DescribeStatement",
+            "ActionConditionKeys": [
+                "redshift-data:statement-owner-iam-userid"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "workgroup"
+                }
+            ]
+        },
+        {
+            "Name": "ExecuteStatement",
+            "ActionConditionKeys": [
+                "redshift-data:glue-catalog-arn",
+                "redshift-data:session-owner-iam-userid"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "workgroup"
+                }
+            ]
+        },
+        {
+            "Name": "GetStagingBucketLocation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "managed-workgroup"
+                }
+            ]
+        },
+        {
+            "Name": "GetStatementResult",
+            "ActionConditionKeys": [
+                "redshift-data:statement-owner-iam-userid"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListDatabases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "workgroup"
+                }
+            ]
+        },
+        {
+            "Name": "ListSchemas",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "workgroup"
+                }
+            ]
+        },
+        {
+            "Name": "ListStatements",
+            "ActionConditionKeys": [
+                "redshift-data:statement-owner-iam-userid"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                },
+                {
+                    "Name": "workgroup"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "redshift-data:glue-catalog-arn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "redshift-data:session-owner-iam-userid",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "redshift-data:statement-owner-iam-userid",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "cluster",
+            "ARNFormats": [
+                "arn:${Partition}:redshift:${Region}:${Account}:cluster:${ClusterName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "managed-workgroup",
+            "ARNFormats": [
+                "arn:${Partition}:redshift-serverless:${Region}:${Account}:managed-workgroup/${ManagedWorkgroupId}"
+            ]
+        },
+        {
+            "Name": "workgroup",
+            "ARNFormats": [
+                "arn:${Partition}:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

@@ -1,0 +1,889 @@
+{
+    "Name": "apprunner",
+    "Actions": [
+        {
+            "Name": "AssociateCustomDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateWebAcl",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "webacl"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAutoScalingConfiguration",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "CreateConnection",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "CreateObservabilityConfiguration",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "observabilityconfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "CreateService",
+            "ActionConditionKeys": [
+                "apprunner:AutoScalingConfigurationArn",
+                "apprunner:ConnectionArn",
+                "apprunner:ObservabilityConfigurationArn",
+                "apprunner:VpcConnectorArn",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "observabilityconfiguration"
+                },
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "vpcconnector"
+                }
+            ]
+        },
+        {
+            "Name": "CreateVpcConnector",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vpcconnector"
+                }
+            ]
+        },
+        {
+            "Name": "CreateVpcIngressConnection",
+            "ActionConditionKeys": [
+                "apprunner:ServiceArn",
+                "apprunner:VpcEndpointId",
+                "apprunner:VpcId",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vpcingressconnection"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAutoScalingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteObservabilityConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "observabilityconfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteService",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVpcConnector",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vpcconnector"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVpcIngressConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vpcingressconnection"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeAutoScalingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeCustomDomains",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeObservabilityConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "observabilityconfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeOperation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeService",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeVpcConnector",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vpcconnector"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeVpcIngressConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vpcingressconnection"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeWebAclForService",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateCustomDomain",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateWebAcl",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "ListAssociatedServicesForWebAcl",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "webacl"
+                }
+            ]
+        },
+        {
+            "Name": "ListAutoScalingConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListConnections",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListObservabilityConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListOperations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "ListServices",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListServicesForAutoScalingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "observabilityconfiguration"
+                },
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "vpcconnector"
+                }
+            ]
+        },
+        {
+            "Name": "ListVpcConnectors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListVpcIngressConnections",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "PauseService",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "ResumeService",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "StartDeployment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "observabilityconfiguration"
+                },
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "vpcconnector"
+                },
+                {
+                    "Name": "vpcingressconnection"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "observabilityconfiguration"
+                },
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "vpcconnector"
+                },
+                {
+                    "Name": "vpcingressconnection"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDefaultAutoScalingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateService",
+            "ActionConditionKeys": [
+                "apprunner:AutoScalingConfigurationArn",
+                "apprunner:ConnectionArn",
+                "apprunner:ObservabilityConfigurationArn",
+                "apprunner:VpcConnectorArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoscalingconfiguration"
+                },
+                {
+                    "Name": "connection"
+                },
+                {
+                    "Name": "observabilityconfiguration"
+                },
+                {
+                    "Name": "service"
+                },
+                {
+                    "Name": "vpcconnector"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateVpcIngressConnection",
+            "ActionConditionKeys": [
+                "apprunner:VpcEndpointId",
+                "apprunner:VpcId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "vpcingressconnection"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "apprunner:AutoScalingConfigurationArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "apprunner:ConnectionArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "apprunner:ObservabilityConfigurationArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "apprunner:ServiceArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "apprunner:VpcConnectorArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "apprunner:VpcEndpointId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "apprunner:VpcId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "autoscalingconfiguration",
+            "ARNFormats": [
+                "arn:${Partition}:apprunner:${Region}:${Account}:autoscalingconfiguration/${AutoscalingConfigurationName}/${AutoscalingConfigurationVersion}/${AutoscalingConfigurationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "connection",
+            "ARNFormats": [
+                "arn:${Partition}:apprunner:${Region}:${Account}:connection/${ConnectionName}/${ConnectionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "observabilityconfiguration",
+            "ARNFormats": [
+                "arn:${Partition}:apprunner:${Region}:${Account}:observabilityconfiguration/${ObservabilityConfigurationName}/${ObservabilityConfigurationVersion}/${ObservabilityConfigurationId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "service",
+            "ARNFormats": [
+                "arn:${Partition}:apprunner:${Region}:${Account}:service/${ServiceName}/${ServiceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "vpcconnector",
+            "ARNFormats": [
+                "arn:${Partition}:apprunner:${Region}:${Account}:vpcconnector/${VpcConnectorName}/${VpcConnectorVersion}/${VpcConnectorId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "vpcingressconnection",
+            "ARNFormats": [
+                "arn:${Partition}:apprunner:${Region}:${Account}:vpcingressconnection/${VpcIngressConnectionName}/${VpcIngressConnectionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "webacl",
+            "ARNFormats": [
+                "arn:${Partition}:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

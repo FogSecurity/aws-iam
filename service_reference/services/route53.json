@@ -1,0 +1,1138 @@
+{
+    "Name": "route53",
+    "Actions": [
+        {
+            "Name": "ActivateKeySigningKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateVPCWithHostedZone",
+            "ActionConditionKeys": [
+                "route53:VPCs"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "ChangeCidrCollection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cidrcollection"
+                }
+            ]
+        },
+        {
+            "Name": "ChangeResourceRecordSets",
+            "ActionConditionKeys": [
+                "route53:ChangeResourceRecordSetsActions",
+                "route53:ChangeResourceRecordSetsNormalizedRecordNames",
+                "route53:ChangeResourceRecordSetsRecordTypes"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "ChangeTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "healthcheck"
+                },
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCidrCollection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateHealthCheck",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateHostedZone",
+            "ActionConditionKeys": [
+                "route53:VPCs"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateKeySigningKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "CreateQueryLoggingConfig",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "CreateReusableDelegationSet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateTrafficPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateTrafficPolicyInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                },
+                {
+                    "Name": "trafficpolicy"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTrafficPolicyVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicy"
+                }
+            ]
+        },
+        {
+            "Name": "CreateVPCAssociationAuthorization",
+            "ActionConditionKeys": [
+                "route53:VPCs"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "DeactivateKeySigningKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCidrCollection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cidrcollection"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteHealthCheck",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "healthcheck"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteHostedZone",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteKeySigningKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteQueryLoggingConfig",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queryloggingconfig"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteReusableDelegationSet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "delegationset"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTrafficPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicy"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTrafficPolicyInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicyinstance"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVPCAssociationAuthorization",
+            "ActionConditionKeys": [
+                "route53:VPCs"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "DisableHostedZoneDNSSEC",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateVPCFromHostedZone",
+            "ActionConditionKeys": [
+                "route53:VPCs"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "EnableHostedZoneDNSSEC",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "GetAccountLimit",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetChange",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "change"
+                }
+            ]
+        },
+        {
+            "Name": "GetCheckerIpRanges",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetDNSSEC",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "GetGeoLocation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetHealthCheck",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "healthcheck"
+                }
+            ]
+        },
+        {
+            "Name": "GetHealthCheckCount",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetHealthCheckLastFailureReason",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "healthcheck"
+                }
+            ]
+        },
+        {
+            "Name": "GetHealthCheckStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "healthcheck"
+                }
+            ]
+        },
+        {
+            "Name": "GetHostedZone",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "GetHostedZoneCount",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetHostedZoneLimit",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "GetQueryLoggingConfig",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "queryloggingconfig"
+                }
+            ]
+        },
+        {
+            "Name": "GetReusableDelegationSet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "delegationset"
+                }
+            ]
+        },
+        {
+            "Name": "GetReusableDelegationSetLimit",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "delegationset"
+                }
+            ]
+        },
+        {
+            "Name": "GetTrafficPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicy"
+                }
+            ]
+        },
+        {
+            "Name": "GetTrafficPolicyInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicyinstance"
+                }
+            ]
+        },
+        {
+            "Name": "GetTrafficPolicyInstanceCount",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListCidrBlocks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cidrcollection"
+                }
+            ]
+        },
+        {
+            "Name": "ListCidrCollections",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListCidrLocations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cidrcollection"
+                }
+            ]
+        },
+        {
+            "Name": "ListGeoLocations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListHealthChecks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListHostedZones",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListHostedZonesByName",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListHostedZonesByVPC",
+            "ActionConditionKeys": [
+                "route53:VPCs"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListQueryLoggingConfigs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "ListResourceRecordSets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "ListReusableDelegationSets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "healthcheck"
+                },
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "healthcheck"
+                },
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "ListTrafficPolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTrafficPolicyInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTrafficPolicyInstancesByHostedZone",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "ListTrafficPolicyInstancesByPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicy"
+                }
+            ]
+        },
+        {
+            "Name": "ListTrafficPolicyVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicy"
+                }
+            ]
+        },
+        {
+            "Name": "ListVPCAssociationAuthorizations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "TestDNSAnswer",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "UpdateHealthCheck",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "healthcheck"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateHostedZoneComment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hostedzone"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTrafficPolicyComment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicy"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTrafficPolicyInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trafficpolicyinstance"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "route53:ChangeResourceRecordSetsActions",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "route53:ChangeResourceRecordSetsNormalizedRecordNames",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "route53:ChangeResourceRecordSetsRecordTypes",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "route53:VPCs",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "change",
+            "ARNFormats": [
+                "arn:${Partition}:route53:::change/${Id}"
+            ]
+        },
+        {
+            "Name": "cidrcollection",
+            "ARNFormats": [
+                "arn:${Partition}:route53:::cidrcollection/${Id}"
+            ]
+        },
+        {
+            "Name": "delegationset",
+            "ARNFormats": [
+                "arn:${Partition}:route53:::delegationset/${Id}"
+            ]
+        },
+        {
+            "Name": "healthcheck",
+            "ARNFormats": [
+                "arn:${Partition}:route53:::healthcheck/${Id}"
+            ]
+        },
+        {
+            "Name": "hostedzone",
+            "ARNFormats": [
+                "arn:${Partition}:route53:::hostedzone/${Id}"
+            ]
+        },
+        {
+            "Name": "queryloggingconfig",
+            "ARNFormats": [
+                "arn:${Partition}:route53:::queryloggingconfig/${Id}"
+            ]
+        },
+        {
+            "Name": "trafficpolicy",
+            "ARNFormats": [
+                "arn:${Partition}:route53:::trafficpolicy/${Id}"
+            ]
+        },
+        {
+            "Name": "trafficpolicyinstance",
+            "ARNFormats": [
+                "arn:${Partition}:route53:::trafficpolicyinstance/${Id}"
+            ]
+        },
+        {
+            "Name": "vpc",
+            "ARNFormats": [
+                "arn:${Partition}:ec2:${Region}:${Account}:vpc/${VpcId}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

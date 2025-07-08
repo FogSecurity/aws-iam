@@ -1,0 +1,1348 @@
+{
+    "Name": "dynamodb",
+    "Actions": [
+        {
+            "Name": "BatchGetItem",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:Select"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "BatchWriteItem",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "ConditionCheckItem",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateBackup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateGlobalTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-table"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateGlobalTableWitness",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTable",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "CreateTableReplica",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteBackup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backup"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteGlobalTableWitness",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteItem",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "stream"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTableReplica",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeBackup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backup"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeContinuousBackups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeContributorInsights",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "index"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeExport",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "export"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeGlobalTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-table"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeGlobalTableSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-table"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeImport",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "import"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeKinesisStreamingDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeLimits",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeReservedCapacity",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeReservedCapacityOfferings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeStream",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "stream"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeTableReplicaAutoScaling",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeTimeToLive",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "DisableKinesisStreamingDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "EnableKinesisStreamingDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "ExportTableToPointInTime",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetAbacStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetItem",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:Select"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetRecords",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "stream"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "stream"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "GetShardIterator",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "stream"
+                }
+            ]
+        },
+        {
+            "Name": "ImportTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "ListBackups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListContributorInsights",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListExports",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListGlobalTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListImports",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListStreams",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsOfResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "PartiQLDelete",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnValues"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "PartiQLInsert",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "PartiQLSelect",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:FullTableScan",
+                "dynamodb:LeadingKeys",
+                "dynamodb:Select"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "index"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "PartiQLUpdate",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnValues"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "PurchaseReservedCapacityOfferings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutItem",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "PutResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "stream"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "Query",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues",
+                "dynamodb:Select"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "index"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreTableFromAwsBackup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreTableFromBackup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "backup"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "RestoreTableToPointInTime",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "Scan",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues",
+                "dynamodb:Select"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "index"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "StartAwsBackupJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAbacStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UpdateContinuousBackups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateContributorInsights",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "index"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateGlobalTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-table"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateGlobalTableSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-table"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateGlobalTableVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "global-table"
+                },
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateItem",
+            "ActionConditionKeys": [
+                "dynamodb:Attributes",
+                "dynamodb:EnclosingOperation",
+                "dynamodb:LeadingKeys",
+                "dynamodb:ReturnConsumedCapacity",
+                "dynamodb:ReturnValues"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateKinesisStreamingDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTable",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTableReplicaAutoScaling",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateTimeToLive",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "table"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "dynamodb:Attributes",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "dynamodb:EnclosingOperation",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dynamodb:FullTableScan",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "dynamodb:LeadingKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "dynamodb:ReturnConsumedCapacity",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dynamodb:ReturnValues",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dynamodb:Select",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "backup",
+            "ARNFormats": [
+                "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/backup/${BackupName}"
+            ]
+        },
+        {
+            "Name": "export",
+            "ARNFormats": [
+                "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/export/${ExportName}"
+            ]
+        },
+        {
+            "Name": "global-table",
+            "ARNFormats": [
+                "arn:${Partition}:dynamodb::${Account}:global-table/${GlobalTableName}"
+            ]
+        },
+        {
+            "Name": "import",
+            "ARNFormats": [
+                "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/import/${ImportName}"
+            ]
+        },
+        {
+            "Name": "index",
+            "ARNFormats": [
+                "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/index/${IndexName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "stream",
+            "ARNFormats": [
+                "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/stream/${StreamLabel}"
+            ]
+        },
+        {
+            "Name": "table",
+            "ARNFormats": [
+                "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

@@ -1,0 +1,3696 @@
+{
+    "Name": "bedrock",
+    "Actions": [
+        {
+            "Name": "AllowVendedLogDeliveryForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "ApplyGuardrail",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "guardrail"
+                },
+                {
+                    "Name": "guardrail-profile"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateAgentCollaborator",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateAgentKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                },
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateThirdPartyKnowledgeBase",
+            "ActionConditionKeys": [
+                "bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "BatchDeleteEvaluationJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-job"
+                }
+            ]
+        },
+        {
+            "Name": "CallWithBearerToken",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "CreateAgent",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateAgentActionGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "CreateAgentAlias",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "CreateBlueprint",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateBlueprintVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCustomModel",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateDataAutomationProject",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDataSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "CreateEvaluationJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "default-prompt-router"
+                },
+                {
+                    "Name": "foundation-model"
+                },
+                {
+                    "Name": "prompt-router"
+                }
+            ]
+        },
+        {
+            "Name": "CreateFlow",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateFlowAlias",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "CreateFlowVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "CreateFoundationModelAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateGuardrail",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "guardrail-profile"
+                }
+            ]
+        },
+        {
+            "Name": "CreateGuardrailVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "guardrail"
+                }
+            ]
+        },
+        {
+            "Name": "CreateInferenceProfile",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application-inference-profile"
+                },
+                {
+                    "Name": "foundation-model"
+                },
+                {
+                    "Name": "inference-profile"
+                }
+            ]
+        },
+        {
+            "Name": "CreateInvocation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "CreateKnowledgeBase",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateMarketplaceModelEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateModelCopyJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                }
+            ]
+        },
+        {
+            "Name": "CreateModelCustomizationJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "foundation-model"
+                }
+            ]
+        },
+        {
+            "Name": "CreateModelEvaluationJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "foundation-model"
+                }
+            ]
+        },
+        {
+            "Name": "CreateModelImportJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateModelInvocationJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "foundation-model"
+                },
+                {
+                    "Name": "model-invocation-job"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePrompt",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreatePromptRouter",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application-inference-profile"
+                },
+                {
+                    "Name": "foundation-model"
+                },
+                {
+                    "Name": "inference-profile"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePromptVersion",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                }
+            ]
+        },
+        {
+            "Name": "CreateProvisionedModelThroughput",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "foundation-model"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSession",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAgentActionGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAgentAlias",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-alias"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAgentMemory",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-alias"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAgentVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteBlueprint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCustomModel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDataAutomationProject",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "data-automation-project"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDataSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteFlow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteFlowAlias",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow-alias"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteFlowVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteFoundationModelAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteGuardrail",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "guardrail"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteImportedModel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imported-model"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteInferenceProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application-inference-profile"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteKnowledgeBaseDocuments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteMarketplaceModelAgreement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteMarketplaceModelEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "bedrock-marketplace-model-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteModelInvocationLoggingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeletePrompt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "prompt-version"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePromptRouter",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt-router"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteProvisionedModelThroughput",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "provisioned-model"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "DeregisterMarketplaceModelEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "bedrock-marketplace-model-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DetectGeneratedContent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "foundation-model"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateAgentCollaborator",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateAgentKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                },
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "EndSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "GenerateQuery",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "GetAgentActionGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "GetAgentAlias",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-alias"
+                }
+            ]
+        },
+        {
+            "Name": "GetAgentCollaborator",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "GetAgentKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                },
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "GetAgentMemory",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-alias"
+                }
+            ]
+        },
+        {
+            "Name": "GetAgentVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "GetAsyncInvoke",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "async-invoke"
+                }
+            ]
+        },
+        {
+            "Name": "GetBlueprint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "GetBlueprintRecommendation",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetCustomModel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataAutomationProject",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "data-automation-project"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataAutomationStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "data-automation-invocation-job"
+                }
+            ]
+        },
+        {
+            "Name": "GetDataSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "GetEvaluationJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-job"
+                }
+            ]
+        },
+        {
+            "Name": "GetExecutionFlowSnapshot",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                },
+                {
+                    "Name": "flow-execution"
+                }
+            ]
+        },
+        {
+            "Name": "GetFlow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "GetFlowAlias",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow-alias"
+                }
+            ]
+        },
+        {
+            "Name": "GetFlowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                },
+                {
+                    "Name": "flow-execution"
+                }
+            ]
+        },
+        {
+            "Name": "GetFlowVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "GetFoundationModel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "foundation-model"
+                }
+            ]
+        },
+        {
+            "Name": "GetFoundationModelAvailability",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetGuardrail",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "guardrail"
+                }
+            ]
+        },
+        {
+            "Name": "GetImportedModel",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "imported-model"
+                }
+            ]
+        },
+        {
+            "Name": "GetInferenceProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application-inference-profile"
+                },
+                {
+                    "Name": "inference-profile"
+                }
+            ]
+        },
+        {
+            "Name": "GetIngestionJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "GetInvocationStep",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "GetKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "GetKnowledgeBaseDocuments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "GetMarketplaceModelEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "bedrock-marketplace-model-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "GetModelCopyJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "model-copy-job"
+                }
+            ]
+        },
+        {
+            "Name": "GetModelCustomizationJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "model-customization-job"
+                }
+            ]
+        },
+        {
+            "Name": "GetModelEvaluationJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "model-evaluation-job"
+                }
+            ]
+        },
+        {
+            "Name": "GetModelImportJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "model-import-job"
+                }
+            ]
+        },
+        {
+            "Name": "GetModelInvocationJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "model-invocation-job"
+                }
+            ]
+        },
+        {
+            "Name": "GetModelInvocationLoggingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetPrompt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "prompt-version"
+                }
+            ]
+        },
+        {
+            "Name": "GetPromptRouter",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "default-prompt-router"
+                },
+                {
+                    "Name": "prompt-router"
+                }
+            ]
+        },
+        {
+            "Name": "GetProvisionedModelThroughput",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "provisioned-model"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                }
+            ]
+        },
+        {
+            "Name": "GetSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "GetUseCaseForModelAccess",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "IngestKnowledgeBaseDocuments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "InvokeAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-alias"
+                }
+            ]
+        },
+        {
+            "Name": "InvokeBlueprintRecommendationAsync",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "data-automation-profile"
+                }
+            ]
+        },
+        {
+            "Name": "InvokeBuilder",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "InvokeDataAutomationAsync",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                },
+                {
+                    "Name": "data-automation-profile"
+                },
+                {
+                    "Name": "data-automation-project"
+                }
+            ]
+        },
+        {
+            "Name": "InvokeFlow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow-alias"
+                }
+            ]
+        },
+        {
+            "Name": "InvokeInlineAgent",
+            "ActionConditionKeys": [
+                "bedrock:InlineAgentName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "InvokeModel",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "bedrock:GuardrailIdentifier",
+                "bedrock:InferenceProfileArn",
+                "bedrock:PromptRouterArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application-inference-profile"
+                },
+                {
+                    "Name": "async-invoke"
+                },
+                {
+                    "Name": "bedrock-marketplace-model-endpoint"
+                },
+                {
+                    "Name": "default-prompt-router"
+                },
+                {
+                    "Name": "foundation-model"
+                },
+                {
+                    "Name": "imported-model"
+                },
+                {
+                    "Name": "inference-profile"
+                },
+                {
+                    "Name": "prompt-router"
+                },
+                {
+                    "Name": "provisioned-model"
+                }
+            ]
+        },
+        {
+            "Name": "InvokeModelWithResponseStream",
+            "ActionConditionKeys": [
+                "bedrock:GuardrailIdentifier",
+                "bedrock:InferenceProfileArn",
+                "bedrock:PromptRouterArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application-inference-profile"
+                },
+                {
+                    "Name": "bedrock-marketplace-model-endpoint"
+                },
+                {
+                    "Name": "default-prompt-router"
+                },
+                {
+                    "Name": "foundation-model"
+                },
+                {
+                    "Name": "imported-model"
+                },
+                {
+                    "Name": "inference-profile"
+                },
+                {
+                    "Name": "prompt-router"
+                },
+                {
+                    "Name": "provisioned-model"
+                }
+            ]
+        },
+        {
+            "Name": "ListAgentActionGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "ListAgentAliases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "ListAgentCollaborators",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "ListAgentKnowledgeBases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "ListAgentVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "ListAgents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListAsyncInvokes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListBlueprints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "data-automation-project"
+                }
+            ]
+        },
+        {
+            "Name": "ListCustomModels",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListDataAutomationProjects",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "ListDataSources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "ListEvaluationJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListFlowAliases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "ListFlowExecutionEvents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                },
+                {
+                    "Name": "flow-execution"
+                }
+            ]
+        },
+        {
+            "Name": "ListFlowExecutions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                }
+            ]
+        },
+        {
+            "Name": "ListFlowVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "ListFlows",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListFoundationModelAgreementOffers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListFoundationModels",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListGuardrails",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "guardrail"
+                }
+            ]
+        },
+        {
+            "Name": "ListImportedModels",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListInferenceProfiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListIngestionJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "ListInvocationSteps",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "ListInvocations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "ListKnowledgeBaseDocuments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "ListKnowledgeBases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListMarketplaceModelEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListModelCopyJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListModelCustomizationJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListModelEvaluationJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListModelImportJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListModelInvocationJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListPromptRouters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListPrompts",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                }
+            ]
+        },
+        {
+            "Name": "ListProvisionedModelThroughputs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListSessions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                },
+                {
+                    "Name": "agent-alias"
+                },
+                {
+                    "Name": "application-inference-profile"
+                },
+                {
+                    "Name": "async-invoke"
+                },
+                {
+                    "Name": "blueprint"
+                },
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "data-automation-invocation-job"
+                },
+                {
+                    "Name": "data-automation-project"
+                },
+                {
+                    "Name": "evaluation-job"
+                },
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                },
+                {
+                    "Name": "guardrail"
+                },
+                {
+                    "Name": "imported-model"
+                },
+                {
+                    "Name": "knowledge-base"
+                },
+                {
+                    "Name": "model-copy-job"
+                },
+                {
+                    "Name": "model-customization-job"
+                },
+                {
+                    "Name": "model-evaluation-job"
+                },
+                {
+                    "Name": "model-import-job"
+                },
+                {
+                    "Name": "model-invocation-job"
+                },
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "prompt-router"
+                },
+                {
+                    "Name": "prompt-version"
+                },
+                {
+                    "Name": "provisioned-model"
+                },
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "OptimizePrompt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "PrepareAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "PrepareFlow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "PutFoundationModelEntitlement",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutInvocationStep",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "PutModelInvocationLoggingConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutResourcePolicy",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                }
+            ]
+        },
+        {
+            "Name": "PutUseCaseForModelAccess",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "RegisterMarketplaceModelEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "bedrock-marketplace-model-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "RenderPrompt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "prompt-version"
+                }
+            ]
+        },
+        {
+            "Name": "Rerank",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "Retrieve",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "RetrieveAndGenerate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartFlowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                }
+            ]
+        },
+        {
+            "Name": "StartIngestionJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "StopEvaluationJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "evaluation-job"
+                }
+            ]
+        },
+        {
+            "Name": "StopFlowExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                },
+                {
+                    "Name": "flow-execution"
+                }
+            ]
+        },
+        {
+            "Name": "StopIngestionJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "StopModelCustomizationJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "model-customization-job"
+                }
+            ]
+        },
+        {
+            "Name": "StopModelInvocationJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "model-invocation-job"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                },
+                {
+                    "Name": "agent-alias"
+                },
+                {
+                    "Name": "application-inference-profile"
+                },
+                {
+                    "Name": "async-invoke"
+                },
+                {
+                    "Name": "blueprint"
+                },
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "data-automation-invocation-job"
+                },
+                {
+                    "Name": "data-automation-project"
+                },
+                {
+                    "Name": "evaluation-job"
+                },
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                },
+                {
+                    "Name": "guardrail"
+                },
+                {
+                    "Name": "imported-model"
+                },
+                {
+                    "Name": "knowledge-base"
+                },
+                {
+                    "Name": "model-copy-job"
+                },
+                {
+                    "Name": "model-customization-job"
+                },
+                {
+                    "Name": "model-evaluation-job"
+                },
+                {
+                    "Name": "model-import-job"
+                },
+                {
+                    "Name": "model-invocation-job"
+                },
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "prompt-router"
+                },
+                {
+                    "Name": "prompt-version"
+                },
+                {
+                    "Name": "provisioned-model"
+                },
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                },
+                {
+                    "Name": "agent-alias"
+                },
+                {
+                    "Name": "application-inference-profile"
+                },
+                {
+                    "Name": "async-invoke"
+                },
+                {
+                    "Name": "blueprint"
+                },
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "data-automation-invocation-job"
+                },
+                {
+                    "Name": "data-automation-project"
+                },
+                {
+                    "Name": "evaluation-job"
+                },
+                {
+                    "Name": "flow"
+                },
+                {
+                    "Name": "flow-alias"
+                },
+                {
+                    "Name": "guardrail"
+                },
+                {
+                    "Name": "imported-model"
+                },
+                {
+                    "Name": "knowledge-base"
+                },
+                {
+                    "Name": "model-copy-job"
+                },
+                {
+                    "Name": "model-customization-job"
+                },
+                {
+                    "Name": "model-evaluation-job"
+                },
+                {
+                    "Name": "model-import-job"
+                },
+                {
+                    "Name": "model-invocation-job"
+                },
+                {
+                    "Name": "prompt"
+                },
+                {
+                    "Name": "prompt-router"
+                },
+                {
+                    "Name": "prompt-version"
+                },
+                {
+                    "Name": "provisioned-model"
+                },
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAgent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAgentActionGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAgentAlias",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent-alias"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAgentCollaborator",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAgentKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "agent"
+                },
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBlueprint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDataAutomationProject",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "blueprint"
+                },
+                {
+                    "Name": "data-automation-project"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDataSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFlow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateFlowAlias",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "flow-alias"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateGuardrail",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "guardrail"
+                },
+                {
+                    "Name": "guardrail-profile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateKnowledgeBase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "knowledge-base"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateMarketplaceModelEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "bedrock-marketplace-model-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "UpdatePrompt",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "prompt"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateProvisionedModelThroughput",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                },
+                {
+                    "Name": "foundation-model"
+                },
+                {
+                    "Name": "provisioned-model"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "session"
+                }
+            ]
+        },
+        {
+            "Name": "ValidateFlowDefinition",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "bedrock:GuardrailIdentifier",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "bedrock:InferenceProfileArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "bedrock:InlineAgentName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "bedrock:PromptRouterArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn",
+            "Types": [
+                "ARN"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "agent",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:agent/${AgentId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "agent-alias",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:agent-alias/${AgentId}/${AgentAliasId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "application-inference-profile",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:application-inference-profile/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "async-invoke",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:async-invoke/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "bedrock-marketplace-model-endpoint",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:marketplace/model-endpoint/all-access"
+            ]
+        },
+        {
+            "Name": "blueprint",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:blueprint/${BlueprintId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "custom-model",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:custom-model/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "data-automation-invocation-job",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-invocation/${JobId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "data-automation-profile",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-profile/${ProfileId}"
+            ]
+        },
+        {
+            "Name": "data-automation-project",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-project/${ProjectId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "default-prompt-router",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:default-prompt-router/${ResourceId}"
+            ]
+        },
+        {
+            "Name": "evaluation-job",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:evaluation-job/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "flow",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:flow/${FlowId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "flow-alias",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:flow/${FlowId}/alias/${FlowAliasId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "flow-execution",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:flow/${FlowId}/alias/${FlowAliasId}/execution/${FlowExecutionId}"
+            ]
+        },
+        {
+            "Name": "foundation-model",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}::foundation-model/${ResourceId}"
+            ]
+        },
+        {
+            "Name": "guardrail",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:guardrail/${GuardrailId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "guardrail-profile",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:guardrail-profile/${ResourceId}"
+            ]
+        },
+        {
+            "Name": "imported-model",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:imported-model/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "inference-profile",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:inference-profile/${ResourceId}"
+            ]
+        },
+        {
+            "Name": "knowledge-base",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "model-copy-job",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:model-copy-job/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "model-customization-job",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:model-customization-job/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "model-evaluation-job",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:model-evaluation-job/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "model-import-job",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:model-import-job/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "model-invocation-job",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:model-invocation-job/${JobIdentifier}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "prompt",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:prompt/${PromptId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "prompt-router",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:prompt-router/${ResourceId}"
+            ]
+        },
+        {
+            "Name": "prompt-version",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:prompt/${PromptId}:${PromptVersion}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "provisioned-model",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:provisioned-model/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "session",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:session/${SessionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

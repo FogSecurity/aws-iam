@@ -1,0 +1,740 @@
+{
+    "Name": "partnercentral",
+    "Actions": [
+        {
+            "Name": "AcceptEngagementInvitation",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "engagement-invitation"
+                }
+            ]
+        },
+        {
+            "Name": "AssignOpportunity",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Opportunity"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateOpportunity",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog",
+                "partnercentral:RelatedEntityType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Opportunity"
+                }
+            ]
+        },
+        {
+            "Name": "CreateEngagement",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateEngagementInvitation",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateOpportunity",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateResourceSnapshot",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ResourceSnapshot"
+                }
+            ]
+        },
+        {
+            "Name": "CreateResourceSnapshotJob",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteResourceSnapshotJob",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "resource-snapshot-job"
+                }
+            ]
+        },
+        {
+            "Name": "DisassociateOpportunity",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog",
+                "partnercentral:RelatedEntityType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Opportunity"
+                }
+            ]
+        },
+        {
+            "Name": "GetAwsOpportunitySummary",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Opportunity"
+                }
+            ]
+        },
+        {
+            "Name": "GetEngagement",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Engagement"
+                }
+            ]
+        },
+        {
+            "Name": "GetEngagementInvitation",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "engagement-invitation"
+                }
+            ]
+        },
+        {
+            "Name": "GetOpportunity",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Opportunity"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourceSnapshot",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ResourceSnapshot"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourceSnapshotJob",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "resource-snapshot-job"
+                }
+            ]
+        },
+        {
+            "Name": "GetSellingSystemSettings",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEngagementByAcceptingInvitationTasks",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEngagementFromOpportunityTasks",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEngagementInvitations",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEngagementMembers",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Engagement"
+                }
+            ]
+        },
+        {
+            "Name": "ListEngagementResourceAssociations",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ResourceSnapshot"
+                }
+            ]
+        },
+        {
+            "Name": "ListEngagements",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListOpportunities",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListResourceSnapshotJobs",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListResourceSnapshots",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ResourceSnapshot"
+                }
+            ]
+        },
+        {
+            "Name": "ListSolutions",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "PutSellingSystemSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "RejectEngagementInvitation",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "engagement-invitation"
+                }
+            ]
+        },
+        {
+            "Name": "StartEngagementByAcceptingInvitationTask",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartEngagementFromOpportunityTask",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartResourceSnapshotJob",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "resource-snapshot-job"
+                }
+            ]
+        },
+        {
+            "Name": "StopResourceSnapshotJob",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "resource-snapshot-job"
+                }
+            ]
+        },
+        {
+            "Name": "SubmitOpportunity",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Opportunity"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UpdateOpportunity",
+            "ActionConditionKeys": [
+                "partnercentral:Catalog"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Opportunity"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "partnercentral:Catalog",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "partnercentral:RelatedEntityType",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Engagement",
+            "ARNFormats": [
+                "arn:${Partition}:partnercentral:${Region}::catalog/${Catalog}/engagement/${Identifier}"
+            ]
+        },
+        {
+            "Name": "Opportunity",
+            "ARNFormats": [
+                "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/opportunity/${Identifier}"
+            ]
+        },
+        {
+            "Name": "ResourceSnapshot",
+            "ARNFormats": [
+                "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/engagement/${EngagementIdentifier}/resource/${ResourceType}/${ResourceIdentifier}/template/${TemplateIdentifier}/resource-snapshot/${SnapshotRevision}"
+            ]
+        },
+        {
+            "Name": "Solution",
+            "ARNFormats": [
+                "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/solution/${Identifier}"
+            ]
+        },
+        {
+            "Name": "engagement-by-accepting-invitation-task",
+            "ARNFormats": [
+                "arn:${Partition}:partnercentral:${Region}::catalog/${Catalog}/engagement-by-accepting-invitation-task/${TaskId}"
+            ]
+        },
+        {
+            "Name": "engagement-from-opportunity-task",
+            "ARNFormats": [
+                "arn:${Partition}:partnercentral:${Region}::catalog/${Catalog}/engagement-from-opportunity-task/${TaskId}"
+            ]
+        },
+        {
+            "Name": "engagement-invitation",
+            "ARNFormats": [
+                "arn:${Partition}:partnercentral:${Region}::catalog/${Catalog}/engagement-invitation/${Identifier}"
+            ]
+        },
+        {
+            "Name": "resource-snapshot-job",
+            "ARNFormats": [
+                "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/resource-snapshot-job/${Identifier}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

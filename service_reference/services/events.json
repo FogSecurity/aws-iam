@@ -1,0 +1,1195 @@
+{
+    "Name": "events",
+    "Actions": [
+        {
+            "Name": "ActivateEventSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-source"
+                }
+            ]
+        },
+        {
+            "Name": "CancelReplay",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "replay"
+                }
+            ]
+        },
+        {
+            "Name": "CreateApiDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api-destination"
+                },
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "CreateArchive",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "alias"
+                },
+                {
+                    "Name": "archive"
+                },
+                {
+                    "Name": "event-bus"
+                },
+                {
+                    "Name": "key"
+                }
+            ]
+        },
+        {
+            "Name": "CreateConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "CreateEndpoint",
+            "ActionConditionKeys": [
+                "events:EventBusArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "CreateEventBus",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "CreatePartnerEventSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-source"
+                }
+            ]
+        },
+        {
+            "Name": "DeactivateEventSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-source"
+                }
+            ]
+        },
+        {
+            "Name": "DeauthorizeConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteApiDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api-destination"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteArchive",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "archive"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEventBus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "DeletePartnerEventSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-source"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRule",
+            "ActionConditionKeys": [
+                "events:ManagedBy",
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeApiDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api-destination"
+                },
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeArchive",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "archive"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEventBus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeEventSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-source"
+                }
+            ]
+        },
+        {
+            "Name": "DescribePartnerEventSource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-source"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeReplay",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "replay"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeRule",
+            "ActionConditionKeys": [
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "DisableRule",
+            "ActionConditionKeys": [
+                "events:ManagedBy",
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "EnableRule",
+            "ActionConditionKeys": [
+                "events:ManagedBy",
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "InvokeApiDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api-destination"
+                }
+            ]
+        },
+        {
+            "Name": "ListApiDestinations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListArchives",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListConnections",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEventBuses",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEventSources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListPartnerEventSourceAccounts",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-source"
+                }
+            ]
+        },
+        {
+            "Name": "ListPartnerEventSources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListReplays",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListRuleNamesByTarget",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListRules",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "ActionConditionKeys": [
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-bus"
+                },
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "ListTargetsByRule",
+            "ActionConditionKeys": [
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "PutEvents",
+            "ActionConditionKeys": [
+                "events:detail-type",
+                "events:eventBusInvocation",
+                "events:source"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "PutPartnerEvents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutPermission",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "PutRule",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "events:ManagedBy",
+                "events:creatorAccount",
+                "events:detail-type",
+                "events:detail.eventTypeCode",
+                "events:detail.service",
+                "events:detail.userIdentity.principalId",
+                "events:source"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "PutTargets",
+            "ActionConditionKeys": [
+                "events:ManagedBy",
+                "events:TargetArn",
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "RemovePermission",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "RemoveTargets",
+            "ActionConditionKeys": [
+                "events:ManagedBy",
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "RetrieveConnectionCredentials",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "StartReplay",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "archive"
+                },
+                {
+                    "Name": "event-bus"
+                },
+                {
+                    "Name": "replay"
+                }
+            ]
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-bus"
+                },
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "TestEventPattern",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys",
+                "events:creatorAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-bus"
+                },
+                {
+                    "Name": "rule-on-custom-event-bus"
+                },
+                {
+                    "Name": "rule-on-default-event-bus"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateApiDestination",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "api-destination"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateArchive",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "alias"
+                },
+                {
+                    "Name": "archive"
+                },
+                {
+                    "Name": "key"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "connection"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateEndpoint",
+            "ActionConditionKeys": [
+                "events:EventBusArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateEventBus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "event-bus"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "events:EventBusArn",
+            "Types": [
+                "ArrayOfARN"
+            ]
+        },
+        {
+            "Name": "events:ManagedBy",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "events:TargetArn",
+            "Types": [
+                "ArrayOfARN"
+            ]
+        },
+        {
+            "Name": "events:creatorAccount",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "events:detail-type",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "events:detail.eventTypeCode",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "events:detail.service",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "events:detail.userIdentity.principalId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "events:eventBusInvocation",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "events:source",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "alias",
+            "ARNFormats": [
+                "arn:${Partition}:kms:${Region}:${Account}:alias/${Alias}"
+            ]
+        },
+        {
+            "Name": "api-destination",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:api-destination/${ApiDestinationName}"
+            ]
+        },
+        {
+            "Name": "archive",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:archive/${ArchiveName}"
+            ]
+        },
+        {
+            "Name": "connection",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:connection/${ConnectionName}"
+            ]
+        },
+        {
+            "Name": "create-snapshot",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:target/create-snapshot"
+            ]
+        },
+        {
+            "Name": "endpoint",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:endpoint/${EndpointName}"
+            ]
+        },
+        {
+            "Name": "event-bus",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:event-bus/${EventBusName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "event-source",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}::event-source/${EventSourceName}"
+            ]
+        },
+        {
+            "Name": "key",
+            "ARNFormats": [
+                "arn:${Partition}:kms:${Region}:${Account}:key/${KeyId}"
+            ]
+        },
+        {
+            "Name": "reboot-instance",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:target/reboot-instance"
+            ]
+        },
+        {
+            "Name": "replay",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:replay/${ReplayName}"
+            ]
+        },
+        {
+            "Name": "rule-on-custom-event-bus",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:rule/${EventBusName}/${RuleName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "rule-on-default-event-bus",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:rule/${RuleName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "stop-instance",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:target/stop-instance"
+            ]
+        },
+        {
+            "Name": "terminate-instance",
+            "ARNFormats": [
+                "arn:${Partition}:events:${Region}:${Account}:target/terminate-instance"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

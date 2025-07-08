@@ -1,0 +1,100 @@
+{
+    "Name": "opensearch",
+    "Actions": [
+        {
+            "Name": "ApplicationAccessAll",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                }
+            ]
+        },
+        {
+            "Name": "CancelDirectQuery",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "datasource"
+                }
+            ]
+        },
+        {
+            "Name": "GetDirectQuery",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "datasource"
+                }
+            ]
+        },
+        {
+            "Name": "GetDirectQueryResult",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "datasource"
+                }
+            ]
+        },
+        {
+            "Name": "StartDirectQuery",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "datasource"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "application",
+            "ARNFormats": [
+                "arn:${Partition}:opensearch:${Region}:${Account}:application/${AppId}"
+            ]
+        },
+        {
+            "Name": "datasource",
+            "ARNFormats": [
+                "arn:${Partition}:opensearch:${Region}:${Account}:datasource/${DataSourceName}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

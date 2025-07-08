@@ -1,0 +1,110 @@
+{
+    "Name": "cloudfront-keyvaluestore",
+    "Actions": [
+        {
+            "Name": "DeleteKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "key-value-store"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeKeyValueStore",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "key-value-store"
+                }
+            ]
+        },
+        {
+            "Name": "GetKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "key-value-store"
+                }
+            ]
+        },
+        {
+            "Name": "ListKeys",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "key-value-store"
+                }
+            ]
+        },
+        {
+            "Name": "PutKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "key-value-store"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateKeys",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "key-value-store"
+                }
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "key-value-store",
+            "ARNFormats": [
+                "arn:${Partition}:cloudfront::${Account}:key-value-store/${ResourceId}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

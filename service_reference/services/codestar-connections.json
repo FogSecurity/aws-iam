@@ -1,0 +1,741 @@
+{
+    "Name": "codestar-connections",
+    "Actions": [
+        {
+            "Name": "CreateConnection",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-connections:ProviderType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateHost",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codestar-connections:ProviderType",
+                "codestar-connections:VpcId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateRepositoryLink",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSyncConfiguration",
+            "ActionConditionKeys": [
+                "codestar-connections:Branch"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteHost",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Host"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRepositoryLink",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSyncConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "GetConnectionToken",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "GetHost",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Host"
+                }
+            ]
+        },
+        {
+            "Name": "GetIndividualAccessToken",
+            "ActionConditionKeys": [
+                "codestar-connections:ProviderType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetInstallationUrl",
+            "ActionConditionKeys": [
+                "codestar-connections:ProviderType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetRepositoryLink",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "GetRepositorySyncStatus",
+            "ActionConditionKeys": [
+                "codestar-connections:Branch"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourceSyncStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetSyncBlockerSummary",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetSyncConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListConnections",
+            "ActionConditionKeys": [
+                "codestar-connections:ProviderTypeFilter"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "ListHosts",
+            "ActionConditionKeys": [
+                "codestar-connections:ProviderTypeFilter"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListInstallationTargets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListRepositoryLinks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListRepositorySyncDefinitions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListSyncConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                },
+                {
+                    "Name": "Host"
+                },
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "PassConnection",
+            "ActionConditionKeys": [
+                "codestar-connections:PassedToService"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "PassRepository",
+            "ActionConditionKeys": [
+                "codestar-connections:PassedToService"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterAppCode",
+            "ActionConditionKeys": [
+                "codestar-connections:HostArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "StartAppRegistrationHandshake",
+            "ActionConditionKeys": [
+                "codestar-connections:HostArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "StartOAuthHandshake",
+            "ActionConditionKeys": [
+                "codestar-connections:ProviderType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                },
+                {
+                    "Name": "Host"
+                },
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                },
+                {
+                    "Name": "Host"
+                },
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConnectionInstallation",
+            "ActionConditionKeys": [
+                "codestar-connections:InstallationId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateHost",
+            "ActionConditionKeys": [
+                "codestar-connections:VpcId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Host"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRepositoryLink",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSyncBlocker",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UpdateSyncConfiguration",
+            "ActionConditionKeys": [
+                "codestar-connections:Branch"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UseConnection",
+            "ActionConditionKeys": [
+                "codestar-connections:BranchName",
+                "codestar-connections:FullRepositoryId",
+                "codestar-connections:OwnerId",
+                "codestar-connections:ProviderAction",
+                "codestar-connections:ProviderPermissionsRequired",
+                "codestar-connections:RepositoryName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "codestar-connections:Branch",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:BranchName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:FullRepositoryId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:HostArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "codestar-connections:InstallationId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:OwnerId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:PassedToService",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:ProviderAction",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:ProviderPermissionsRequired",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:ProviderType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:ProviderTypeFilter",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:RepositoryName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codestar-connections:VpcId",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Connection",
+            "ARNFormats": [
+                "arn:${Partition}:codestar-connections:${Region}:${Account}:connection/${ConnectionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Host",
+            "ARNFormats": [
+                "arn:${Partition}:codestar-connections:${Region}:${Account}:host/${HostId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "RepositoryLink",
+            "ARNFormats": [
+                "arn:${Partition}:codestar-connections:${Region}:${Account}:repository-link/${RepositoryLinkId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

@@ -1,0 +1,337 @@
+{
+    "Name": "acm",
+    "Actions": [
+        {
+            "Name": "AddTagsToCertificate",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCertificate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeCertificate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "ExportCertificate",
+            "ActionConditionKeys": [
+                "acm:DomainNames"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "GetAccountConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetCertificate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "ImportCertificate",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "ListCertificates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForCertificate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "PutAccountConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "RemoveTagsFromCertificate",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "RenewCertificate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "RequestCertificate",
+            "ActionConditionKeys": [
+                "acm:CertificateAuthority",
+                "acm:CertificateTransparencyLogging",
+                "acm:DomainNames",
+                "acm:Export",
+                "acm:KeyAlgorithm",
+                "acm:ValidationMethod",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ResendValidationEmail",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "RevokeCertificate",
+            "ActionConditionKeys": [
+                "acm:DomainNames"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCertificateOptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "certificate"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "acm:CertificateAuthority",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "acm:CertificateTransparencyLogging",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "acm:DomainNames",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "acm:Export",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "acm:KeyAlgorithm",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "acm:ValidationMethod",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "certificate",
+            "ARNFormats": [
+                "arn:${Partition}:acm:${Region}:${Account}:certificate/${CertificateId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

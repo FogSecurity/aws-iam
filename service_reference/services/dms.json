@@ -1,0 +1,2089 @@
+{
+    "Name": "dms",
+    "Actions": [
+        {
+            "Name": "AddTagsToResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Certificate"
+                },
+                {
+                    "Name": "DataMigration"
+                },
+                {
+                    "Name": "DataProvider"
+                },
+                {
+                    "Name": "Endpoint"
+                },
+                {
+                    "Name": "EventSubscription"
+                },
+                {
+                    "Name": "InstanceProfile"
+                },
+                {
+                    "Name": "MigrationProject"
+                },
+                {
+                    "Name": "ReplicationConfig"
+                },
+                {
+                    "Name": "ReplicationInstance"
+                },
+                {
+                    "Name": "ReplicationSubnetGroup"
+                },
+                {
+                    "Name": "ReplicationTask"
+                },
+                {
+                    "Name": "ReplicationTaskAssessmentRun"
+                },
+                {
+                    "Name": "ReplicationTaskIndividualAssessment"
+                }
+            ]
+        },
+        {
+            "Name": "ApplyPendingMaintenanceAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "AssociateExtensionPack",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "BatchStartRecommendations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CancelReplicationTaskAssessmentRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTaskAssessmentRun"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDataMigration",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "CreateDataProvider",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateEndpoint",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateEventSubscription",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateFleetAdvisorCollector",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateInstanceProfile",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateMigrationProject",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataProvider"
+                },
+                {
+                    "Name": "InstanceProfile"
+                }
+            ]
+        },
+        {
+            "Name": "CreateReplicationConfig",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "CreateReplicationInstance",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateReplicationSubnetGroup",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateReplicationTask",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
+                "dms:req-tag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Endpoint"
+                },
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCertificate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Certificate"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Endpoint"
+                },
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDataMigration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataMigration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteDataProvider",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataProvider"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteEventSubscription",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "EventSubscription"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteFleetAdvisorCollector",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteFleetAdvisorDatabases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteInstanceProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "InstanceProfile"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteMigrationProject",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteReplicationConfig",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationConfig"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteReplicationInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteReplicationSubnetGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationSubnetGroup"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteReplicationTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteReplicationTaskAssessmentRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTaskAssessmentRun"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeAccountAttributes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeApplicableIndividualAssessments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationInstance"
+                },
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeCertificates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeConnections",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeConversionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeDataMigrations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEndpointSettings",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEndpointTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEngineVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEventCategories",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEventSubscriptions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeEvents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeFleetAdvisorCollectors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeFleetAdvisorDatabases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeFleetAdvisorLsaAnalysis",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeFleetAdvisorSchemaObjectSummary",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeFleetAdvisorSchemas",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeMetadataModelImports",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeOrderableReplicationInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribePendingMaintenanceActions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeRecommendationLimitations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeRecommendations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeRefreshSchemasStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeReplicationConfigs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeReplicationInstanceTaskLogs",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeReplicationInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeReplicationSubnetGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeReplicationTableStatistics",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationConfig"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeReplicationTaskAssessmentResults",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeReplicationTaskAssessmentRuns",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationInstance"
+                },
+                {
+                    "Name": "ReplicationTask"
+                },
+                {
+                    "Name": "ReplicationTaskAssessmentRun"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeReplicationTaskIndividualAssessments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                },
+                {
+                    "Name": "ReplicationTaskAssessmentRun"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeReplicationTasks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeReplications",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeSchemas",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeTableStatistics",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "ExportMetadataModelAssessment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "ImportCertificate",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ListDataProviders",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataProvider"
+                }
+            ]
+        },
+        {
+            "Name": "ListExtensionPacks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "ListInstanceProfiles",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "InstanceProfile"
+                }
+            ]
+        },
+        {
+            "Name": "ListMetadataModelAssessmentActionItems",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "ListMetadataModelAssessments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "ListMetadataModelConversions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "ListMetadataModelExports",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "ListMigrationProjects",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataProvider"
+                },
+                {
+                    "Name": "InstanceProfile"
+                },
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Certificate"
+                },
+                {
+                    "Name": "DataMigration"
+                },
+                {
+                    "Name": "DataProvider"
+                },
+                {
+                    "Name": "Endpoint"
+                },
+                {
+                    "Name": "EventSubscription"
+                },
+                {
+                    "Name": "InstanceProfile"
+                },
+                {
+                    "Name": "MigrationProject"
+                },
+                {
+                    "Name": "ReplicationConfig"
+                },
+                {
+                    "Name": "ReplicationInstance"
+                },
+                {
+                    "Name": "ReplicationSubnetGroup"
+                },
+                {
+                    "Name": "ReplicationTask"
+                },
+                {
+                    "Name": "ReplicationTaskAssessmentRun"
+                },
+                {
+                    "Name": "ReplicationTaskIndividualAssessment"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyDataMigration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataMigration"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Certificate"
+                },
+                {
+                    "Name": "Endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyEventSubscription",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ModifyFleetAdvisorCollector",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ModifyFleetAdvisorCollectorStatuses",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ModifyReplicationConfig",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationConfig"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyReplicationInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "ModifyReplicationSubnetGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "ModifyReplicationTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "MoveReplicationTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationInstance"
+                },
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "RebootReplicationInstance",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "RefreshSchemas",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Endpoint"
+                },
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "ReloadReplicationTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationConfig"
+                }
+            ]
+        },
+        {
+            "Name": "ReloadTables",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "RemoveTagsFromResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Certificate"
+                },
+                {
+                    "Name": "DataMigration"
+                },
+                {
+                    "Name": "DataProvider"
+                },
+                {
+                    "Name": "Endpoint"
+                },
+                {
+                    "Name": "EventSubscription"
+                },
+                {
+                    "Name": "InstanceProfile"
+                },
+                {
+                    "Name": "MigrationProject"
+                },
+                {
+                    "Name": "ReplicationConfig"
+                },
+                {
+                    "Name": "ReplicationInstance"
+                },
+                {
+                    "Name": "ReplicationSubnetGroup"
+                },
+                {
+                    "Name": "ReplicationTask"
+                },
+                {
+                    "Name": "ReplicationTaskAssessmentRun"
+                },
+                {
+                    "Name": "ReplicationTaskIndividualAssessment"
+                }
+            ]
+        },
+        {
+            "Name": "RunFleetAdvisorLsaAnalysis",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartDataMigration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataMigration"
+                }
+            ]
+        },
+        {
+            "Name": "StartMetadataModelAssessment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "StartMetadataModelConversion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "StartMetadataModelExportAsScripts",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "StartMetadataModelExportToTarget",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "StartMetadataModelImport",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "StartRecommendations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "StartReplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationConfig"
+                }
+            ]
+        },
+        {
+            "Name": "StartReplicationTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "StartReplicationTaskAssessment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "StartReplicationTaskAssessmentRun",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "StopDataMigration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataMigration"
+                }
+            ]
+        },
+        {
+            "Name": "StopReplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationConfig"
+                }
+            ]
+        },
+        {
+            "Name": "StopReplicationTask",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "ReplicationTask"
+                }
+            ]
+        },
+        {
+            "Name": "TestConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Endpoint"
+                },
+                {
+                    "Name": "ReplicationInstance"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConversionConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateDataProvider",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "DataProvider"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateInstanceProfile",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "InstanceProfile"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateMigrationProject",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "MigrationProject"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSubscriptionsToEventBridge",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UploadFileMetadataList",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "dms:assessment-run-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:cert-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:data-migration-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:data-provider-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:endpoint-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:es-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:individual-assessment-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:instance-profile-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:migration-project-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:rep-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:replication-config-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:req-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:subgrp-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "dms:task-tag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Certificate",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:cert:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:cert-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "DataMigration",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:data-migration:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:data-migration-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "DataProvider",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:data-provider:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:data-provider-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Endpoint",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:endpoint:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:endpoint-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "EventSubscription",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:es:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:es-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "InstanceProfile",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:instance-profile:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:instance-profile-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "MigrationProject",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:migration-project:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:migration-project-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "ReplicationConfig",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:replication-config:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:replication-config-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "ReplicationInstance",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:rep:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:rep-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "ReplicationSubnetGroup",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:subgrp:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:subgrp-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "ReplicationTask",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:task:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:task-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "ReplicationTaskAssessmentRun",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:assessment-run:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:assessment-run-tag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "ReplicationTaskIndividualAssessment",
+            "ARNFormats": [
+                "arn:${Partition}:dms:${Region}:${Account}:individual-assessment:*"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "dms:individual-assessment-tag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

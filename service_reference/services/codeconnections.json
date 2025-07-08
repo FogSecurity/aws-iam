@@ -1,0 +1,741 @@
+{
+    "Name": "codeconnections",
+    "Actions": [
+        {
+            "Name": "CreateConnection",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codeconnections:ProviderType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateHost",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "codeconnections:ProviderType",
+                "codeconnections:VpcId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateRepositoryLink",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "CreateSyncConfiguration",
+            "ActionConditionKeys": [
+                "codeconnections:Branch"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteHost",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Host"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteRepositoryLink",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteSyncConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetConnection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "GetConnectionToken",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "GetHost",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Host"
+                }
+            ]
+        },
+        {
+            "Name": "GetIndividualAccessToken",
+            "ActionConditionKeys": [
+                "codeconnections:ProviderType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetInstallationUrl",
+            "ActionConditionKeys": [
+                "codeconnections:ProviderType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetRepositoryLink",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "GetRepositorySyncStatus",
+            "ActionConditionKeys": [
+                "codeconnections:Branch"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "GetResourceSyncStatus",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetSyncBlockerSummary",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetSyncConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListConnections",
+            "ActionConditionKeys": [
+                "codeconnections:ProviderTypeFilter"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "ListHosts",
+            "ActionConditionKeys": [
+                "codeconnections:ProviderTypeFilter"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListInstallationTargets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListRepositoryLinks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListRepositorySyncDefinitions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListSyncConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListTagsForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                },
+                {
+                    "Name": "Host"
+                },
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "PassConnection",
+            "ActionConditionKeys": [
+                "codeconnections:PassedToService"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "PassRepository",
+            "ActionConditionKeys": [
+                "codeconnections:PassedToService"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "RegisterAppCode",
+            "ActionConditionKeys": [
+                "codeconnections:HostArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "StartAppRegistrationHandshake",
+            "ActionConditionKeys": [
+                "codeconnections:HostArn"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "StartOAuthHandshake",
+            "ActionConditionKeys": [
+                "codeconnections:ProviderType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                },
+                {
+                    "Name": "Host"
+                },
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                },
+                {
+                    "Name": "Host"
+                },
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateConnectionInstallation",
+            "ActionConditionKeys": [
+                "codeconnections:InstallationId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateHost",
+            "ActionConditionKeys": [
+                "codeconnections:VpcId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Host"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateRepositoryLink",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "RepositoryLink"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateSyncBlocker",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UpdateSyncConfiguration",
+            "ActionConditionKeys": [
+                "codeconnections:Branch"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UseConnection",
+            "ActionConditionKeys": [
+                "codeconnections:BranchName",
+                "codeconnections:FullRepositoryId",
+                "codeconnections:OwnerId",
+                "codeconnections:ProviderAction",
+                "codeconnections:ProviderPermissionsRequired",
+                "codeconnections:RepositoryName"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Connection"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "codeconnections:Branch",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:BranchName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:FullRepositoryId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:HostArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "codeconnections:InstallationId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:OwnerId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:PassedToService",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:ProviderAction",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:ProviderPermissionsRequired",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:ProviderType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:ProviderTypeFilter",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:RepositoryName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "codeconnections:VpcId",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Connection",
+            "ARNFormats": [
+                "arn:${Partition}:codeconnections:${Region}:${Account}:connection/${ConnectionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "Host",
+            "ARNFormats": [
+                "arn:${Partition}:codeconnections:${Region}:${Account}:host/${HostId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "RepositoryLink",
+            "ARNFormats": [
+                "arn:${Partition}:codeconnections:${Region}:${Account}:repository-link/${RepositoryLinkId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

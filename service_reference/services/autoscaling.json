@@ -1,0 +1,1309 @@
+{
+    "Name": "autoscaling",
+    "Actions": [
+        {
+            "Name": "AttachInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "AttachLoadBalancerTargetGroups",
+            "ActionConditionKeys": [
+                "autoscaling:TargetGroupARNs"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "AttachLoadBalancers",
+            "ActionConditionKeys": [
+                "autoscaling:LoadBalancerNames"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "AttachTrafficSources",
+            "ActionConditionKeys": [
+                "autoscaling:TrafficSourceIdentifiers"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "BatchDeleteScheduledAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "BatchPutScheduledUpdateGroupAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CancelInstanceRefresh",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CompleteLifecycleAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateAutoScalingGroup",
+            "ActionConditionKeys": [
+                "autoscaling:CapacityReservationIds",
+                "autoscaling:CapacityReservationResourceGroupArns",
+                "autoscaling:InstanceTypes",
+                "autoscaling:LaunchConfigurationName",
+                "autoscaling:LaunchTemplateVersionSpecified",
+                "autoscaling:LoadBalancerNames",
+                "autoscaling:MaxSize",
+                "autoscaling:MinSize",
+                "autoscaling:TargetGroupARNs",
+                "autoscaling:TrafficSourceIdentifiers",
+                "autoscaling:VPCZoneIdentifiers",
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "CreateLaunchConfiguration",
+            "ActionConditionKeys": [
+                "autoscaling:ImageId",
+                "autoscaling:InstanceType",
+                "autoscaling:MetadataHttpEndpoint",
+                "autoscaling:MetadataHttpPutResponseHopLimit",
+                "autoscaling:MetadataHttpTokens",
+                "autoscaling:SpotPrice"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "launchConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "CreateOrUpdateTags",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteAutoScalingGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteLaunchConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "launchConfiguration"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteLifecycleHook",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteNotificationConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeletePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteScheduledAction",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteTags",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": true,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DeleteWarmPool",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DescribeAccountLimits",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeAdjustmentTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeAutoScalingGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeAutoScalingInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeAutoScalingNotificationTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeInstanceRefreshes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLaunchConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLifecycleHookTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLifecycleHooks",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLoadBalancerTargetGroups",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeLoadBalancers",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeMetricCollectionTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeNotificationConfigurations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribePolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeScalingActivities",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeScalingProcessTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeScheduledActions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTags",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTerminationPolicyTypes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeTrafficSources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DescribeWarmPool",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "DetachInstances",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DetachLoadBalancerTargetGroups",
+            "ActionConditionKeys": [
+                "autoscaling:TargetGroupARNs"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DetachLoadBalancers",
+            "ActionConditionKeys": [
+                "autoscaling:LoadBalancerNames"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DetachTrafficSources",
+            "ActionConditionKeys": [
+                "autoscaling:TrafficSourceIdentifiers"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "DisableMetricsCollection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "EnableMetricsCollection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "EnterStandby",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ExecutePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ExitStandby",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "GetPredictiveScalingForecast",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "PutLifecycleHook",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "PutNotificationConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "PutScalingPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "PutScheduledUpdateGroupAction",
+            "ActionConditionKeys": [
+                "autoscaling:MaxSize",
+                "autoscaling:MinSize"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "PutWarmPool",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "RecordLifecycleActionHeartbeat",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "ResumeProcesses",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "RollbackInstanceRefresh",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "SetDesiredCapacity",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "SetInstanceHealth",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "SetInstanceProtection",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "StartInstanceRefresh",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "SuspendProcesses",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "TerminateInstanceInAutoScalingGroup",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAutoScalingGroup",
+            "ActionConditionKeys": [
+                "autoscaling:CapacityReservationIds",
+                "autoscaling:CapacityReservationResourceGroupArns",
+                "autoscaling:InstanceTypes",
+                "autoscaling:LaunchConfigurationName",
+                "autoscaling:LaunchTemplateVersionSpecified",
+                "autoscaling:MaxSize",
+                "autoscaling:MinSize",
+                "autoscaling:VPCZoneIdentifiers"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "autoScalingGroup",
+                    "ConditionKeys": [
+                        "autoscaling:ResourceTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}"
+                    ]
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "autoscaling:CapacityReservationIds",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "autoscaling:CapacityReservationResourceGroupArns",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "autoscaling:ImageId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "autoscaling:InstanceType",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "autoscaling:InstanceTypes",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "autoscaling:LaunchConfigurationName",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "autoscaling:LaunchTemplateVersionSpecified",
+            "Types": [
+                "Bool"
+            ]
+        },
+        {
+            "Name": "autoscaling:LoadBalancerNames",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "autoscaling:MaxSize",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "autoscaling:MetadataHttpEndpoint",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "autoscaling:MetadataHttpPutResponseHopLimit",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "autoscaling:MetadataHttpTokens",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "autoscaling:MinSize",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "autoscaling:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "autoscaling:SpotPrice",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "autoscaling:TargetGroupARNs",
+            "Types": [
+                "ArrayOfARN"
+            ]
+        },
+        {
+            "Name": "autoscaling:TrafficSourceIdentifiers",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "autoscaling:VPCZoneIdentifiers",
+            "Types": [
+                "ArrayOfString"
+            ]
+        },
+        {
+            "Name": "aws:RequestTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "aws:TagKeys",
+            "Types": [
+                "ArrayOfString"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "autoScalingGroup",
+            "ARNFormats": [
+                "arn:${Partition}:autoscaling:${Region}:${Account}:autoScalingGroup:${GroupId}:autoScalingGroupName/${GroupFriendlyName}"
+            ],
+            "ConditionKeys": [
+                "autoscaling:ResourceTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "launchConfiguration",
+            "ARNFormats": [
+                "arn:${Partition}:autoscaling:${Region}:${Account}:launchConfiguration:${Id}:launchConfigurationName/${LaunchConfigurationName}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}

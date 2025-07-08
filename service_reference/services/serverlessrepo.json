@@ -1,0 +1,265 @@
+{
+    "Name": "serverlessrepo",
+    "Actions": [
+        {
+            "Name": "CreateApplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateApplicationVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCloudFormationChangeSet",
+            "ActionConditionKeys": [
+                "serverlessrepo:applicationType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "CreateCloudFormationTemplate",
+            "ActionConditionKeys": [
+                "serverlessrepo:applicationType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteApplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "GetApplication",
+            "ActionConditionKeys": [
+                "serverlessrepo:applicationType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "GetApplicationPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "GetCloudFormationTemplate",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "ListApplicationDependencies",
+            "ActionConditionKeys": [
+                "serverlessrepo:applicationType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "ListApplicationVersions",
+            "ActionConditionKeys": [
+                "serverlessrepo:applicationType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "ListApplications",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "PutApplicationPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "SearchApplications",
+            "ActionConditionKeys": [
+                "serverlessrepo:applicationType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "UnshareApplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateApplication",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "applications"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "serverlessrepo:applicationType",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "applications",
+            "ARNFormats": [
+                "arn:${Partition}:serverlessrepo:${Region}:${Account}:applications/${ResourceId}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}
