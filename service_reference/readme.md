@@ -26,7 +26,11 @@ The following resources and insights were pulled and processed via python script
 - Index: [service_ref.json](service_ref.json)
 - Service Reference Files (by Service): [services/](services/)
 
+### Actions in Programmatic Reference but not in SAR
 
+This listing shows IAM actions that were in the programmatic service reference information, but not listed on AWS's service authorization pages.
+
+- Actions in Programmatic Reference but not in SAR [actions_in_prog_not_sar.json](actions_in_prog_not_sar.json)
 
 ## Resources and References
 
