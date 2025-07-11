@@ -4,8 +4,6 @@ This folder contains data sourced from the programmatic service reference and ot
 
 Release Blog Post: <>
 
-Fog Security: [fogsecurity.io](https://www.fogsecurity.io/)
-
 Contact [info@fogsecurity.io](mailto:info@fogsecurity.io) for help and feedback. Feedback can be submitted here as well.
 
 ## Overview
