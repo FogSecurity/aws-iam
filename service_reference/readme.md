@@ -23,8 +23,8 @@ For an overview of the programmatic service reference release, see Rowan Udell's
 
 ### Complete Listing of Service Reference JSON Files
 
-Index: [service_ref.json](service_ref.json)
-Service Reference Files (by Service): [services/](services/)
+- Index: [service_ref.json](service_ref.json)
+- Service Reference Files (by Service): [services/](services/)
 
 
 
