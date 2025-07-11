@@ -30,7 +30,13 @@ The following resources and insights were pulled and processed via python script
 
 This listing shows IAM actions that were in the programmatic service reference information, but not listed on AWS's service authorization pages.
 
-- Actions in Programmatic Reference but not in SAR [actions_in_prog_not_sar.json](actions_in_prog_not_sar.json)
+- Actions in Programmatic Reference but not in SAR: [actions_in_prog_not_sar.json](actions_in_prog_not_sar.json)
+
+### Duplicates in SAR
+
+This listing shows duplicate IAM actions that show up in multiple service authorization reference pages. 
+
+- Service Authorization Reference Duplicate IAM Actions: [sar_duplicates.json](sar_duplicates.json)
 
 ## Resources and References
 
