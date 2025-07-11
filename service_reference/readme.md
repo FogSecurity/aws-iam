@@ -19,6 +19,8 @@ For an overview of the programmatic service reference release, see Rowan Udell's
 
 ## Content
 
+The following resources and insights were pulled and processed via python scripts.
+
 ### Complete Listing of Service Reference JSON Files
 
 - Index: [service_ref.json](service_ref.json)
