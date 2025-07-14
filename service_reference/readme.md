@@ -26,6 +26,12 @@ The following resources and insights were pulled and processed via python script
 - Index: [service_ref.json](service_ref.json)
 - Service Reference Files (by Service): [services/](services/)
 
+### Actions with Additional Categories
+
+This listing shows IAM actions that have multiple categories now.  In the programmatic listing of IAM Actions, actions could have multiple categories.  This is different than the previous model of Service Authorization Reference pages, where each action could only have 1 category.
+
+- Actions with Addtional Categories: [actions_add_cat.json](actions_add_cat.json)
+
 ### Write and Tag Actions
 
 This listing shows IAM actions annotated as both Write and TaggingOnly in the programmatic service reference.
