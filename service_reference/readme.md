@@ -26,6 +26,18 @@ The following resources and insights were pulled and processed via python script
 - Index: [service_ref.json](service_ref.json)
 - Service Reference Files (by Service): [services/](services/)
 
+### Write and Tag Actions
+
+This listing shows IAM actions annotated as both Write and TaggingOnly in the programmatic service reference.
+
+- Actions annotated as both Write and Tag: [write_and_tag.json](write_and_tag.json)
+
+### Permissions Management and Write Actions
+
+This listing shows IAM actions annotated as both Permissions Management and Write in the programmatic service refernece.
+
+- Actions annotated as both Permissions Management and Write: [perm_and_write.json](perm_and_write.json)
+
 ### Actions in Programmatic Reference but not in SAR
 
 This listing shows IAM actions that were in the programmatic service reference information, but not listed on AWS's service authorization pages.
