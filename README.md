@@ -8,7 +8,7 @@ This repository contains information to help with AWS Identity and Access Manage
 
 ## Service Reference
 
-AWS recently released (late 2024) a programmatic service reference with a listing of the over 16,000 IAM actions.  This changes IAM workflows as previously one of the only ways was to scrape the Service Authorization Reference web pages. These changes can affect IAM workflows if you're using SAR pages or programmatic references of IAM actions - for example, open source IAM tools or policy and permission level classifications. 
+AWS recently released (late 2024) a programmatic service reference with a listing of the over 18,000 IAM actions.  This changes IAM workflows as previously one of the only ways was to scrape the Service Authorization Reference web pages. These changes can affect IAM workflows if you're using SAR pages or programmatic references of IAM actions - for example, open source IAM tools or policy and permission level classifications. 
 
 Changes include:
 - Multiple categorization of IAM Actions
