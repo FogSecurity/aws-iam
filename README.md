@@ -14,7 +14,6 @@ Changes include:
 - Multiple categorization of IAM Actions
 - Inconsistencies in Action Listings
 - Inconsistencies in Classification of IAM Actions
-- Categorization Changes
 
 [service_reference](service_reference/)
 
