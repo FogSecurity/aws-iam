@@ -2,7 +2,7 @@
 
 This folder contains data sourced from the programmatic service reference and other insights.
 
-Release Blog Post: <>
+Release Blog Post: [www.fogsecurity.io/blog/aws-sar-and-programmatic-iam-actions](www.fogsecurity.io/blog/aws-sar-and-programmatic-iam-actions)
 
 Contact [info@fogsecurity.io](mailto:info@fogsecurity.io) for help and feedback. Feedback can be submitted here as well.
 
