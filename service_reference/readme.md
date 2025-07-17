@@ -56,6 +56,14 @@ This listing shows duplicate IAM actions that show up in multiple service author
 
 - Service Authorization Reference Duplicate IAM Actions: [sar_duplicates.json](sar_duplicates.json)
 
+### Actions without Resources
+
+This listing shows all AWS IAM Actions that do not have a resource specified.  This was pulled from the programmatic reference.  From the Service Authorization Pages, if the column is empty, then the action does not support resource-level permissions and you must specify all resources ("*") in the policy.
+
+Note: This was pulled July 17th, 2025.  The rest of the files in this listing are on an older version of programmatic reference from early July 2025.
+
+- IAM Actions without Resources (from programmatic reference): [actions_without_resource.json](actions_without_resource.json)
+
 ## Resources and References
 
 - [Permissions.Cloud](permissions.cloud)
