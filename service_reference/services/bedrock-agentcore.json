@@ -1,8 +1,24 @@
 {
-    "Name": "sagemaker-mlflow",
+    "Name": "bedrock-agentcore",
     "Actions": [
         {
-            "Name": "AccessUI",
+            "Name": "AllowVendedLogDeliveryForResource",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "memory"
+                }
+            ]
+        },
+        {
+            "Name": "ConnectBrowserAutomationStream",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -13,7 +29,77 @@
             }
         },
         {
-            "Name": "CreateExperiment",
+            "Name": "ConnectBrowserLiveViewStream",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "CreateAgentRuntime",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateAgentRuntimeEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateApiKeyCredentialProvider",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateBrowser",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateCodeInterpreter",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateEvent",
+            "ActionConditionKeys": [
+                "bedrock-agentcore:actorId",
+                "bedrock-agentcore:sessionId"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -24,12 +110,23 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "CreateModelVersion",
+            "Name": "CreateGateway",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateGatewayTarget",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -40,12 +137,45 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "gateway"
                 }
             ]
         },
         {
-            "Name": "CreateRegisteredModel",
+            "Name": "CreateMemory",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateOauth2CredentialProvider",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "CreateWorkloadIdentity",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteAgentRuntime",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -56,12 +186,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "runtime"
                 }
             ]
         },
         {
-            "Name": "CreateRun",
+            "Name": "DeleteAgentRuntimeEndpoint",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -72,12 +202,26 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "runtime"
+                },
+                {
+                    "Name": "runtime-endpoint"
                 }
             ]
         },
         {
-            "Name": "DeleteExperiment",
+            "Name": "DeleteApiKeyCredentialProvider",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "DeleteBrowser",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -88,12 +232,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "browser-custom"
                 }
             ]
         },
         {
-            "Name": "DeleteLoggedModel",
+            "Name": "DeleteCodeInterpreter",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -104,12 +248,16 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "code-interpreter-custom"
                 }
             ]
         },
         {
-            "Name": "DeleteLoggedModelTag",
+            "Name": "DeleteEvent",
+            "ActionConditionKeys": [
+                "bedrock-agentcore:actorId",
+                "bedrock-agentcore:sessionId"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -120,12 +268,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "DeleteModelVersion",
+            "Name": "DeleteGateway",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -136,12 +284,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "gateway"
                 }
             ]
         },
         {
-            "Name": "DeleteModelVersionTag",
+            "Name": "DeleteGatewayTarget",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -152,12 +300,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "gateway"
                 }
             ]
         },
         {
-            "Name": "DeleteRegisteredModel",
+            "Name": "DeleteMemory",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -168,12 +316,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "DeleteRegisteredModelAlias",
+            "Name": "DeleteMemoryRecord",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -184,12 +332,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "DeleteRegisteredModelTag",
+            "Name": "DeleteOauth2CredentialProvider",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -197,15 +345,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         },
         {
-            "Name": "DeleteRun",
+            "Name": "DeleteWorkloadIdentity",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -213,95 +356,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         },
         {
-            "Name": "DeleteTag",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "DeleteTraceTag",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "DeleteTraces",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "EndTrace",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "FinalizeLoggedModel",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "GetDownloadURIForModelVersionArtifacts",
+            "Name": "GetAgentRuntime",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -312,12 +370,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "runtime"
                 }
             ]
         },
         {
-            "Name": "GetExperiment",
+            "Name": "GetAgentRuntimeEndpoint",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -328,12 +386,26 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "runtime"
+                },
+                {
+                    "Name": "runtime-endpoint"
                 }
             ]
         },
         {
-            "Name": "GetExperimentByName",
+            "Name": "GetApiKeyCredentialProvider",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetBrowser",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -344,12 +416,276 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "browser-custom"
                 }
             ]
         },
         {
-            "Name": "GetLatestModelVersions",
+            "Name": "GetBrowserSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "browser"
+                },
+                {
+                    "Name": "browser-custom"
+                }
+            ]
+        },
+        {
+            "Name": "GetCodeInterpreter",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "code-interpreter-custom"
+                }
+            ]
+        },
+        {
+            "Name": "GetCodeInterpreterSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "code-interpreter"
+                },
+                {
+                    "Name": "code-interpreter-custom"
+                }
+            ]
+        },
+        {
+            "Name": "GetEvent",
+            "ActionConditionKeys": [
+                "bedrock-agentcore:actorId",
+                "bedrock-agentcore:sessionId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "memory"
+                }
+            ]
+        },
+        {
+            "Name": "GetGateway",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "gateway"
+                }
+            ]
+        },
+        {
+            "Name": "GetGatewayTarget",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "gateway"
+                }
+            ]
+        },
+        {
+            "Name": "GetMemory",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "memory"
+                }
+            ]
+        },
+        {
+            "Name": "GetMemoryRecord",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "memory"
+                }
+            ]
+        },
+        {
+            "Name": "GetOauth2CredentialProvider",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetResourceApiKey",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetResourceOauth2Token",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetTokenVault",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "GetWorkloadAccessToken",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetWorkloadAccessTokenForJWT",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetWorkloadAccessTokenForUserId",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "GetWorkloadIdentity",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "InvokeAgentRuntimeEndpoint",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "runtime"
+                },
+                {
+                    "Name": "runtime-endpoint"
+                }
+            ]
+        },
+        {
+            "Name": "InvokeCodeInterpreter",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "code-interpreter"
+                },
+                {
+                    "Name": "code-interpreter-custom"
+                }
+            ]
+        },
+        {
+            "Name": "ListActors",
             "Annotations": {
                 "Properties": {
                     "IsList": true,
@@ -360,12 +696,45 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "GetLoggedModel",
+            "Name": "ListAgentRuntimeEndpoints",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListAgentRuntimeVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListAgentRuntimes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListApiKeyCredentialProviders",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -373,111 +742,32 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         },
         {
-            "Name": "GetMetricHistory",
+            "Name": "ListBrowserSessions",
             "Annotations": {
                 "Properties": {
-                    "IsList": false,
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         },
         {
-            "Name": "GetModelVersion",
+            "Name": "ListBrowsers",
             "Annotations": {
                 "Properties": {
-                    "IsList": false,
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         },
         {
-            "Name": "GetModelVersionByAlias",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "GetRegisteredModel",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "GetRun",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "GetTraceInfo",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "ListArtifacts",
+            "Name": "ListCodeInterpreterSessions",
             "Annotations": {
                 "Properties": {
                     "IsList": true,
@@ -488,12 +778,30 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "code-interpreter"
+                },
+                {
+                    "Name": "code-interpreter-custom"
                 }
             ]
         },
         {
-            "Name": "ListLoggedModelArtifacts",
+            "Name": "ListCodeInterpreters",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListEvents",
+            "ActionConditionKeys": [
+                "bedrock-agentcore:actorId",
+                "bedrock-agentcore:sessionId"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": true,
@@ -504,175 +812,15 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "LogBatch",
+            "Name": "ListGatewayTargets",
             "Annotations": {
                 "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "LogInputs",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "LogLoggedModelParams",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "LogMetric",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "LogModel",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "LogOutputs",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "LogParam",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "RenameRegisteredModel",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "RestoreExperiment",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "RestoreRun",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "SearchExperiments",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
                     "IsWrite": false
@@ -680,15 +828,41 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "gateway"
                 }
             ]
         },
         {
-            "Name": "SearchLoggedModels",
+            "Name": "ListGateways",
             "Annotations": {
                 "Properties": {
-                    "IsList": false,
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListMemories",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListMemoryRecords",
+            "ActionConditionKeys": [
+                "bedrock-agentcore:namespace",
+                "bedrock-agentcore:strategyId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
                     "IsWrite": false
@@ -696,12 +870,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "SearchModelVersions",
+            "Name": "ListOauth2CredentialProviders",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -709,18 +883,16 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         },
         {
-            "Name": "SearchRegisteredModels",
+            "Name": "ListSessions",
+            "ActionConditionKeys": [
+                "bedrock-agentcore:actorId"
+            ],
             "Annotations": {
                 "Properties": {
-                    "IsList": false,
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
                     "IsWrite": false
@@ -728,12 +900,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "SearchRuns",
+            "Name": "ListWorkloadIdentities",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -741,18 +913,17 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         },
         {
-            "Name": "SearchTraces",
+            "Name": "RetrieveMemoryRecords",
+            "ActionConditionKeys": [
+                "bedrock-agentcore:namespace",
+                "bedrock-agentcore:strategyId"
+            ],
             "Annotations": {
                 "Properties": {
-                    "IsList": false,
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
                     "IsWrite": false
@@ -760,12 +931,23 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "SetExperimentTag",
+            "Name": "SetTokenVaultCMK",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "StartBrowserSession",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -776,12 +958,15 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "browser"
+                },
+                {
+                    "Name": "browser-custom"
                 }
             ]
         },
         {
-            "Name": "SetLoggedModelTags",
+            "Name": "StartCodeInterpreterSession",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -792,12 +977,15 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "code-interpreter"
+                },
+                {
+                    "Name": "code-interpreter-custom"
                 }
             ]
         },
         {
-            "Name": "SetModelVersionTag",
+            "Name": "StopBrowserSession",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -808,12 +996,15 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "browser"
+                },
+                {
+                    "Name": "browser-custom"
                 }
             ]
         },
         {
-            "Name": "SetRegisteredModelAlias",
+            "Name": "StopCodeInterpreterSession",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -824,12 +1015,31 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "code-interpreter"
+                },
+                {
+                    "Name": "code-interpreter-custom"
                 }
             ]
         },
         {
-            "Name": "SetRegisteredModelTag",
+            "Name": "SynchronizeGatewayTargets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "gateway"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateAgentRuntime",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -840,12 +1050,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "runtime"
                 }
             ]
         },
         {
-            "Name": "SetTag",
+            "Name": "UpdateAgentRuntimeEndpoint",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -856,12 +1066,26 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "runtime"
+                },
+                {
+                    "Name": "runtime-endpoint"
                 }
             ]
         },
         {
-            "Name": "SetTraceTag",
+            "Name": "UpdateApiKeyCredentialProvider",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            }
+        },
+        {
+            "Name": "UpdateBrowserStream",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -872,12 +1096,15 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "browser"
+                },
+                {
+                    "Name": "browser-custom"
                 }
             ]
         },
         {
-            "Name": "StartTrace",
+            "Name": "UpdateGateway",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -888,12 +1115,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "gateway"
                 }
             ]
         },
         {
-            "Name": "TransitionModelVersionStage",
+            "Name": "UpdateGatewayTarget",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -904,12 +1131,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "gateway"
                 }
             ]
         },
         {
-            "Name": "UpdateExperiment",
+            "Name": "UpdateMemory",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -920,12 +1147,12 @@
             },
             "Resources": [
                 {
-                    "Name": "mlflow-tracking-server"
+                    "Name": "memory"
                 }
             ]
         },
         {
-            "Name": "UpdateModelVersion",
+            "Name": "UpdateOauth2CredentialProvider",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -933,15 +1160,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         },
         {
-            "Name": "UpdateRegisteredModel",
+            "Name": "UpdateWorkloadIdentity",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -949,39 +1171,30 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
-        },
-        {
-            "Name": "UpdateRun",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "mlflow-tracking-server"
-                }
-            ]
+            }
         }
     ],
     "ConditionKeys": [
         {
-            "Name": "aws:ResourceTag/${TagKey}",
+            "Name": "bedrock-agentcore:actorId",
             "Types": [
                 "String"
             ]
         },
         {
-            "Name": "sagemaker:ResourceTag/${TagKey}",
+            "Name": "bedrock-agentcore:namespace",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "bedrock-agentcore:sessionId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "bedrock-agentcore:strategyId",
             "Types": [
                 "String"
             ]
@@ -989,13 +1202,69 @@
     ],
     "Resources": [
         {
-            "Name": "mlflow-tracking-server",
+            "Name": "apikeycredentialprovider",
             "ARNFormats": [
-                "arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName}"
-            ],
-            "ConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "sagemaker:ResourceTag/${TagKey}"
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/apikeycredentialprovider/${Name}"
+            ]
+        },
+        {
+            "Name": "browser",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:aws:browser/${BrowserId}"
+            ]
+        },
+        {
+            "Name": "browser-custom",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:browser-custom/${BrowserId}"
+            ]
+        },
+        {
+            "Name": "code-interpreter",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:aws:code-interpreter/${CodeInterpreterId}"
+            ]
+        },
+        {
+            "Name": "code-interpreter-custom",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:code-interpreter-custom/${CodeInterpreterId}"
+            ]
+        },
+        {
+            "Name": "gateway",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:gateway/${GatewayId}"
+            ]
+        },
+        {
+            "Name": "memory",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:memory/${MemoryId}"
+            ]
+        },
+        {
+            "Name": "oauth2credentialprovider",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/oauth2credentialprovider/${Name}"
+            ]
+        },
+        {
+            "Name": "runtime",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:runtime/${RuntimeId}"
+            ]
+        },
+        {
+            "Name": "runtime-endpoint",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:runtime/${RuntimeId}/runtime-endpoint/${Name}"
+            ]
+        },
+        {
+            "Name": "workload-identity",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:workload-identity-directory/${DirectoryId}/workload-identity/${WorkloadIdentityName}"
             ]
         }
     ],

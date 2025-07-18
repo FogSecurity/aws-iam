@@ -62,7 +62,12 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
-            }
+            },
+            "Resources": [
+                {
+                    "Name": "data-grants"
+                }
+            ]
         },
         {
             "Name": "CreateDataSet",
@@ -77,10 +82,19 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
-            }
+            },
+            "Resources": [
+                {
+                    "Name": "data-sets"
+                }
+            ]
         },
         {
             "Name": "CreateEventAction",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -88,7 +102,12 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
-            }
+            },
+            "Resources": [
+                {
+                    "Name": "event-actions"
+                }
+            ]
         },
         {
             "Name": "CreateJob",
@@ -102,7 +121,12 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
-            }
+            },
+            "Resources": [
+                {
+                    "Name": "jobs"
+                }
+            ]
         },
         {
             "Name": "CreateRevision",
@@ -439,6 +463,9 @@
                     "Name": "data-sets"
                 },
                 {
+                    "Name": "event-actions"
+                },
+                {
                     "Name": "revisions"
                 }
             ]
@@ -461,6 +488,10 @@
         },
         {
             "Name": "PublishToDataGrant",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -564,6 +595,9 @@
                     "Name": "data-sets"
                 },
                 {
+                    "Name": "event-actions"
+                },
+                {
                     "Name": "revisions"
                 }
             ]
@@ -587,6 +621,9 @@
                 },
                 {
                     "Name": "data-sets"
+                },
+                {
+                    "Name": "event-actions"
                 },
                 {
                     "Name": "revisions"
@@ -731,6 +768,9 @@
             "Name": "event-actions",
             "ARNFormats": [
                 "arn:${Partition}:dataexchange:${Region}:${Account}:event-actions/${EventActionId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
             ]
         },
         {

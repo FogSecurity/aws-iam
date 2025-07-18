@@ -214,6 +214,26 @@
             }
         },
         {
+            "Name": "CreateCustomModelDeployment",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model"
+                }
+            ]
+        },
+        {
             "Name": "CreateDataAutomationProject",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
@@ -759,6 +779,22 @@
             "Resources": [
                 {
                     "Name": "custom-model"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteCustomModelDeployment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model-deployment"
                 }
             ]
         },
@@ -1319,6 +1355,22 @@
             "Resources": [
                 {
                     "Name": "custom-model"
+                }
+            ]
+        },
+        {
+            "Name": "GetCustomModelDeployment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "custom-model-deployment"
                 }
             ]
         },
@@ -1967,6 +2019,9 @@
                     "Name": "bedrock-marketplace-model-endpoint"
                 },
                 {
+                    "Name": "custom-model-deployment"
+                },
+                {
                     "Name": "default-prompt-router"
                 },
                 {
@@ -2007,6 +2062,9 @@
                 },
                 {
                     "Name": "bedrock-marketplace-model-endpoint"
+                },
+                {
+                    "Name": "custom-model-deployment"
                 },
                 {
                     "Name": "default-prompt-router"
@@ -2145,6 +2203,17 @@
                     "Name": "data-automation-project"
                 }
             ]
+        },
+        {
+            "Name": "ListCustomModelDeployments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
         },
         {
             "Name": "ListCustomModels",
@@ -2564,6 +2633,9 @@
                     "Name": "custom-model"
                 },
                 {
+                    "Name": "custom-model-deployment"
+                },
+                {
                     "Name": "data-automation-invocation-job"
                 },
                 {
@@ -2959,6 +3031,9 @@
                     "Name": "custom-model"
                 },
                 {
+                    "Name": "custom-model-deployment"
+                },
+                {
                     "Name": "data-automation-invocation-job"
                 },
                 {
@@ -3045,6 +3120,9 @@
                 },
                 {
                     "Name": "custom-model"
+                },
+                {
+                    "Name": "custom-model-deployment"
                 },
                 {
                     "Name": "data-automation-invocation-job"
@@ -3489,6 +3567,15 @@
         },
         {
             "Name": "custom-model",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:custom-model/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "custom-model-deployment",
             "ARNFormats": [
                 "arn:${Partition}:bedrock:${Region}:${Account}:custom-model/${ResourceId}"
             ],
