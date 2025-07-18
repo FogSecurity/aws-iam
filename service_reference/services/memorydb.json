@@ -688,6 +688,25 @@
             ]
         },
         {
+            "Name": "PauseMultiRegionClusterReplication",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "multiregioncluster"
+                }
+            ]
+        },
+        {
             "Name": "PurchaseReservedNodesOffering",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",

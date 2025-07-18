@@ -71,6 +71,22 @@
             ]
         },
         {
+            "Name": "GetDICOMBulkdata",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "datastore"
+                }
+            ]
+        },
+        {
             "Name": "GetDICOMImportJob",
             "Annotations": {
                 "Properties": {
@@ -354,6 +370,38 @@
         },
         {
             "Name": "StartDICOMImportJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "datastore"
+                }
+            ]
+        },
+        {
+            "Name": "StoreDICOM",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "datastore"
+                }
+            ]
+        },
+        {
+            "Name": "StoreDICOMStudy",
             "Annotations": {
                 "Properties": {
                     "IsList": false,

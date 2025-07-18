@@ -90,6 +90,9 @@
                     "Name": "es"
                 },
                 {
+                    "Name": "global-cluster"
+                },
+                {
                     "Name": "integration"
                 },
                 {
@@ -730,6 +733,10 @@
         },
         {
             "Name": "CreateGlobalCluster",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2065,6 +2072,9 @@
                     "Name": "es"
                 },
                 {
+                    "Name": "global-cluster"
+                },
+                {
                     "Name": "integration"
                 },
                 {
@@ -2736,6 +2746,9 @@
                 },
                 {
                     "Name": "es"
+                },
+                {
+                    "Name": "global-cluster"
                 },
                 {
                     "Name": "integration"
@@ -3531,6 +3544,9 @@
             "Name": "global-cluster",
             "ARNFormats": [
                 "arn:${Partition}:rds::${Account}:global-cluster:${GlobalCluster}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
             ]
         },
         {

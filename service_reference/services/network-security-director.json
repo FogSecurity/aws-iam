@@ -1,8 +1,8 @@
 {
-    "Name": "freetier",
+    "Name": "network-security-director",
     "Actions": [
         {
-            "Name": "GetAccountActivity",
+            "Name": "GetFinding",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -13,7 +13,7 @@
             }
         },
         {
-            "Name": "GetAccountPlanState",
+            "Name": "GetNetworkSecurityScan",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -24,7 +24,7 @@
             }
         },
         {
-            "Name": "GetFreeTierAlertPreference",
+            "Name": "GetResource",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -35,18 +35,7 @@
             }
         },
         {
-            "Name": "GetFreeTierUsage",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            }
-        },
-        {
-            "Name": "ListAccountActivities",
+            "Name": "ListFindings",
             "Annotations": {
                 "Properties": {
                     "IsList": true,
@@ -57,7 +46,40 @@
             }
         },
         {
-            "Name": "PutFreeTierAlertPreference",
+            "Name": "ListInsights",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListRemediations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListResources",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "StartNetworkSecurityScan",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -68,7 +90,7 @@
             }
         },
         {
-            "Name": "UpgradeAccountPlan",
+            "Name": "UpdateFinding",
             "Annotations": {
                 "Properties": {
                     "IsList": false,

@@ -102,6 +102,7 @@
                 "aws:RequestTag/${TagKey}",
                 "aws:ResourceTag/${TagKey}",
                 "aws:TagKeys",
+                "s3:AccessGrantScope",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -156,6 +157,7 @@
                 "aws:RequestTag/${TagKey}",
                 "aws:ResourceTag/${TagKey}",
                 "aws:TagKeys",
+                "s3:AccessGrantsLocationScope",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -363,6 +365,7 @@
             "Name": "DeleteAccessGrant",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}",
+                "s3:AccessGrantScope",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -438,6 +441,7 @@
             "Name": "DeleteAccessGrantsLocation",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}",
+                "s3:AccessGrantsLocationScope",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1001,6 +1005,7 @@
             "Name": "GetAccessGrant",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}",
+                "s3:AccessGrantScope",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1101,6 +1106,7 @@
             "Name": "GetAccessGrantsLocation",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}",
+                "s3:AccessGrantsLocationScope",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -4078,6 +4084,7 @@
             "Name": "UpdateAccessGrantsLocation",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}",
+                "s3:AccessGrantsLocationScope",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -4096,6 +4103,54 @@
             "Resources": [
                 {
                     "Name": "accessgrantslocation"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBucketMetadataInventoryTableConfiguration",
+            "ActionConditionKeys": [
+                "s3:ResourceAccount",
+                "s3:TlsVersion",
+                "s3:authType",
+                "s3:signatureAge",
+                "s3:signatureversion",
+                "s3:x-amz-content-sha256"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "bucket"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateBucketMetadataJournalTableConfiguration",
+            "ActionConditionKeys": [
+                "s3:ResourceAccount",
+                "s3:TlsVersion",
+                "s3:authType",
+                "s3:signatureAge",
+                "s3:signatureversion",
+                "s3:x-amz-content-sha256"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "bucket"
                 }
             ]
         },
@@ -4198,9 +4253,21 @@
             ]
         },
         {
+            "Name": "s3:AccessGrantScope",
+            "Types": [
+                "String"
+            ]
+        },
+        {
             "Name": "s3:AccessGrantsInstanceArn",
             "Types": [
                 "ARN"
+            ]
+        },
+        {
+            "Name": "s3:AccessGrantsLocationScope",
+            "Types": [
+                "String"
             ]
         },
         {

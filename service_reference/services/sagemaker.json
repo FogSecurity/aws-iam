@@ -175,6 +175,9 @@
                     "Name": "notebook-instance"
                 },
                 {
+                    "Name": "notebook-instance-lifecycle-config"
+                },
+                {
                     "Name": "optimization-job"
                 },
                 {
@@ -903,6 +906,25 @@
             ]
         },
         {
+            "Name": "CreateHubContentPresignedUrls",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "hub"
+                },
+                {
+                    "Name": "hub-content"
+                }
+            ]
+        },
+        {
             "Name": "CreateHubContentReference",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
@@ -1381,6 +1403,10 @@
         },
         {
             "Name": "CreateNotebookInstanceLifecycleConfig",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1612,6 +1638,7 @@
                 "sagemaker:ImageVersionArns",
                 "sagemaker:InstanceTypes",
                 "sagemaker:OwnerUserProfileArn",
+                "sagemaker:RemoteAccess",
                 "sagemaker:SpaceSharingType"
             ],
             "Annotations": {
@@ -2852,6 +2879,9 @@
                     "Name": "notebook-instance"
                 },
                 {
+                    "Name": "notebook-instance-lifecycle-config"
+                },
+                {
                     "Name": "optimization-job"
                 },
                 {
@@ -3121,6 +3151,22 @@
         },
         {
             "Name": "DescribeCluster",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
+                }
+            ]
+        },
+        {
+            "Name": "DescribeClusterInference",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3839,6 +3885,9 @@
         },
         {
             "Name": "DescribePipeline",
+            "ActionConditionKeys": [
+                "sagemaker:PipelineVersionId"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5144,6 +5193,22 @@
             ]
         },
         {
+            "Name": "ListPipelineVersions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
             "Name": "ListPipelines",
             "Annotations": {
                 "Properties": {
@@ -5410,6 +5475,9 @@
                     "Name": "notebook-instance"
                 },
                 {
+                    "Name": "notebook-instance-lifecycle-config"
+                },
+                {
                     "Name": "optimization-job"
                 },
                 {
@@ -5417,6 +5485,9 @@
                 },
                 {
                     "Name": "pipeline"
+                },
+                {
+                    "Name": "pipeline-execution"
                 },
                 {
                     "Name": "processing-job"
@@ -5853,6 +5924,9 @@
         },
         {
             "Name": "StartPipelineExecution",
+            "ActionConditionKeys": [
+                "sagemaker:PipelineVersionId"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5864,6 +5938,22 @@
             "Resources": [
                 {
                     "Name": "pipeline"
+                }
+            ]
+        },
+        {
+            "Name": "StartSession",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "space"
                 }
             ]
         },
@@ -6230,6 +6320,22 @@
                 },
                 {
                     "Name": "training-plan"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateClusterInference",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "cluster"
                 }
             ]
         },
@@ -6776,6 +6882,25 @@
             ]
         },
         {
+            "Name": "UpdatePipelineVersion",
+            "ActionConditionKeys": [
+                "sagemaker:PipelineVersionId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "pipeline"
+                }
+            ]
+        },
+        {
             "Name": "UpdateProject",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
@@ -6818,6 +6943,7 @@
                 "sagemaker:ImageVersionArns",
                 "sagemaker:InstanceTypes",
                 "sagemaker:OwnerUserProfileArn",
+                "sagemaker:RemoteAccess",
                 "sagemaker:SpaceSharingType"
             ],
             "Annotations": {
@@ -7165,6 +7291,18 @@
             "Name": "sagemaker:OwnerUserProfileArn",
             "Types": [
                 "ARN"
+            ]
+        },
+        {
+            "Name": "sagemaker:PipelineVersionId",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "sagemaker:RemoteAccess",
+            "Types": [
+                "String"
             ]
         },
         {
@@ -7741,6 +7879,10 @@
             "Name": "notebook-instance-lifecycle-config",
             "ARNFormats": [
                 "arn:${Partition}:sagemaker:${Region}:${Account}:notebook-instance-lifecycle-config/${NotebookInstanceLifecycleConfigName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "sagemaker:ResourceTag/${TagKey}"
             ]
         },
         {
@@ -7777,6 +7919,10 @@
             "Name": "pipeline-execution",
             "ARNFormats": [
                 "arn:${Partition}:sagemaker:${Region}:${Account}:pipeline/${PipelineName}/execution/${RandomString}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "sagemaker:ResourceTag/${TagKey}"
             ]
         },
         {

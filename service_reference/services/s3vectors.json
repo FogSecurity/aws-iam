@@ -1,0 +1,289 @@
+{
+    "Name": "s3vectors",
+    "Actions": [
+        {
+            "Name": "CreateIndex",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Index"
+                }
+            ]
+        },
+        {
+            "Name": "CreateVectorBucket",
+            "ActionConditionKeys": [
+                "s3vectors:kmsKeyArn",
+                "s3vectors:sseType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VectorBucket"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteIndex",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Index"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVectorBucket",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VectorBucket"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVectorBucketPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VectorBucket"
+                }
+            ]
+        },
+        {
+            "Name": "DeleteVectors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Index"
+                }
+            ]
+        },
+        {
+            "Name": "GetIndex",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Index"
+                }
+            ]
+        },
+        {
+            "Name": "GetVectorBucket",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VectorBucket"
+                }
+            ]
+        },
+        {
+            "Name": "GetVectorBucketPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VectorBucket"
+                }
+            ]
+        },
+        {
+            "Name": "GetVectors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Index"
+                }
+            ]
+        },
+        {
+            "Name": "ListIndexes",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VectorBucket"
+                }
+            ]
+        },
+        {
+            "Name": "ListVectorBuckets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            }
+        },
+        {
+            "Name": "ListVectors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Index"
+                }
+            ]
+        },
+        {
+            "Name": "PutVectorBucketPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "VectorBucket"
+                }
+            ]
+        },
+        {
+            "Name": "PutVectors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Index"
+                }
+            ]
+        },
+        {
+            "Name": "QueryVectors",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Index"
+                }
+            ]
+        }
+    ],
+    "ConditionKeys": [
+        {
+            "Name": "s3vectors:kmsKeyArn",
+            "Types": [
+                "ARN"
+            ]
+        },
+        {
+            "Name": "s3vectors:sseType",
+            "Types": [
+                "String"
+            ]
+        }
+    ],
+    "Resources": [
+        {
+            "Name": "Index",
+            "ARNFormats": [
+                "arn:${Partition}:s3vectors:${Region}:${Account}:bucket/${BucketName}/index/${IndexName}"
+            ]
+        },
+        {
+            "Name": "VectorBucket",
+            "ARNFormats": [
+                "arn:${Partition}:s3vectors:${Region}:${Account}:bucket/${BucketName}"
+            ]
+        }
+    ],
+    "Version": "v1.2"
+}
