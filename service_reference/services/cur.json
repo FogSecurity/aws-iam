@@ -15,7 +15,11 @@
                 {
                     "Name": "cur"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DescribeReportDefinitions",
@@ -26,6 +30,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -37,6 +45,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -48,6 +60,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -59,6 +75,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -78,7 +98,11 @@
                 {
                     "Name": "cur"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ModifyReportDefinition",
@@ -94,7 +118,11 @@
                 {
                     "Name": "cur"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutClassicReportPreferences",
@@ -105,6 +133,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -119,9 +151,18 @@
             },
             "Resources": [
                 {
-                    "Name": "cur"
+                    "Name": "cur",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "TagResource",
@@ -142,7 +183,11 @@
                 {
                     "Name": "cur"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UntagResource",
@@ -162,7 +207,11 @@
                 {
                     "Name": "cur"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ValidateReportDestination",
@@ -173,6 +222,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
             }
         }
     ],
@@ -204,5 +257,5 @@
             ]
         }
     ],
-    "Version": "v1.2"
+    "Version": "v1.3"
 }

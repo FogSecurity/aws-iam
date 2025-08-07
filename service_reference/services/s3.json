@@ -4,8 +4,10 @@
         {
             "Name": "AbortMultipartUpload",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -27,7 +29,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "AssociateAccessGrantsIdentityCenter",
@@ -52,7 +58,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "BypassGovernanceRetention",
@@ -94,7 +104,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateAccessGrant",
@@ -122,7 +136,11 @@
                 {
                     "Name": "accessgrantslocation"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateAccessGrantsInstance",
@@ -149,7 +167,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateAccessGrantsLocation",
@@ -177,12 +199,20 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateAccessPoint",
             "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
+                "aws:TagKeys",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -206,7 +236,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateAccessPointForObjectLambda",
@@ -233,7 +267,11 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateBucket",
@@ -265,7 +303,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateBucketMetadataTableConfiguration",
@@ -289,7 +331,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateJob",
@@ -312,6 +358,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -338,7 +388,11 @@
                 {
                     "Name": "multiregionaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateStorageLensGroup",
@@ -359,6 +413,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -385,7 +443,11 @@
                 {
                     "Name": "accessgrant"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteAccessGrantsInstance",
@@ -410,7 +472,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteAccessGrantsInstanceResourcePolicy",
@@ -435,7 +501,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteAccessGrantsLocation",
@@ -461,12 +531,18 @@
                 {
                     "Name": "accessgrantslocation"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteAccessPoint",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -488,7 +564,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteAccessPointForObjectLambda",
@@ -515,12 +595,18 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteAccessPointPolicy",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -542,7 +628,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteAccessPointPolicyForObjectLambda",
@@ -569,7 +659,11 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteBucket",
@@ -593,7 +687,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteBucketMetadataTableConfiguration",
@@ -617,7 +715,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteBucketPolicy",
@@ -641,7 +743,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteBucketWebsite",
@@ -665,7 +771,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteJobTagging",
@@ -691,7 +801,11 @@
                 {
                     "Name": "job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteMultiRegionAccessPoint",
@@ -717,13 +831,19 @@
                 {
                     "Name": "multiregionaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteObject",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -745,12 +865,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteObjectTagging",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
@@ -773,7 +899,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteObjectVersion",
@@ -802,7 +932,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteObjectVersionTagging",
@@ -831,7 +965,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteStorageLensConfiguration",
@@ -855,7 +993,11 @@
                 {
                     "Name": "storagelensconfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteStorageLensConfigurationTagging",
@@ -879,7 +1021,11 @@
                 {
                     "Name": "storagelensconfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteStorageLensGroup",
@@ -903,7 +1049,11 @@
                 {
                     "Name": "storagelensgroup"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DescribeJob",
@@ -927,7 +1077,11 @@
                 {
                     "Name": "job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DescribeMultiRegionAccessPointOperation",
@@ -950,7 +1104,11 @@
                 {
                     "Name": "multiregionaccesspointrequestarn"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DissociateAccessGrantsIdentityCenter",
@@ -975,7 +1133,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccelerateConfiguration",
@@ -999,7 +1161,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessGrant",
@@ -1025,7 +1191,11 @@
                 {
                     "Name": "accessgrant"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessGrantsInstance",
@@ -1050,7 +1220,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessGrantsInstanceForPrefix",
@@ -1075,7 +1249,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessGrantsInstanceResourcePolicy",
@@ -1100,7 +1278,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessGrantsLocation",
@@ -1126,12 +1308,18 @@
                 {
                     "Name": "accessgrantslocation"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessPoint",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -1148,6 +1336,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -1175,7 +1367,11 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessPointForObjectLambda",
@@ -1202,12 +1398,18 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessPointPolicy",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -1229,7 +1431,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessPointPolicyForObjectLambda",
@@ -1256,12 +1462,18 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessPointPolicyStatus",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -1283,7 +1495,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccessPointPolicyStatusForObjectLambda",
@@ -1310,7 +1526,11 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetAccountPublicAccessBlock",
@@ -1329,6 +1549,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -1353,11 +1577,17 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketAcl",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1377,11 +1607,17 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketCORS",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1401,11 +1637,17 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketLocation",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1425,7 +1667,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketLogging",
@@ -1449,7 +1695,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketMetadataTableConfiguration",
@@ -1473,11 +1723,17 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetBucketNotification",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1497,7 +1753,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketObjectLockConfiguration",
@@ -1521,7 +1781,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketOwnershipControls",
@@ -1545,11 +1809,17 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketPolicy",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1569,7 +1839,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketPolicyStatus",
@@ -1593,7 +1867,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketPublicAccessBlock",
@@ -1617,7 +1895,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketRequestPayment",
@@ -1641,7 +1923,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketTagging",
@@ -1665,7 +1951,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetBucketVersioning",
@@ -1689,7 +1979,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetBucketWebsite",
@@ -1713,7 +2007,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetDataAccess",
@@ -1738,7 +2036,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetEncryptionConfiguration",
@@ -1762,7 +2064,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetIntelligentTieringConfiguration",
@@ -1786,7 +2092,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetInventoryConfiguration",
@@ -1810,7 +2120,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetJobTagging",
@@ -1834,7 +2148,11 @@
                 {
                     "Name": "job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetLifecycleConfiguration",
@@ -1858,7 +2176,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetMetricsConfiguration",
@@ -1882,7 +2204,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetMultiRegionAccessPoint",
@@ -1908,7 +2234,11 @@
                 {
                     "Name": "multiregionaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetMultiRegionAccessPointPolicy",
@@ -1934,7 +2264,11 @@
                 {
                     "Name": "multiregionaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetMultiRegionAccessPointPolicyStatus",
@@ -1960,7 +2294,11 @@
                 {
                     "Name": "multiregionaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetMultiRegionAccessPointRoutes",
@@ -1986,13 +2324,19 @@
                 {
                     "Name": "multiregionaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetObject",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
@@ -2017,13 +2361,19 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectAcl",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
@@ -2046,12 +2396,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectAttributes",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
@@ -2077,12 +2433,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetObjectLegalHold",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -2104,12 +2466,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectRetention",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -2131,12 +2499,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectTagging",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
@@ -2159,7 +2533,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectTorrent",
@@ -2183,7 +2561,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectVersion",
@@ -2213,7 +2595,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectVersionAcl",
@@ -2243,7 +2629,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectVersionAttributes",
@@ -2272,7 +2662,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectVersionForReplication",
@@ -2296,7 +2690,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectVersionTagging",
@@ -2325,7 +2723,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetObjectVersionTorrent",
@@ -2350,7 +2752,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetReplicationConfiguration",
@@ -2374,7 +2780,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetStorageLensConfiguration",
@@ -2398,7 +2808,11 @@
                 {
                     "Name": "storagelensconfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetStorageLensConfigurationTagging",
@@ -2422,7 +2836,11 @@
                 {
                     "Name": "storagelensconfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetStorageLensDashboard",
@@ -2446,7 +2864,11 @@
                 {
                     "Name": "storagelensconfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetStorageLensGroup",
@@ -2470,7 +2892,11 @@
                 {
                     "Name": "storagelensgroup"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "InitiateReplication",
@@ -2489,7 +2915,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListAccessGrants",
@@ -2514,7 +2944,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListAccessGrantsInstances",
@@ -2533,6 +2967,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -2558,7 +2996,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListAccessPoints",
@@ -2577,6 +3019,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -2596,6 +3042,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -2615,13 +3065,19 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
             "Name": "ListBucket",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -2646,13 +3102,19 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListBucketMultipartUploads",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -2674,13 +3136,19 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListBucketVersions",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -2705,7 +3173,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListCallerAccessGrants",
@@ -2730,7 +3202,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListJobs",
@@ -2749,6 +3225,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -2767,13 +3247,19 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
             "Name": "ListMultipartUploadParts",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -2795,7 +3281,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListStorageLensConfigurations",
@@ -2814,6 +3304,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -2833,6 +3327,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2864,9 +3362,16 @@
                     "Name": "accessgrantslocation"
                 },
                 {
+                    "Name": "accesspoint"
+                },
+                {
                     "Name": "storagelensgroup"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ObjectOwnerOverrideToBucketOwner",
@@ -2890,7 +3395,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PauseReplication",
@@ -2915,7 +3424,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutAccelerateConfiguration",
@@ -2939,7 +3452,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutAccessGrantsInstanceResourcePolicy",
@@ -2964,7 +3481,11 @@
                 {
                     "Name": "accessgrantsinstance"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutAccessPointConfigurationForObjectLambda",
@@ -2991,12 +3512,18 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutAccessPointPolicy",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -3018,7 +3545,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutAccessPointPolicyForObjectLambda",
@@ -3045,7 +3576,11 @@
                 {
                     "Name": "objectlambdaaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutAccessPointPublicAccessBlock",
@@ -3056,6 +3591,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -3075,6 +3614,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -3099,7 +3642,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketAcl",
@@ -3129,7 +3676,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketCORS",
@@ -3153,7 +3704,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketLogging",
@@ -3177,7 +3732,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketNotification",
@@ -3201,7 +3760,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketObjectLockConfiguration",
@@ -3224,7 +3787,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketOwnershipControls",
@@ -3248,7 +3815,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketPolicy",
@@ -3272,7 +3843,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketPublicAccessBlock",
@@ -3296,7 +3871,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketRequestPayment",
@@ -3320,7 +3899,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketTagging",
@@ -3344,7 +3927,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutBucketVersioning",
@@ -3368,7 +3955,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutBucketWebsite",
@@ -3392,7 +3983,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutEncryptionConfiguration",
@@ -3416,7 +4011,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutIntelligentTieringConfiguration",
@@ -3440,7 +4039,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutInventoryConfiguration",
@@ -3465,7 +4068,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutJobTagging",
@@ -3493,7 +4100,11 @@
                 {
                     "Name": "job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutLifecycleConfiguration",
@@ -3517,7 +4128,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutMetricsConfiguration",
@@ -3541,7 +4156,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutMultiRegionAccessPointPolicy",
@@ -3567,13 +4186,19 @@
                 {
                     "Name": "multiregionaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutObject",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ObjectCreationOperation",
@@ -3617,13 +4242,19 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutObjectAcl",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
@@ -3653,12 +4284,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutObjectLegalHold",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -3681,12 +4318,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutObjectRetention",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -3711,12 +4354,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutObjectTagging",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
@@ -3741,7 +4390,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutObjectVersionAcl",
@@ -3778,7 +4431,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutObjectVersionTagging",
@@ -3809,7 +4466,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutReplicationConfiguration",
@@ -3834,7 +4495,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutStorageLensConfiguration",
@@ -3855,6 +4520,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -3881,7 +4550,11 @@
                 {
                     "Name": "storagelensconfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ReplicateDelete",
@@ -3905,7 +4578,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ReplicateObject",
@@ -3932,7 +4609,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ReplicateTags",
@@ -3956,12 +4637,18 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "RestoreObject",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
                 "s3:DataAccessPointAccount",
                 "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
@@ -3983,7 +4670,11 @@
                 {
                     "Name": "object"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "SubmitMultiRegionAccessPointRoutes",
@@ -4009,7 +4700,11 @@
                 {
                     "Name": "multiregionaccesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "TagResource",
@@ -4042,9 +4737,16 @@
                     "Name": "accessgrantslocation"
                 },
                 {
+                    "Name": "accesspoint"
+                },
+                {
                     "Name": "storagelensgroup"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UntagResource",
@@ -4076,9 +4778,16 @@
                     "Name": "accessgrantslocation"
                 },
                 {
+                    "Name": "accesspoint"
+                },
+                {
                     "Name": "storagelensgroup"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateAccessGrantsLocation",
@@ -4104,7 +4813,11 @@
                 {
                     "Name": "accessgrantslocation"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateBucketMetadataInventoryTableConfiguration",
@@ -4128,7 +4841,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateBucketMetadataJournalTableConfiguration",
@@ -4152,7 +4869,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateJobPriority",
@@ -4179,7 +4900,11 @@
                 {
                     "Name": "job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateJobStatus",
@@ -4206,7 +4931,11 @@
                 {
                     "Name": "job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateStorageLensGroup",
@@ -4230,7 +4959,11 @@
                 {
                     "Name": "storagelensgroup"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         }
     ],
     "ConditionKeys": [
@@ -4272,6 +5005,12 @@
         },
         {
             "Name": "s3:AccessPointNetworkOrigin",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "s3:AccessPointTag/${TagKey}",
             "Types": [
                 "String"
             ]
@@ -4651,5 +5390,5 @@
             ]
         }
     ],
-    "Version": "v1.2"
+    "Version": "v1.3"
 }
