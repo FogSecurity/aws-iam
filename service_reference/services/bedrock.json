@@ -15,7 +15,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ApplyGuardrail",
@@ -34,7 +38,11 @@
                 {
                     "Name": "guardrail-profile"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "AssociateAgentCollaborator",
@@ -50,7 +58,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "AssociateAgentKnowledgeBase",
@@ -69,7 +81,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "AssociateThirdPartyKnowledgeBase",
@@ -83,6 +99,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -99,7 +119,11 @@
                 {
                     "Name": "evaluation-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CallWithBearerToken",
@@ -110,6 +134,30 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "CancelAutomatedReasoningPolicyBuildWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -125,6 +173,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -145,7 +197,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateAgentAlias",
@@ -165,7 +221,74 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "CreateAutomatedReasoningPolicy",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "CreateAutomatedReasoningPolicyTestCase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "CreateAutomatedReasoningPolicyVersion",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateBlueprint",
@@ -180,6 +303,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -196,7 +323,11 @@
                 {
                     "Name": "blueprint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateCustomModel",
@@ -211,6 +342,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -231,7 +366,11 @@
                 {
                     "Name": "custom-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateDataAutomationProject",
@@ -251,7 +390,11 @@
                 {
                     "Name": "blueprint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateDataSource",
@@ -267,7 +410,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateEvaluationJob",
@@ -296,7 +443,11 @@
                 {
                     "Name": "prompt-router"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateFlow",
@@ -311,6 +462,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -331,7 +486,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateFlowVersion",
@@ -347,7 +506,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateFoundationModelAgreement",
@@ -358,6 +521,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -376,9 +543,19 @@
             },
             "Resources": [
                 {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
+                },
+                {
                     "Name": "guardrail-profile"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateGuardrailVersion",
@@ -394,7 +571,11 @@
                 {
                     "Name": "guardrail"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateInferenceProfile",
@@ -420,7 +601,11 @@
                 {
                     "Name": "inference-profile"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateInvocation",
@@ -436,7 +621,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateKnowledgeBase",
@@ -451,6 +640,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -462,6 +655,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -482,7 +679,11 @@
                 {
                     "Name": "custom-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateModelCustomizationJob",
@@ -505,7 +706,11 @@
                 {
                     "Name": "foundation-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateModelEvaluationJob",
@@ -528,7 +733,11 @@
                 {
                     "Name": "foundation-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateModelImportJob",
@@ -543,6 +752,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -569,7 +782,11 @@
                 {
                     "Name": "model-invocation-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreatePrompt",
@@ -584,6 +801,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -610,7 +831,11 @@
                 {
                     "Name": "inference-profile"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreatePromptVersion",
@@ -630,7 +855,11 @@
                 {
                     "Name": "prompt"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateProvisionedModelThroughput",
@@ -653,7 +882,11 @@
                 {
                     "Name": "foundation-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateSession",
@@ -668,6 +901,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -684,7 +921,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteAgentActionGroup",
@@ -700,7 +941,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteAgentAlias",
@@ -716,7 +961,11 @@
                 {
                     "Name": "agent-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteAgentMemory",
@@ -732,7 +981,11 @@
                 {
                     "Name": "agent-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteAgentVersion",
@@ -748,7 +1001,74 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "DeleteAutomatedReasoningPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "DeleteAutomatedReasoningPolicyBuildWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "DeleteAutomatedReasoningPolicyTestCase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteBlueprint",
@@ -764,7 +1084,11 @@
                 {
                     "Name": "blueprint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteCustomModel",
@@ -780,7 +1104,11 @@
                 {
                     "Name": "custom-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteCustomModelDeployment",
@@ -796,7 +1124,11 @@
                 {
                     "Name": "custom-model-deployment"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteDataAutomationProject",
@@ -812,7 +1144,11 @@
                 {
                     "Name": "data-automation-project"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteDataSource",
@@ -828,7 +1164,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteFlow",
@@ -844,7 +1184,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteFlowAlias",
@@ -860,7 +1204,11 @@
                 {
                     "Name": "flow-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteFlowVersion",
@@ -876,7 +1224,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteFoundationModelAgreement",
@@ -887,6 +1239,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -903,7 +1259,11 @@
                 {
                     "Name": "guardrail"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteImportedModel",
@@ -919,7 +1279,11 @@
                 {
                     "Name": "imported-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteInferenceProfile",
@@ -935,7 +1299,11 @@
                 {
                     "Name": "application-inference-profile"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteKnowledgeBase",
@@ -951,7 +1319,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteKnowledgeBaseDocuments",
@@ -967,7 +1339,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteMarketplaceModelAgreement",
@@ -978,6 +1354,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -994,7 +1374,11 @@
                 {
                     "Name": "bedrock-marketplace-model-endpoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteModelInvocationLoggingConfiguration",
@@ -1005,6 +1389,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -1024,7 +1412,11 @@
                 {
                     "Name": "prompt-version"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeletePromptRouter",
@@ -1040,7 +1432,11 @@
                 {
                     "Name": "prompt-router"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteProvisionedModelThroughput",
@@ -1056,7 +1452,11 @@
                 {
                     "Name": "provisioned-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteResourcePolicy",
@@ -1072,7 +1472,11 @@
                 {
                     "Name": "custom-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteSession",
@@ -1088,7 +1492,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeregisterMarketplaceModelEndpoint",
@@ -1104,7 +1512,11 @@
                 {
                     "Name": "bedrock-marketplace-model-endpoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DetectGeneratedContent",
@@ -1120,7 +1532,11 @@
                 {
                     "Name": "foundation-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DisassociateAgentCollaborator",
@@ -1136,7 +1552,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DisassociateAgentKnowledgeBase",
@@ -1155,7 +1575,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "EndSession",
@@ -1171,7 +1595,34 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ExportAutomatedReasoningPolicyVersion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GenerateQuery",
@@ -1182,6 +1633,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -1198,7 +1653,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAgentActionGroup",
@@ -1214,7 +1673,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAgentAlias",
@@ -1230,7 +1693,11 @@
                 {
                     "Name": "agent-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAgentCollaborator",
@@ -1246,7 +1713,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAgentKnowledgeBase",
@@ -1265,7 +1736,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAgentMemory",
@@ -1281,7 +1756,11 @@
                 {
                     "Name": "agent-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAgentVersion",
@@ -1297,7 +1776,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAsyncInvoke",
@@ -1313,7 +1796,154 @@
                 {
                     "Name": "async-invoke"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetAutomatedReasoningPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetAutomatedReasoningPolicyAnnotations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetAutomatedReasoningPolicyBuildWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetAutomatedReasoningPolicyBuildWorkflowResultAssets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetAutomatedReasoningPolicyNextScenario",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetAutomatedReasoningPolicyTestCase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetAutomatedReasoningPolicyTestResult",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetBlueprint",
@@ -1329,7 +1959,11 @@
                 {
                     "Name": "blueprint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetBlueprintRecommendation",
@@ -1340,6 +1974,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -1356,7 +1994,11 @@
                 {
                     "Name": "custom-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetCustomModelDeployment",
@@ -1372,7 +2014,11 @@
                 {
                     "Name": "custom-model-deployment"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetDataAutomationProject",
@@ -1388,7 +2034,11 @@
                 {
                     "Name": "data-automation-project"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetDataAutomationStatus",
@@ -1404,7 +2054,11 @@
                 {
                     "Name": "data-automation-invocation-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetDataSource",
@@ -1420,7 +2074,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetEvaluationJob",
@@ -1436,7 +2094,11 @@
                 {
                     "Name": "evaluation-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetExecutionFlowSnapshot",
@@ -1458,7 +2120,11 @@
                 {
                     "Name": "flow-execution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetFlow",
@@ -1474,7 +2140,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetFlowAlias",
@@ -1490,7 +2160,11 @@
                 {
                     "Name": "flow-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetFlowExecution",
@@ -1512,7 +2186,11 @@
                 {
                     "Name": "flow-execution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetFlowVersion",
@@ -1528,7 +2206,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetFoundationModel",
@@ -1544,7 +2226,11 @@
                 {
                     "Name": "foundation-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetFoundationModelAvailability",
@@ -1555,6 +2241,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -1571,7 +2261,11 @@
                 {
                     "Name": "guardrail"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetImportedModel",
@@ -1587,7 +2281,11 @@
                 {
                     "Name": "imported-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetInferenceProfile",
@@ -1606,7 +2304,11 @@
                 {
                     "Name": "inference-profile"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetIngestionJob",
@@ -1622,7 +2324,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetInvocationStep",
@@ -1638,7 +2344,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetKnowledgeBase",
@@ -1654,7 +2364,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetKnowledgeBaseDocuments",
@@ -1670,7 +2384,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetMarketplaceModelEndpoint",
@@ -1686,7 +2404,11 @@
                 {
                     "Name": "bedrock-marketplace-model-endpoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetModelCopyJob",
@@ -1702,7 +2424,11 @@
                 {
                     "Name": "model-copy-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetModelCustomizationJob",
@@ -1718,7 +2444,11 @@
                 {
                     "Name": "model-customization-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetModelEvaluationJob",
@@ -1734,7 +2464,11 @@
                 {
                     "Name": "model-evaluation-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetModelImportJob",
@@ -1750,7 +2484,11 @@
                 {
                     "Name": "model-import-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetModelInvocationJob",
@@ -1766,7 +2504,11 @@
                 {
                     "Name": "model-invocation-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetModelInvocationLoggingConfiguration",
@@ -1777,6 +2519,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -1796,7 +2542,11 @@
                 {
                     "Name": "prompt-version"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetPromptRouter",
@@ -1815,7 +2565,11 @@
                 {
                     "Name": "prompt-router"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetProvisionedModelThroughput",
@@ -1831,7 +2585,11 @@
                 {
                     "Name": "provisioned-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetResourcePolicy",
@@ -1847,7 +2605,11 @@
                 {
                     "Name": "custom-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetSession",
@@ -1863,7 +2625,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetUseCaseForModelAccess",
@@ -1874,6 +2640,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -1890,7 +2660,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "InvokeAgent",
@@ -1906,7 +2680,34 @@
                 {
                     "Name": "agent-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "InvokeAutomatedReasoningPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "InvokeBlueprintRecommendationAsync",
@@ -1922,7 +2723,11 @@
                 {
                     "Name": "data-automation-profile"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "InvokeBuilder",
@@ -1933,6 +2738,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -1959,7 +2768,11 @@
                 {
                     "Name": "data-automation-project"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "InvokeFlow",
@@ -1975,7 +2788,11 @@
                 {
                     "Name": "flow-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "InvokeInlineAgent",
@@ -1989,6 +2806,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2039,7 +2860,11 @@
                 {
                     "Name": "provisioned-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "InvokeModelWithResponseStream",
@@ -2084,7 +2909,11 @@
                 {
                     "Name": "provisioned-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListAgentActionGroups",
@@ -2100,7 +2929,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListAgentAliases",
@@ -2116,7 +2949,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListAgentCollaborators",
@@ -2132,7 +2969,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListAgentKnowledgeBases",
@@ -2148,7 +2989,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListAgentVersions",
@@ -2164,7 +3009,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListAgents",
@@ -2175,6 +3024,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2186,6 +3039,90 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ListAutomatedReasoningPolicies",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ListAutomatedReasoningPolicyBuildWorkflows",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ListAutomatedReasoningPolicyTestCases",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ListAutomatedReasoningPolicyTestResults",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2202,7 +3139,11 @@
                 {
                     "Name": "data-automation-project"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListCustomModelDeployments",
@@ -2213,6 +3154,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2224,6 +3169,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2240,7 +3189,11 @@
                 {
                     "Name": "blueprint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListDataSources",
@@ -2256,7 +3209,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListEvaluationJobs",
@@ -2267,6 +3224,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2283,7 +3244,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListFlowExecutionEvents",
@@ -2305,7 +3270,11 @@
                 {
                     "Name": "flow-execution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListFlowExecutions",
@@ -2324,7 +3293,11 @@
                 {
                     "Name": "flow-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListFlowVersions",
@@ -2340,7 +3313,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListFlows",
@@ -2351,6 +3328,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2362,6 +3343,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2373,6 +3358,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2389,7 +3378,11 @@
                 {
                     "Name": "guardrail"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListImportedModels",
@@ -2400,6 +3393,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2411,6 +3408,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2427,7 +3428,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListInvocationSteps",
@@ -2443,7 +3448,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListInvocations",
@@ -2459,7 +3468,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListKnowledgeBaseDocuments",
@@ -2475,7 +3488,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListKnowledgeBases",
@@ -2486,6 +3503,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2497,6 +3518,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2508,6 +3533,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2519,6 +3548,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2530,6 +3563,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2541,6 +3578,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2552,6 +3593,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2563,6 +3608,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2579,7 +3628,11 @@
                 {
                     "Name": "prompt"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListProvisionedModelThroughputs",
@@ -2590,6 +3643,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2601,6 +3658,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2625,6 +3686,12 @@
                 },
                 {
                     "Name": "async-invoke"
+                },
+                {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
                 },
                 {
                     "Name": "blueprint"
@@ -2689,7 +3756,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "OptimizePrompt",
@@ -2700,6 +3771,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2716,7 +3791,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PrepareFlow",
@@ -2732,7 +3811,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutFoundationModelEntitlement",
@@ -2743,6 +3826,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2759,7 +3846,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutModelInvocationLoggingConfiguration",
@@ -2770,6 +3861,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2790,7 +3885,11 @@
                 {
                     "Name": "custom-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutUseCaseForModelAccess",
@@ -2801,6 +3900,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2817,7 +3920,11 @@
                 {
                     "Name": "bedrock-marketplace-model-endpoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "RenderPrompt",
@@ -2836,7 +3943,11 @@
                 {
                     "Name": "prompt-version"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "Rerank",
@@ -2847,6 +3958,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2863,7 +3978,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "RetrieveAndGenerate",
@@ -2874,6 +3993,50 @@
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "StartAutomatedReasoningPolicyBuildWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "StartAutomatedReasoningPolicyTestWorkflow",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -2893,7 +4056,11 @@
                 {
                     "Name": "flow-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "StartIngestionJob",
@@ -2909,7 +4076,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "StopEvaluationJob",
@@ -2925,7 +4096,11 @@
                 {
                     "Name": "evaluation-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "StopFlowExecution",
@@ -2947,7 +4122,11 @@
                 {
                     "Name": "flow-execution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "StopIngestionJob",
@@ -2963,7 +4142,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "StopModelCustomizationJob",
@@ -2979,7 +4162,11 @@
                 {
                     "Name": "model-customization-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "StopModelInvocationJob",
@@ -2995,7 +4182,11 @@
                 {
                     "Name": "model-invocation-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "TagResource",
@@ -3025,6 +4216,12 @@
                     "Name": "async-invoke"
                 },
                 {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
+                },
+                {
                     "Name": "blueprint"
                 },
                 {
@@ -3087,7 +4284,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UntagResource",
@@ -3116,6 +4317,12 @@
                     "Name": "async-invoke"
                 },
                 {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
+                },
+                {
                     "Name": "blueprint"
                 },
                 {
@@ -3178,7 +4385,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateAgent",
@@ -3194,7 +4405,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateAgentActionGroup",
@@ -3210,7 +4425,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateAgentAlias",
@@ -3226,7 +4445,11 @@
                 {
                     "Name": "agent-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateAgentCollaborator",
@@ -3242,7 +4465,11 @@
                 {
                     "Name": "agent"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateAgentKnowledgeBase",
@@ -3261,7 +4488,71 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "UpdateAutomatedReasoningPolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "UpdateAutomatedReasoningPolicyAnnotations",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "UpdateAutomatedReasoningPolicyTestCase",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "automated-reasoning-policy"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateBlueprint",
@@ -3277,7 +4568,11 @@
                 {
                     "Name": "blueprint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateDataAutomationProject",
@@ -3296,7 +4591,11 @@
                 {
                     "Name": "data-automation-project"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateDataSource",
@@ -3312,7 +4611,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateFlow",
@@ -3328,7 +4631,11 @@
                 {
                     "Name": "flow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateFlowAlias",
@@ -3344,7 +4651,11 @@
                 {
                     "Name": "flow-alias"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateGuardrail",
@@ -3358,12 +4669,22 @@
             },
             "Resources": [
                 {
+                    "Name": "automated-reasoning-policy"
+                },
+                {
+                    "Name": "automated-reasoning-policy-version"
+                },
+                {
                     "Name": "guardrail"
                 },
                 {
                     "Name": "guardrail-profile"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateKnowledgeBase",
@@ -3379,7 +4700,11 @@
                 {
                     "Name": "knowledge-base"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateMarketplaceModelEndpoint",
@@ -3395,7 +4720,11 @@
                 {
                     "Name": "bedrock-marketplace-model-endpoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdatePrompt",
@@ -3411,7 +4740,11 @@
                 {
                     "Name": "prompt"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateProvisionedModelThroughput",
@@ -3433,7 +4766,11 @@
                 {
                     "Name": "provisioned-model"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateSession",
@@ -3449,7 +4786,11 @@
                 {
                     "Name": "session"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ValidateFlowDefinition",
@@ -3460,6 +4801,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         }
     ],
@@ -3545,6 +4890,24 @@
             "Name": "async-invoke",
             "ARNFormats": [
                 "arn:${Partition}:bedrock:${Region}:${Account}:async-invoke/${ResourceId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "automated-reasoning-policy",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:automated-reasoning-policy/${AutomatedReasoningPolicyId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "automated-reasoning-policy-version",
+            "ARNFormats": [
+                "arn:${Partition}:bedrock:${Region}:${Account}:automated-reasoning-policy/${AutomatedReasoningPolicyId}:${AutomatedReasoningPolicyVersion}"
             ],
             "ConditionKeys": [
                 "aws:ResourceTag/${TagKey}"
@@ -3779,5 +5142,5 @@
             ]
         }
     ],
-    "Version": "v1.2"
+    "Version": "v1.3"
 }

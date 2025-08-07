@@ -4,6 +4,8 @@
         {
             "Name": "CreateAccessPoint",
             "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
                 "s3express:AccessPointNetworkOrigin",
                 "s3express:DataAccessPointAccount",
                 "s3express:DataAccessPointArn",
@@ -26,7 +28,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateBucket",
@@ -52,7 +58,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "CreateSession",
@@ -87,7 +97,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteAccessPoint",
@@ -113,7 +127,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteAccessPointPolicy",
@@ -139,7 +157,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteAccessPointScope",
@@ -165,7 +187,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteBucket",
@@ -188,7 +214,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteBucketPolicy",
@@ -211,7 +241,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAccessPoint",
@@ -237,7 +271,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAccessPointPolicy",
@@ -263,7 +301,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetAccessPointScope",
@@ -289,7 +331,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetBucketPolicy",
@@ -312,7 +358,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetEncryptionConfiguration",
@@ -335,7 +385,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetLifecycleConfiguration",
@@ -358,7 +412,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListAccessPointsForDirectoryBuckets",
@@ -376,6 +434,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -394,6 +456,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -415,9 +481,16 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspoint"
+                },
+                {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutAccessPointPolicy",
@@ -443,7 +516,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutAccessPointScope",
@@ -469,7 +546,11 @@
                 {
                     "Name": "accesspoint"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutBucketPolicy",
@@ -492,7 +573,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutEncryptionConfiguration",
@@ -515,7 +600,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutLifecycleConfiguration",
@@ -538,7 +627,11 @@
                 {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "TagResource",
@@ -561,9 +654,16 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspoint"
+                },
+                {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UntagResource",
@@ -585,9 +685,16 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspoint"
+                },
+                {
                     "Name": "bucket"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         }
     ],
     "ConditionKeys": [
@@ -611,6 +718,12 @@
         },
         {
             "Name": "s3express:AccessPointNetworkOrigin",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "s3express:AccessPointTag/${TagKey}",
             "Types": [
                 "String"
             ]
@@ -711,6 +824,10 @@
             "Name": "accesspoint",
             "ARNFormats": [
                 "arn:${Partition}:s3express:${Region}:${Account}:accesspoint/${AccessPointName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "s3express:AccessPointTag/${TagKey}"
             ]
         },
         {
@@ -724,5 +841,5 @@
             ]
         }
     ],
-    "Version": "v1.2"
+    "Version": "v1.3"
 }

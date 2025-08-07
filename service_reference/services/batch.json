@@ -15,7 +15,11 @@
                 {
                     "Name": "job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateComputeEnvironment",
@@ -35,7 +39,11 @@
                 {
                     "Name": "compute-environment"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateConsumableResource",
@@ -55,7 +63,11 @@
                 {
                     "Name": "consumable-resource"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateJobQueue",
@@ -80,8 +92,15 @@
                 },
                 {
                     "Name": "scheduling-policy"
+                },
+                {
+                    "Name": "service-environment"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateSchedulingPolicy",
@@ -101,7 +120,35 @@
                 {
                     "Name": "scheduling-policy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "CreateServiceEnvironment",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service-environment"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeleteComputeEnvironment",
@@ -117,7 +164,11 @@
                 {
                     "Name": "compute-environment"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteConsumableResource",
@@ -133,7 +184,11 @@
                 {
                     "Name": "consumable-resource"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteJobQueue",
@@ -149,7 +204,11 @@
                 {
                     "Name": "job-queue"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteSchedulingPolicy",
@@ -165,7 +224,31 @@
                 {
                     "Name": "scheduling-policy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "DeleteServiceEnvironment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service-environment"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "DeregisterJobDefinition",
@@ -181,7 +264,11 @@
                 {
                     "Name": "job-definition-revision"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DescribeComputeEnvironments",
@@ -192,6 +279,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -208,7 +299,11 @@
                 {
                     "Name": "consumable-resource"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DescribeJobDefinitions",
@@ -219,6 +314,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -230,6 +329,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -241,6 +344,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -252,6 +359,40 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "DescribeServiceEnvironments",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "DescribeServiceJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -268,7 +409,11 @@
                 {
                     "Name": "job-queue"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListConsumableResources",
@@ -279,6 +424,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -290,6 +439,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -306,7 +459,11 @@
                 {
                     "Name": "consumable-resource"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListSchedulingPolicies",
@@ -317,6 +474,25 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "ListServiceJobs",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -347,8 +523,18 @@
                 },
                 {
                     "Name": "scheduling-policy"
+                },
+                {
+                    "Name": "service-environment"
+                },
+                {
+                    "Name": "service-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "RegisterJobDefinition",
@@ -385,7 +571,11 @@
                 {
                     "Name": "job-definition"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "SubmitJob",
@@ -417,7 +607,39 @@
                 {
                     "Name": "job-queue"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "SubmitServiceJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "job-queue"
+                },
+                {
+                    "Name": "service-job",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:TagKeys",
+                        "batch:ShareIdentifier"
+                    ]
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "TagResource",
@@ -451,8 +673,18 @@
                 },
                 {
                     "Name": "scheduling-policy"
+                },
+                {
+                    "Name": "service-environment"
+                },
+                {
+                    "Name": "service-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "TerminateJob",
@@ -468,7 +700,31 @@
                 {
                     "Name": "job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "TerminateServiceJob",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service-job"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UntagResource",
@@ -501,8 +757,18 @@
                 },
                 {
                     "Name": "scheduling-policy"
+                },
+                {
+                    "Name": "service-environment"
+                },
+                {
+                    "Name": "service-job"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateComputeEnvironment",
@@ -518,7 +784,11 @@
                 {
                     "Name": "compute-environment"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateConsumableResource",
@@ -534,7 +804,11 @@
                 {
                     "Name": "consumable-resource"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateJobQueue",
@@ -556,7 +830,11 @@
                 {
                     "Name": "scheduling-policy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateSchedulingPolicy",
@@ -572,7 +850,31 @@
                 {
                     "Name": "scheduling-policy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "UpdateServiceEnvironment",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "service-environment"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         }
     ],
     "ConditionKeys": [
@@ -745,7 +1047,25 @@
             "ConditionKeys": [
                 "aws:ResourceTag/${TagKey}"
             ]
+        },
+        {
+            "Name": "service-environment",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:service-environment/${ServiceEnvironmentName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "service-job",
+            "ARNFormats": [
+                "arn:${Partition}:batch:${Region}:${Account}:service-job/${JobId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
         }
     ],
-    "Version": "v1.2"
+    "Version": "v1.3"
 }

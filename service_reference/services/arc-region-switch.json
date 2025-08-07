@@ -1,8 +1,8 @@
 {
-    "Name": "rum",
+    "Name": "arc-region-switch",
     "Actions": [
         {
-            "Name": "BatchCreateRumMetricDefinitions",
+            "Name": "ApprovePlanExecutionStep",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -13,16 +13,16 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "BatchDeleteRumMetricDefinitions",
+            "Name": "CancelPlanExecution",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -33,36 +33,16 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "BatchGetRumMetricDefinitions",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "AppMonitorResource"
-                }
-            ],
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
-            }
-        },
-        {
-            "Name": "CreateAppMonitor",
+            "Name": "CreatePlan",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
                 "aws:TagKeys"
@@ -77,16 +57,16 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "DeleteAppMonitor",
+            "Name": "DeletePlan",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -97,12 +77,12 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -110,43 +90,18 @@
             "Annotations": {
                 "Properties": {
                     "IsList": false,
-                    "IsPermissionManagement": false,
+                    "IsPermissionManagement": true,
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
             },
-            "Resources": [
-                {
-                    "Name": "AppMonitorResource"
-                }
-            ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "DeleteRumMetricsDestination",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "AppMonitorResource"
-                }
-            ],
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
-            }
-        },
-        {
-            "Name": "GetAppMonitor",
+            "Name": "GetPlan",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -157,16 +112,16 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "GetAppMonitorData",
+            "Name": "GetPlanEvaluationStatus",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -177,12 +132,52 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetPlanExecution",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "plan"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetPlanInRegion",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "plan"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -190,6 +185,26 @@
             "Annotations": {
                 "Properties": {
                     "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "plan"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ListPlanExecutionEvents",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
                     "IsWrite": false
@@ -197,16 +212,36 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "ListAppMonitors",
+            "Name": "ListPlanExecutions",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "plan"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ListPlans",
             "Annotations": {
                 "Properties": {
                     "IsList": true,
@@ -216,78 +251,38 @@
                 }
             },
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
-            }
-        },
-        {
-            "Name": "ListRumMetricsDestinations",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "Resources": [
-                {
-                    "Name": "AppMonitorResource"
-                }
-            ],
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
-            }
-        },
-        {
-            "Name": "ListTagsForResource",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
+                "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "PutResourcePolicy",
+            "Name": "ListPlansInRegion",
             "Annotations": {
                 "Properties": {
-                    "IsList": false,
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
-                    "IsWrite": true
+                    "IsWrite": false
                 }
             },
-            "Resources": [
-                {
-                    "Name": "AppMonitorResource"
-                }
-            ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "PutRumEvents",
+            "Name": "ListRoute53HealthChecks",
             "Annotations": {
                 "Properties": {
-                    "IsList": false,
+                    "IsList": true,
                     "IsPermissionManagement": false,
                     "IsTaggingOnly": false,
-                    "IsWrite": true
+                    "IsWrite": false
                 }
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
@@ -296,7 +291,45 @@
             }
         },
         {
-            "Name": "PutRumMetricsDestination",
+            "Name": "ListTagsForResource",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "plan"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "PutResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "StartPlanExecution",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -307,18 +340,19 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
             "Name": "TagResource",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
                 "aws:TagKeys"
             ],
             "Annotations": {
@@ -331,17 +365,18 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
+                "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
             }
         },
         {
             "Name": "UntagResource",
             "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
                 "aws:TagKeys"
             ],
             "Annotations": {
@@ -354,16 +389,16 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
+                "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "UpdateAppMonitor",
+            "Name": "UpdatePlan",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -374,16 +409,16 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
-            "Name": "UpdateRumMetricDefinition",
+            "Name": "UpdatePlanExecution",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -394,12 +429,32 @@
             },
             "Resources": [
                 {
-                    "Name": "AppMonitorResource"
+                    "Name": "plan"
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": true,
-                "IAM Action Last Accessed": true
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "UpdatePlanExecutionStep",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "plan"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         }
     ],
@@ -425,9 +480,9 @@
     ],
     "Resources": [
         {
-            "Name": "AppMonitorResource",
+            "Name": "plan",
             "ARNFormats": [
-                "arn:${Partition}:rum:${Region}:${Account}:appmonitor/${Name}"
+                "arn:${Partition}:arc-region-switch:${Region}:${Account}:plan/${ResourceId}"
             ],
             "ConditionKeys": [
                 "aws:ResourceTag/${TagKey}"

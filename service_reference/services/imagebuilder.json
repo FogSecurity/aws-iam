@@ -15,7 +15,11 @@
                 {
                     "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CancelLifecycleExecution",
@@ -31,10 +35,18 @@
                 {
                     "Name": "lifecycleExecution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateComponent",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -45,16 +57,20 @@
             },
             "Resources": [
                 {
-                    "Name": "component",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "component"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateContainerRecipe",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -65,16 +81,20 @@
             },
             "Resources": [
                 {
-                    "Name": "containerRecipe",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "containerRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateDistributionConfiguration",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -85,16 +105,20 @@
             },
             "Resources": [
                 {
-                    "Name": "distributionConfiguration",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "distributionConfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateImage",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -105,16 +129,20 @@
             },
             "Resources": [
                 {
-                    "Name": "image",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateImagePipeline",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -125,16 +153,20 @@
             },
             "Resources": [
                 {
-                    "Name": "imagePipeline",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "imagePipeline"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateImageRecipe",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -145,16 +177,24 @@
             },
             "Resources": [
                 {
-                    "Name": "imageRecipe",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "imageRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateInfrastructureConfiguration",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "imagebuilder:CreatedResourceTag/${TagKey}",
+                "imagebuilder:CreatedResourceTagKeys",
+                "imagebuilder:Ec2MetadataHttpTokens",
+                "imagebuilder:StatusTopicArn"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -165,20 +205,21 @@
             },
             "Resources": [
                 {
-                    "Name": "infrastructureConfiguration",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys",
-                        "imagebuilder:CreatedResourceTag/<key>",
-                        "imagebuilder:CreatedResourceTagKeys",
-                        "imagebuilder:Ec2MetadataHttpTokens",
-                        "imagebuilder:StatusTopicArn"
-                    ]
+                    "Name": "infrastructureConfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateLifecyclePolicy",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys",
+                "imagebuilder:LifecyclePolicyResourceType"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -189,17 +230,20 @@
             },
             "Resources": [
                 {
-                    "Name": "lifecyclePolicy",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys",
-                        "imagebuilder:LifecyclePolicyResourceType"
-                    ]
+                    "Name": "lifecyclePolicy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "CreateWorkflow",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -210,13 +254,13 @@
             },
             "Resources": [
                 {
-                    "Name": "workflow",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "workflow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteComponent",
@@ -232,7 +276,11 @@
                 {
                     "Name": "component"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteContainerRecipe",
@@ -248,7 +296,11 @@
                 {
                     "Name": "containerRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteDistributionConfiguration",
@@ -264,7 +316,11 @@
                 {
                     "Name": "distributionConfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteImage",
@@ -280,7 +336,11 @@
                 {
                     "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteImagePipeline",
@@ -296,7 +356,11 @@
                 {
                     "Name": "imagePipeline"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteImageRecipe",
@@ -312,7 +376,11 @@
                 {
                     "Name": "imageRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteInfrastructureConfiguration",
@@ -328,7 +396,11 @@
                 {
                     "Name": "infrastructureConfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteLifecyclePolicy",
@@ -344,7 +416,11 @@
                 {
                     "Name": "lifecyclePolicy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "DeleteWorkflow",
@@ -360,7 +436,11 @@
                 {
                     "Name": "workflow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetComponent",
@@ -376,7 +456,11 @@
                 {
                     "Name": "component"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetComponentPolicy",
@@ -392,7 +476,11 @@
                 {
                     "Name": "component"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetContainerRecipe",
@@ -408,7 +496,11 @@
                 {
                     "Name": "containerRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetContainerRecipePolicy",
@@ -424,7 +516,11 @@
                 {
                     "Name": "containerRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetDistributionConfiguration",
@@ -440,7 +536,11 @@
                 {
                     "Name": "distributionConfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetImage",
@@ -454,12 +554,13 @@
             },
             "Resources": [
                 {
-                    "Name": "image",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetImagePipeline",
@@ -475,7 +576,11 @@
                 {
                     "Name": "imagePipeline"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetImagePolicy",
@@ -491,7 +596,11 @@
                 {
                     "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetImageRecipe",
@@ -507,7 +616,11 @@
                 {
                     "Name": "imageRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetImageRecipePolicy",
@@ -523,7 +636,11 @@
                 {
                     "Name": "imageRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetInfrastructureConfiguration",
@@ -539,7 +656,11 @@
                 {
                     "Name": "infrastructureConfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetLifecycleExecution",
@@ -555,7 +676,11 @@
                 {
                     "Name": "lifecycleExecution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetLifecyclePolicy",
@@ -571,7 +696,11 @@
                 {
                     "Name": "lifecyclePolicy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetMarketplaceResource",
@@ -587,7 +716,11 @@
                 {
                     "Name": "component"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetWorkflow",
@@ -603,7 +736,11 @@
                 {
                     "Name": "workflow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "GetWorkflowExecution",
@@ -619,7 +756,11 @@
                 {
                     "Name": "workflowExecution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetWorkflowStepExecution",
@@ -635,10 +776,18 @@
                 {
                     "Name": "workflowStepExecution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ImportComponent",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -649,16 +798,20 @@
             },
             "Resources": [
                 {
-                    "Name": "component",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "component"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ImportDiskImage",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -669,16 +822,20 @@
             },
             "Resources": [
                 {
-                    "Name": "imageVersion",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "imageVersion"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ImportVmImage",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -689,13 +846,13 @@
             },
             "Resources": [
                 {
-                    "Name": "imageVersion",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "imageVersion"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListComponentBuildVersions",
@@ -709,9 +866,13 @@
             },
             "Resources": [
                 {
-                    "Name": "componentVersion"
+                    "Name": "allComponentBuildVersions"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListComponents",
@@ -722,6 +883,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -733,6 +898,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -744,6 +913,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -758,9 +931,13 @@
             },
             "Resources": [
                 {
-                    "Name": "imageVersion"
+                    "Name": "allImageBuildVersions"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListImagePackages",
@@ -774,12 +951,13 @@
             },
             "Resources": [
                 {
-                    "Name": "image",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListImagePipelineImages",
@@ -795,7 +973,11 @@
                 {
                     "Name": "imagePipeline"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListImagePipelines",
@@ -806,6 +988,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -817,6 +1003,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -836,7 +1026,11 @@
                 {
                     "Name": "imagePipeline"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListImageScanFindings",
@@ -855,7 +1049,11 @@
                 {
                     "Name": "imagePipeline"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListImages",
@@ -866,6 +1064,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -877,6 +1079,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -893,7 +1099,11 @@
                 {
                     "Name": "lifecycleExecution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListLifecycleExecutions",
@@ -912,7 +1122,11 @@
                 {
                     "Name": "lifecyclePolicy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListLifecyclePolicies",
@@ -923,6 +1137,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -937,60 +1155,37 @@
             },
             "Resources": [
                 {
-                    "Name": "component",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "component"
                 },
                 {
-                    "Name": "containerRecipe",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "containerRecipe"
                 },
                 {
-                    "Name": "distributionConfiguration",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "distributionConfiguration"
                 },
                 {
-                    "Name": "image",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "image"
                 },
                 {
-                    "Name": "imagePipeline",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "imagePipeline"
                 },
                 {
-                    "Name": "imageRecipe",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "imageRecipe"
                 },
                 {
-                    "Name": "infrastructureConfiguration",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "infrastructureConfiguration"
                 },
                 {
-                    "Name": "lifecyclePolicy",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "lifecyclePolicy"
                 },
                 {
-                    "Name": "workflow",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}"
-                    ]
+                    "Name": "workflow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListWaitingWorkflowSteps",
@@ -1001,6 +1196,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -1015,9 +1214,13 @@
             },
             "Resources": [
                 {
-                    "Name": "workflowVersion"
+                    "Name": "allWorkflowBuildVersions"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListWorkflowExecutions",
@@ -1033,7 +1236,11 @@
                 {
                     "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListWorkflowStepExecutions",
@@ -1049,7 +1256,11 @@
                 {
                     "Name": "workflowExecution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "ListWorkflows",
@@ -1060,6 +1271,10 @@
                     "IsTaggingOnly": false,
                     "IsWrite": false
                 }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -1076,7 +1291,11 @@
                 {
                     "Name": "component"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutContainerRecipePolicy",
@@ -1092,7 +1311,11 @@
                 {
                     "Name": "containerRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutImagePolicy",
@@ -1108,7 +1331,11 @@
                 {
                     "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "PutImageRecipePolicy",
@@ -1124,7 +1351,11 @@
                 {
                     "Name": "imageRecipe"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "SendWorkflowStepAction",
@@ -1143,7 +1374,11 @@
                 {
                     "Name": "workflowStepExecution"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "StartImagePipelineExecution",
@@ -1159,7 +1394,11 @@
                 {
                     "Name": "imagePipeline"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "StartResourceStateUpdate",
@@ -1175,10 +1414,18 @@
                 {
                     "Name": "image"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "TagResource",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1189,81 +1436,43 @@
             },
             "Resources": [
                 {
-                    "Name": "component",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "component"
                 },
                 {
-                    "Name": "containerRecipe",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "containerRecipe"
                 },
                 {
-                    "Name": "distributionConfiguration",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "distributionConfiguration"
                 },
                 {
-                    "Name": "image",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "image"
                 },
                 {
-                    "Name": "imagePipeline",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "imagePipeline"
                 },
                 {
-                    "Name": "imageRecipe",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "imageRecipe"
                 },
                 {
-                    "Name": "infrastructureConfiguration",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "infrastructureConfiguration"
                 },
                 {
-                    "Name": "lifecyclePolicy",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "lifecyclePolicy"
                 },
                 {
-                    "Name": "workflow",
-                    "ConditionKeys": [
-                        "aws:RequestTag/${TagKey}",
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "workflow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UntagResource",
+            "ActionConditionKeys": [
+                "aws:TagKeys"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1274,69 +1483,37 @@
             },
             "Resources": [
                 {
-                    "Name": "component",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "component"
                 },
                 {
-                    "Name": "containerRecipe",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "containerRecipe"
                 },
                 {
-                    "Name": "distributionConfiguration",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "distributionConfiguration"
                 },
                 {
-                    "Name": "image",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "image"
                 },
                 {
-                    "Name": "imagePipeline",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "imagePipeline"
                 },
                 {
-                    "Name": "imageRecipe",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "imageRecipe"
                 },
                 {
-                    "Name": "infrastructureConfiguration",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "infrastructureConfiguration"
                 },
                 {
-                    "Name": "lifecyclePolicy",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "lifecyclePolicy"
                 },
                 {
-                    "Name": "workflow",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "aws:TagKeys"
-                    ]
+                    "Name": "workflow"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "UpdateDistributionConfiguration",
@@ -1352,7 +1529,11 @@
                 {
                     "Name": "distributionConfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateImagePipeline",
@@ -1368,10 +1549,20 @@
                 {
                     "Name": "imagePipeline"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateInfrastructureConfiguration",
+            "ActionConditionKeys": [
+                "imagebuilder:CreatedResourceTag/${TagKey}",
+                "imagebuilder:CreatedResourceTagKeys",
+                "imagebuilder:Ec2MetadataHttpTokens",
+                "imagebuilder:StatusTopicArn"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1382,19 +1573,19 @@
             },
             "Resources": [
                 {
-                    "Name": "infrastructureConfiguration",
-                    "ConditionKeys": [
-                        "aws:ResourceTag/${TagKey}",
-                        "imagebuilder:CreatedResourceTag/<key>",
-                        "imagebuilder:CreatedResourceTagKeys",
-                        "imagebuilder:Ec2MetadataHttpTokens",
-                        "imagebuilder:StatusTopicArn"
-                    ]
+                    "Name": "infrastructureConfiguration"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "UpdateLifecyclePolicy",
+            "ActionConditionKeys": [
+                "imagebuilder:LifecyclePolicyResourceType"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1405,12 +1596,13 @@
             },
             "Resources": [
                 {
-                    "Name": "lifecyclePolicy",
-                    "ConditionKeys": [
-                        "imagebuilder:LifecyclePolicyResourceType"
-                    ]
+                    "Name": "lifecyclePolicy"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         }
     ],
     "ConditionKeys": [
@@ -1433,7 +1625,7 @@
             ]
         },
         {
-            "Name": "imagebuilder:CreatedResourceTag/<key>",
+            "Name": "imagebuilder:CreatedResourceTag/${TagKey}",
             "Types": [
                 "String"
             ]
@@ -1465,18 +1657,27 @@
     ],
     "Resources": [
         {
-            "Name": "component",
+            "Name": "allComponentBuildVersions",
             "ARNFormats": [
-                "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}"
-            ],
-            "ConditionKeys": [
-                "aws:ResourceTag/${TagKey}"
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/*"
             ]
         },
         {
-            "Name": "componentVersion",
+            "Name": "allImageBuildVersions",
             "ARNFormats": [
-                "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}"
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/*"
+            ]
+        },
+        {
+            "Name": "allWorkflowBuildVersions",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow/${WorkflowType}/${WorkflowName}/${WorkflowVersion}/*"
+            ]
+        },
+        {
+            "Name": "component",
+            "ARNFormats": [
+                "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}"
             ],
             "ConditionKeys": [
                 "aws:ResourceTag/${TagKey}"
@@ -1546,12 +1747,6 @@
             ]
         },
         {
-            "Name": "kmsKey",
-            "ARNFormats": [
-                "arn:${Partition}:kms:${Region}:${Account}:key/${KeyId}"
-            ]
-        },
-        {
             "Name": "lifecycleExecution",
             "ARNFormats": [
                 "arn:${Partition}:imagebuilder:${Region}:${Account}:lifecycle-execution/${LifecycleExecutionId}"
@@ -1586,16 +1781,7 @@
             "ARNFormats": [
                 "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow-step-execution/${WorkflowStepExecutionId}"
             ]
-        },
-        {
-            "Name": "workflowVersion",
-            "ARNFormats": [
-                "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow/${WorkflowType}/${WorkflowName}/${WorkflowVersion}"
-            ],
-            "ConditionKeys": [
-                "aws:ResourceTag/${TagKey}"
-            ]
         }
     ],
-    "Version": "v1.2"
+    "Version": "v1.3"
 }

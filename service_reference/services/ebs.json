@@ -18,7 +18,11 @@
                 {
                     "Name": "snapshot"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         },
         {
             "Name": "GetSnapshotBlock",
@@ -37,7 +41,11 @@
                 {
                     "Name": "snapshot"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListChangedBlocks",
@@ -56,7 +64,11 @@
                 {
                     "Name": "snapshot"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "ListSnapshotBlocks",
@@ -75,7 +87,11 @@
                 {
                     "Name": "snapshot"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "PutSnapshotBlock",
@@ -94,7 +110,11 @@
                 {
                     "Name": "snapshot"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
         },
         {
             "Name": "StartSnapshot",
@@ -118,7 +138,11 @@
                 {
                     "Name": "snapshot"
                 }
-            ]
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
         }
     ],
     "ConditionKeys": [
@@ -149,7 +173,7 @@
         {
             "Name": "ebs:ParentSnapshot",
             "Types": [
-                "String"
+                "ARN"
             ]
         },
         {
@@ -175,5 +199,5 @@
             ]
         }
     ],
-    "Version": "v1.2"
+    "Version": "v1.3"
 }
