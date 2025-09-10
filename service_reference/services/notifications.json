@@ -62,6 +62,26 @@
             }
         },
         {
+            "Name": "AssociateOrganizationalUnit",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "NotificationConfiguration"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "CreateEventRule",
             "Annotations": {
                 "Properties": {
@@ -155,7 +175,7 @@
             "Annotations": {
                 "Properties": {
                     "IsList": false,
-                    "IsPermissionManagement": false,
+                    "IsPermissionManagement": true,
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
@@ -226,11 +246,31 @@
             }
         },
         {
-            "Name": "EnableNotificationsAccessForOrganization",
+            "Name": "DisassociateOrganizationalUnit",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
                     "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "NotificationConfiguration"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "EnableNotificationsAccessForOrganization",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
                     "IsTaggingOnly": false,
                     "IsWrite": true
                 }
@@ -491,6 +531,26 @@
             }
         },
         {
+            "Name": "ListMemberAccounts",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "NotificationConfiguration"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "ListNotificationConfigurations",
             "Annotations": {
                 "Properties": {
@@ -530,6 +590,26 @@
                     "IsWrite": false
                 }
             },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ListOrganizationalUnits",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "NotificationConfiguration"
+                }
+            ],
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false

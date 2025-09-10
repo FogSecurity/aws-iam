@@ -176,9 +176,48 @@
             }
         },
         {
+            "Name": "CreateThreatEntitySet",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
             "Name": "CreateThreatIntelSet",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "CreateTrustedEntitySet",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:ResourceTag/${TagKey}",
                 "aws:TagKeys"
             ],
             "Annotations": {
@@ -340,6 +379,26 @@
             }
         },
         {
+            "Name": "DeleteThreatEntitySet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "threatentityset"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
             "Name": "DeleteThreatIntelSet",
             "Annotations": {
                 "Properties": {
@@ -352,6 +411,26 @@
             "Resources": [
                 {
                     "Name": "threatintelset"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "DeleteTrustedEntitySet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trustedentityset"
                 }
             ],
             "SupportedBy": {
@@ -735,6 +814,26 @@
             }
         },
         {
+            "Name": "GetThreatEntitySet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "threatentityset"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
             "Name": "GetThreatIntelSet",
             "Annotations": {
                 "Properties": {
@@ -747,6 +846,26 @@
             "Resources": [
                 {
                     "Name": "threatintelset"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "GetTrustedEntitySet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trustedentityset"
                 }
             ],
             "SupportedBy": {
@@ -963,7 +1082,13 @@
                     "Name": "malwareprotectionplan"
                 },
                 {
+                    "Name": "threatentityset"
+                },
+                {
                     "Name": "threatintelset"
+                },
+                {
+                    "Name": "trustedentityset"
                 }
             ],
             "SupportedBy": {
@@ -972,7 +1097,37 @@
             }
         },
         {
+            "Name": "ListThreatEntitySets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
             "Name": "ListThreatIntelSets",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "ListTrustedEntitySets",
             "Annotations": {
                 "Properties": {
                     "IsList": true,
@@ -1074,7 +1229,13 @@
                     "Name": "malwareprotectionplan"
                 },
                 {
+                    "Name": "threatentityset"
+                },
+                {
                     "Name": "threatintelset"
+                },
+                {
+                    "Name": "trustedentityset"
                 }
             ],
             "SupportedBy": {
@@ -1124,7 +1285,13 @@
                     "Name": "malwareprotectionplan"
                 },
                 {
+                    "Name": "threatentityset"
+                },
+                {
                     "Name": "threatintelset"
+                },
+                {
+                    "Name": "trustedentityset"
                 }
             ],
             "SupportedBy": {
@@ -1293,6 +1460,26 @@
             }
         },
         {
+            "Name": "UpdateThreatEntitySet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "threatentityset"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
             "Name": "UpdateThreatIntelSet",
             "Annotations": {
                 "Properties": {
@@ -1305,6 +1492,26 @@
             "Resources": [
                 {
                     "Name": "threatintelset"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "UpdateTrustedEntitySet",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "trustedentityset"
                 }
             ],
             "SupportedBy": {
@@ -1377,9 +1584,27 @@
             ]
         },
         {
+            "Name": "threatentityset",
+            "ARNFormats": [
+                "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/threatentityset/${ThreatEntitySetId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
             "Name": "threatintelset",
             "ARNFormats": [
                 "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/threatintelset/${ThreatIntelSetId}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ]
+        },
+        {
+            "Name": "trustedentityset",
+            "ARNFormats": [
+                "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/trustedentityset/${TrustedEntitySetId}"
             ],
             "ConditionKeys": [
                 "aws:ResourceTag/${TagKey}"

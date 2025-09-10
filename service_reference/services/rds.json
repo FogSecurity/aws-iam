@@ -577,6 +577,7 @@
                 "aws:TagKeys",
                 "rds:BackupTarget",
                 "rds:ManageMasterUserPassword",
+                "rds:PubliclyAccessible",
                 "rds:req-tag/${TagKey}"
             ],
             "Annotations": {
@@ -617,6 +618,7 @@
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
                 "aws:TagKeys",
+                "rds:PubliclyAccessible",
                 "rds:req-tag/${TagKey}"
             ],
             "Annotations": {
@@ -749,7 +751,8 @@
             "Name": "CreateDBShardGroup",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
-                "aws:TagKeys"
+                "aws:TagKeys",
+                "rds:PubliclyAccessible"
             ],
             "Annotations": {
                 "Properties": {
@@ -3551,6 +3554,7 @@
                 "aws:TagKeys",
                 "rds:BackupTarget",
                 "rds:ManageMasterUserPassword",
+                "rds:PubliclyAccessible",
                 "rds:req-tag/${TagKey}"
             ],
             "Annotations": {
@@ -3592,6 +3596,7 @@
                 "aws:RequestTag/${TagKey}",
                 "aws:TagKeys",
                 "rds:ManageMasterUserPassword",
+                "rds:PubliclyAccessible",
                 "rds:req-tag/${TagKey}"
             ],
             "Annotations": {
@@ -3631,6 +3636,7 @@
                 "aws:TagKeys",
                 "rds:BackupTarget",
                 "rds:ManageMasterUserPassword",
+                "rds:PubliclyAccessible",
                 "rds:req-tag/${TagKey}"
             ],
             "Annotations": {
@@ -4019,6 +4025,12 @@
             "Name": "rds:Piops",
             "Types": [
                 "Numeric"
+            ]
+        },
+        {
+            "Name": "rds:PubliclyAccessible",
+            "Types": [
+                "Bool"
             ]
         },
         {

@@ -685,6 +685,24 @@
             }
         },
         {
+            "Name": "ListAccountsWithInvalidEffectivePolicy",
+            "ActionConditionKeys": [
+                "organizations:PolicyType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "ListChildren",
             "Annotations": {
                 "Properties": {
@@ -758,6 +776,29 @@
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": true,
                 "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "ListEffectivePolicyValidationErrors",
+            "ActionConditionKeys": [
+                "organizations:PolicyType"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "account"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {

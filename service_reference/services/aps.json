@@ -257,6 +257,29 @@
             }
         },
         {
+            "Name": "DeleteResourcePolicy",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workspace"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
             "Name": "DeleteRuleGroupsNamespace",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}"
@@ -373,6 +396,29 @@
         },
         {
             "Name": "DescribeQueryLoggingConfiguration",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workspace"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "DescribeResourcePolicy",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}"
             ],
@@ -881,6 +927,29 @@
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "PutResourcePolicy",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "workspace"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {

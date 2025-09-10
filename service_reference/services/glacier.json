@@ -43,10 +43,6 @@
         },
         {
             "Name": "AddTagsToVault",
-            "ActionConditionKeys": [
-                "aws:RequestTag/${TagKey}",
-                "aws:TagKeys"
-            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -648,18 +644,6 @@
         }
     ],
     "ConditionKeys": [
-        {
-            "Name": "aws:RequestTag/${TagKey}",
-            "Types": [
-                "String"
-            ]
-        },
-        {
-            "Name": "aws:TagKeys",
-            "Types": [
-                "ArrayOfString"
-            ]
-        },
         {
             "Name": "glacier:ArchiveAgeInDays",
             "Types": [

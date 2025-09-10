@@ -393,6 +393,10 @@
         },
         {
             "Name": "CreateServiceSpecificCredential",
+            "ActionConditionKeys": [
+                "iam:ServiceSpecificCredentialAgeDays",
+                "iam:ServiceSpecificCredentialServiceName"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -833,6 +837,9 @@
         },
         {
             "Name": "DeleteServiceSpecificCredential",
+            "ActionConditionKeys": [
+                "iam:ServiceSpecificCredentialServiceName"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2594,6 +2601,9 @@
         },
         {
             "Name": "ResetServiceSpecificCredential",
+            "ActionConditionKeys": [
+                "iam:ServiceSpecificCredentialServiceName"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3361,6 +3371,9 @@
         },
         {
             "Name": "UpdateServiceSpecificCredential",
+            "ActionConditionKeys": [
+                "iam:ServiceSpecificCredentialServiceName"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3580,6 +3593,18 @@
         },
         {
             "Name": "iam:ResourceTag/${TagKey}",
+            "Types": [
+                "String"
+            ]
+        },
+        {
+            "Name": "iam:ServiceSpecificCredentialAgeDays",
+            "Types": [
+                "Numeric"
+            ]
+        },
+        {
+            "Name": "iam:ServiceSpecificCredentialServiceName",
             "Types": [
                 "String"
             ]

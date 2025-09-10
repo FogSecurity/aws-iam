@@ -512,7 +512,6 @@
         {
             "Name": "CreateRoleMembership",
             "ActionConditionKeys": [
-                "identitystore:GroupId",
                 "quicksight:Group"
             ],
             "Annotations": {
@@ -1125,7 +1124,6 @@
         {
             "Name": "DeleteRoleMembership",
             "ActionConditionKeys": [
-                "identitystore:GroupId",
                 "quicksight:Group"
             ],
             "Annotations": {
@@ -2326,8 +2324,6 @@
         {
             "Name": "GenerateEmbedUrlForAnonymousUser",
             "ActionConditionKeys": [
-                "aws:RequestTag/${TagKey}",
-                "aws:TagKeys",
                 "quicksight:AllowedEmbeddingDomains"
             ],
             "Annotations": {
@@ -4697,12 +4693,6 @@
             "Name": "aws:TagKeys",
             "Types": [
                 "ArrayOfString"
-            ]
-        },
-        {
-            "Name": "identitystore:GroupId",
-            "Types": [
-                "ARN"
             ]
         },
         {

@@ -4,12 +4,7 @@
         {
             "Name": "AbortMultipartUpload",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -26,6 +21,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -67,9 +65,6 @@
         {
             "Name": "BypassGovernanceRetention",
             "ActionConditionKeys": [
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:RequestObjectTag/<key>",
                 "s3:RequestObjectTagKeys",
                 "s3:ResourceAccount",
@@ -101,6 +96,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -840,12 +838,7 @@
         {
             "Name": "DeleteObject",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -863,6 +856,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -874,11 +870,6 @@
         {
             "Name": "DeleteObjectTagging",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -896,6 +887,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -909,9 +903,6 @@
             "Name": "DeleteObjectVersion",
             "ActionConditionKeys": [
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -930,6 +921,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -941,9 +935,6 @@
         {
             "Name": "DeleteObjectVersionTagging",
             "ActionConditionKeys": [
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -962,6 +953,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -1586,8 +1580,6 @@
         {
             "Name": "GetBucketAcl",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1604,6 +1596,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspoint"
+                },
                 {
                     "Name": "bucket"
                 }
@@ -1616,8 +1611,6 @@
         {
             "Name": "GetBucketCORS",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1635,6 +1628,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspoint"
+                },
+                {
                     "Name": "bucket"
                 }
             ],
@@ -1646,8 +1642,6 @@
         {
             "Name": "GetBucketLocation",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1664,6 +1658,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspoint"
+                },
                 {
                     "Name": "bucket"
                 }
@@ -1732,8 +1729,6 @@
         {
             "Name": "GetBucketNotification",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1750,6 +1745,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspoint"
+                },
                 {
                     "Name": "bucket"
                 }
@@ -1818,8 +1816,6 @@
         {
             "Name": "GetBucketPolicy",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointTag/${TagKey}",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -1836,6 +1832,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspoint"
+                },
                 {
                     "Name": "bucket"
                 }
@@ -2333,12 +2332,7 @@
         {
             "Name": "GetObject",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -2359,6 +2353,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -2370,12 +2367,7 @@
         {
             "Name": "GetObjectAcl",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -2393,6 +2385,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -2405,11 +2400,6 @@
         {
             "Name": "GetObjectAttributes",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -2428,7 +2418,7 @@
             },
             "Resources": [
                 {
-                    "Name": "accesspoint"
+                    "Name": "accesspointobject"
                 },
                 {
                     "Name": "object"
@@ -2442,11 +2432,6 @@
         {
             "Name": "GetObjectLegalHold",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -2463,6 +2448,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -2475,11 +2463,6 @@
         {
             "Name": "GetObjectRetention",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -2497,6 +2480,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -2508,11 +2494,6 @@
         {
             "Name": "GetObjectTagging",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -2530,6 +2511,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -2571,9 +2555,6 @@
             "Name": "GetObjectVersion",
             "ActionConditionKeys": [
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -2592,6 +2573,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -2605,9 +2589,6 @@
             "Name": "GetObjectVersionAcl",
             "ActionConditionKeys": [
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -2627,6 +2608,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -2638,9 +2622,6 @@
         {
             "Name": "GetObjectVersionAttributes",
             "ActionConditionKeys": [
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -2659,6 +2640,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -2699,9 +2683,6 @@
         {
             "Name": "GetObjectVersionTagging",
             "ActionConditionKeys": [
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -2720,6 +2701,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -3074,12 +3058,7 @@
         {
             "Name": "ListBucket",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -3099,6 +3078,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspoint"
+                },
                 {
                     "Name": "bucket"
                 }
@@ -3145,12 +3127,7 @@
         {
             "Name": "ListBucketVersions",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -3170,6 +3147,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspoint"
+                },
                 {
                     "Name": "bucket"
                 }
@@ -3256,12 +3236,7 @@
         {
             "Name": "ListMultipartUploadParts",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -3278,6 +3253,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -3521,11 +3499,6 @@
         {
             "Name": "PutAccessPointPolicy",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -4195,12 +4168,7 @@
         {
             "Name": "PutObject",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ObjectCreationOperation",
                 "s3:RequestObjectTag/<key>",
                 "s3:RequestObjectTagKeys",
@@ -4240,6 +4208,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -4251,12 +4222,7 @@
         {
             "Name": "PutObjectAcl",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -4282,6 +4248,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -4293,11 +4262,6 @@
         {
             "Name": "PutObjectLegalHold",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -4316,6 +4280,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -4327,11 +4294,6 @@
         {
             "Name": "PutObjectRetention",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -4352,6 +4314,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -4363,11 +4328,6 @@
         {
             "Name": "PutObjectTagging",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:RequestObjectTag/<key>",
                 "s3:RequestObjectTagKeys",
@@ -4388,6 +4348,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -4400,9 +4363,6 @@
             "Name": "PutObjectVersionAcl",
             "ActionConditionKeys": [
                 "s3:AccessGrantsInstanceArn",
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
@@ -4429,6 +4389,9 @@
             },
             "Resources": [
                 {
+                    "Name": "accesspointobject"
+                },
+                {
                     "Name": "object"
                 }
             ],
@@ -4440,9 +4403,6 @@
         {
             "Name": "PutObjectVersionTagging",
             "ActionConditionKeys": [
-                "s3:AccessPointNetworkOrigin",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ExistingObjectTag/<key>",
                 "s3:RequestObjectTag/<key>",
                 "s3:RequestObjectTagKeys",
@@ -4463,6 +4423,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -4646,11 +4609,6 @@
         {
             "Name": "RestoreObject",
             "ActionConditionKeys": [
-                "aws:ResourceTag/${TagKey}",
-                "s3:AccessPointNetworkOrigin",
-                "s3:AccessPointTag/${TagKey}",
-                "s3:DataAccessPointAccount",
-                "s3:DataAccessPointArn",
                 "s3:ResourceAccount",
                 "s3:TlsVersion",
                 "s3:authType",
@@ -4667,6 +4625,9 @@
                 }
             },
             "Resources": [
+                {
+                    "Name": "accesspointobject"
+                },
                 {
                     "Name": "object"
                 }
@@ -4871,8 +4832,8 @@
                 }
             ],
             "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": false,
-                "IAM Action Last Accessed": false
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
             }
         },
         {
@@ -5324,6 +5285,26 @@
             "Name": "accesspoint",
             "ARNFormats": [
                 "arn:${Partition}:s3:${Region}:${Account}:accesspoint/${AccessPointName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
+                "s3:DataAccessPointAccount",
+                "s3:DataAccessPointArn"
+            ]
+        },
+        {
+            "Name": "accesspointobject",
+            "ARNFormats": [
+                "arn:${Partition}:s3:${Region}:${Account}:accesspoint/${AccessPointName}/object/${ObjectName}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}",
+                "s3:AccessPointNetworkOrigin",
+                "s3:AccessPointTag/${TagKey}",
+                "s3:DataAccessPointAccount",
+                "s3:DataAccessPointArn"
             ]
         },
         {
