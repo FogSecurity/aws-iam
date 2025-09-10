@@ -107,7 +107,30 @@
             }
         },
         {
+            "Name": "DeleteResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "namespace"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "DeleteService",
+            "ActionConditionKeys": [
+                "servicediscovery:ServiceCreatedByAccount"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -128,6 +151,9 @@
         },
         {
             "Name": "DeleteServiceAttributes",
+            "ActionConditionKeys": [
+                "servicediscovery:ServiceCreatedByAccount"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -149,7 +175,8 @@
         {
             "Name": "DeregisterInstance",
             "ActionConditionKeys": [
-                "servicediscovery:ServiceArn"
+                "servicediscovery:ServiceArn",
+                "servicediscovery:ServiceCreatedByAccount"
             ],
             "Annotations": {
                 "Properties": {
@@ -183,6 +210,14 @@
                     "IsWrite": false
                 }
             },
+            "Resources": [
+                {
+                    "Name": "namespace"
+                },
+                {
+                    "Name": "service"
+                }
+            ],
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
@@ -202,6 +237,14 @@
                     "IsWrite": false
                 }
             },
+            "Resources": [
+                {
+                    "Name": "namespace"
+                },
+                {
+                    "Name": "service"
+                }
+            ],
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
@@ -220,6 +263,11 @@
                     "IsWrite": false
                 }
             },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ],
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": true,
                 "IAM Action Last Accessed": true
@@ -238,6 +286,11 @@
                     "IsWrite": false
                 }
             },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ],
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": true,
                 "IAM Action Last Accessed": true
@@ -273,9 +326,37 @@
                     "IsWrite": false
                 }
             },
+            "Resources": [
+                {
+                    "Name": "namespace"
+                },
+                {
+                    "Name": "service"
+                }
+            ],
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": true,
                 "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "GetResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "namespace"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -331,6 +412,11 @@
                     "IsWrite": false
                 }
             },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ],
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": true,
                 "IAM Action Last Accessed": true
@@ -397,9 +483,30 @@
             }
         },
         {
+            "Name": "PutResourcePolicy",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "namespace"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "RegisterInstance",
             "ActionConditionKeys": [
-                "servicediscovery:ServiceArn"
+                "servicediscovery:ServiceArn",
+                "servicediscovery:ServiceCreatedByAccount"
             ],
             "Annotations": {
                 "Properties": {
@@ -479,7 +586,8 @@
         {
             "Name": "UpdateInstanceCustomHealthStatus",
             "ActionConditionKeys": [
-                "servicediscovery:ServiceArn"
+                "servicediscovery:ServiceArn",
+                "servicediscovery:ServiceCreatedByAccount"
             ],
             "Annotations": {
                 "Properties": {
@@ -489,6 +597,11 @@
                     "IsWrite": true
                 }
             },
+            "Resources": [
+                {
+                    "Name": "service"
+                }
+            ],
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": true,
                 "IAM Action Last Accessed": true
@@ -536,6 +649,9 @@
         },
         {
             "Name": "UpdateService",
+            "ActionConditionKeys": [
+                "servicediscovery:ServiceCreatedByAccount"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -556,6 +672,9 @@
         },
         {
             "Name": "UpdateServiceAttributes",
+            "ActionConditionKeys": [
+                "servicediscovery:ServiceCreatedByAccount"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -610,6 +729,12 @@
             "Name": "servicediscovery:ServiceArn",
             "Types": [
                 "ARN"
+            ]
+        },
+        {
+            "Name": "servicediscovery:ServiceCreatedByAccount",
+            "Types": [
+                "String"
             ]
         },
         {

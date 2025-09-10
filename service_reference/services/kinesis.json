@@ -839,6 +839,9 @@
             "Name": "consumer",
             "ARNFormats": [
                 "arn:${Partition}:kinesis:${Region}:${Account}:${StreamType}/${StreamName}/consumer/${ConsumerName}:${ConsumerCreationTimpstamp}"
+            ],
+            "ConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
             ]
         },
         {

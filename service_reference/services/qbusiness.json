@@ -2,6 +2,29 @@
     "Name": "qbusiness",
     "Actions": [
         {
+            "Name": "AllowVendedLogDeliveryForResource",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": true,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "application"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "AssociatePermission",
             "Annotations": {
                 "Properties": {

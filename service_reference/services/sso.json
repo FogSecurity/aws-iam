@@ -619,21 +619,6 @@
             }
         },
         {
-            "Name": "DeletePermissionsPolicy",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": true,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": false,
-                "IAM Action Last Accessed": false
-            }
-        },
-        {
             "Name": "DeleteProfile",
             "Annotations": {
                 "Properties": {
@@ -775,21 +760,6 @@
             }
         },
         {
-            "Name": "DescribeDirectories",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": false,
-                "IAM Action Last Accessed": false
-            }
-        },
-        {
             "Name": "DescribeInstance",
             "Annotations": {
                 "Properties": {
@@ -873,21 +843,6 @@
             }
         },
         {
-            "Name": "DescribePermissionsPolicies",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": false,
-                "IAM Action Last Accessed": false
-            }
-        },
-        {
             "Name": "DescribeRegisteredRegions",
             "Annotations": {
                 "Properties": {
@@ -917,21 +872,6 @@
                     "Name": "TrustedTokenIssuer"
                 }
             ],
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": false,
-                "IAM Action Last Accessed": false
-            }
-        },
-        {
-            "Name": "DescribeTrusts",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
@@ -1121,6 +1061,29 @@
             }
         },
         {
+            "Name": "GetApplicationSessionConfiguration",
+            "ActionConditionKeys": [
+                "sso:ApplicationAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Application"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "GetApplicationTemplate",
             "Annotations": {
                 "Properties": {
@@ -1221,21 +1184,6 @@
                     "Name": "PermissionSet"
                 }
             ],
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": false,
-                "IAM Action Last Accessed": false
-            }
-        },
-        {
-            "Name": "GetPermissionsPolicy",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": false
-                }
-            },
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
@@ -1972,6 +1920,29 @@
             }
         },
         {
+            "Name": "PutApplicationSessionConfiguration",
+            "ActionConditionKeys": [
+                "sso:ApplicationAccount"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "Application"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "PutInlinePolicyToPermissionSet",
             "Annotations": {
                 "Properties": {
@@ -2272,21 +2243,6 @@
         },
         {
             "Name": "UpdateApplicationInstanceStatus",
-            "Annotations": {
-                "Properties": {
-                    "IsList": false,
-                    "IsPermissionManagement": false,
-                    "IsTaggingOnly": false,
-                    "IsWrite": true
-                }
-            },
-            "SupportedBy": {
-                "IAM Access Analyzer Policy Generation": false,
-                "IAM Action Last Accessed": false
-            }
-        },
-        {
-            "Name": "UpdateDirectoryAssociation",
             "Annotations": {
                 "Properties": {
                     "IsList": false,

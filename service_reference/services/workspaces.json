@@ -810,6 +810,36 @@
             }
         },
         {
+            "Name": "DescribeConsent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "DescribeCustomWorkspaceImageImport",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
             "Name": "DescribeImageAssociations",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}"
@@ -1182,6 +1212,21 @@
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": true,
                 "IAM Action Last Accessed": true
+            }
+        },
+        {
+            "Name": "ImportCustomWorkspaceImage",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
             }
         },
         {
@@ -1785,6 +1830,21 @@
             }
         },
         {
+            "Name": "UpdateConsent",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "UpdateRootClientCertificate",
             "Annotations": {
                 "Properties": {
@@ -1919,9 +1979,6 @@
             "Name": "certificateid",
             "ARNFormats": [
                 "arn:${Partition}:workspaces:${Region}:${Account}:workspacecertificate/${CertificateId}"
-            ],
-            "ConditionKeys": [
-                "aws:ResourceTag/${TagKey}"
             ]
         },
         {

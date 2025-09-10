@@ -23,6 +23,9 @@
         },
         {
             "Name": "BatchCreatePartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -52,6 +55,9 @@
         },
         {
             "Name": "BatchDeleteConnection",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -75,6 +81,9 @@
         },
         {
             "Name": "BatchDeletePartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -104,6 +113,9 @@
         },
         {
             "Name": "BatchDeleteTable",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -133,6 +145,9 @@
         },
         {
             "Name": "BatchDeleteTableVersion",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -257,6 +272,9 @@
         },
         {
             "Name": "BatchGetPartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -387,6 +405,9 @@
         },
         {
             "Name": "BatchUpdatePartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -535,6 +556,9 @@
         },
         {
             "Name": "CreateCatalog",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -601,7 +625,8 @@
             "Name": "CreateConnection",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
-                "aws:TagKeys"
+                "aws:TagKeys",
+                "glue:LakeFormationPermissions"
             ],
             "Annotations": {
                 "Properties": {
@@ -680,6 +705,9 @@
         },
         {
             "Name": "CreateDatabase",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -710,6 +738,21 @@
                 "aws:RequestTag/${TagKey}",
                 "aws:TagKeys"
             ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "CreateGlueIdentityCenterConfiguration",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -871,6 +914,9 @@
         },
         {
             "Name": "CreatePartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -900,6 +946,9 @@
         },
         {
             "Name": "CreatePartitionIndex",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1037,6 +1086,9 @@
         },
         {
             "Name": "CreateTable",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1140,6 +1192,9 @@
         },
         {
             "Name": "CreateUserDefinedFunction",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1210,6 +1265,9 @@
         },
         {
             "Name": "DeleteCatalog",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1248,6 +1306,9 @@
         },
         {
             "Name": "DeleteColumnStatisticsForPartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1277,6 +1338,9 @@
         },
         {
             "Name": "DeleteColumnStatisticsForTable",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1332,6 +1396,9 @@
         },
         {
             "Name": "DeleteConnection",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1410,6 +1477,9 @@
         },
         {
             "Name": "DeleteDatabase",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1455,6 +1525,21 @@
                     "Name": "devendpoint"
                 }
             ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "DeleteGlueIdentityCenterConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
@@ -1551,6 +1636,9 @@
         },
         {
             "Name": "DeletePartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1580,6 +1668,9 @@
         },
         {
             "Name": "DeletePartitionIndex",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1730,6 +1821,9 @@
         },
         {
             "Name": "DeleteTable",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1785,6 +1879,9 @@
         },
         {
             "Name": "DeleteTableVersion",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -1854,6 +1951,9 @@
         },
         {
             "Name": "DeleteUserDefinedFunction",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2055,7 +2155,8 @@
         {
             "Name": "GetCatalog",
             "ActionConditionKeys": [
-                "glue:EnabledForRedshiftAutoDiscovery"
+                "glue:EnabledForRedshiftAutoDiscovery",
+                "glue:LakeFormationPermissions"
             ],
             "Annotations": {
                 "Properties": {
@@ -2080,6 +2181,9 @@
         },
         {
             "Name": "GetCatalogImportStatus",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2101,7 +2205,8 @@
         {
             "Name": "GetCatalogs",
             "ActionConditionKeys": [
-                "glue:EnabledForRedshiftAutoDiscovery"
+                "glue:EnabledForRedshiftAutoDiscovery",
+                "glue:LakeFormationPermissions"
             ],
             "Annotations": {
                 "Properties": {
@@ -2156,6 +2261,9 @@
         },
         {
             "Name": "GetColumnStatisticsForPartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2185,6 +2293,9 @@
         },
         {
             "Name": "GetColumnStatisticsForTable",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2279,6 +2390,9 @@
         },
         {
             "Name": "GetConnection",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2302,6 +2416,9 @@
         },
         {
             "Name": "GetConnections",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2571,6 +2688,9 @@
         },
         {
             "Name": "GetDatabase",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2597,6 +2717,9 @@
         },
         {
             "Name": "GetDatabases",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -2741,6 +2864,21 @@
         },
         {
             "Name": "GetGeneratedCode",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "GetGlueIdentityCenterConfiguration",
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3043,6 +3181,9 @@
         },
         {
             "Name": "GetPartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3072,6 +3213,9 @@
         },
         {
             "Name": "GetPartitionIndexes",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3101,6 +3245,9 @@
         },
         {
             "Name": "GetPartitions",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3532,6 +3679,9 @@
         },
         {
             "Name": "GetTable",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3587,6 +3737,9 @@
         },
         {
             "Name": "GetTableVersion",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3616,6 +3769,9 @@
         },
         {
             "Name": "GetTableVersions",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3645,6 +3801,9 @@
         },
         {
             "Name": "GetTables",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3770,6 +3929,9 @@
         },
         {
             "Name": "GetUserDefinedFunction",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3799,6 +3961,9 @@
         },
         {
             "Name": "GetUserDefinedFunctions",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -3938,6 +4103,9 @@
         },
         {
             "Name": "ImportCatalogToGlue",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -4779,6 +4947,9 @@
         },
         {
             "Name": "SearchTables",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5344,7 +5515,8 @@
             "Name": "TagResource",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",
-                "aws:TagKeys"
+                "aws:TagKeys",
+                "glue:LakeFormationPermissions"
             ],
             "Annotations": {
                 "Properties": {
@@ -5439,7 +5611,8 @@
         {
             "Name": "UntagResource",
             "ActionConditionKeys": [
-                "aws:TagKeys"
+                "aws:TagKeys",
+                "glue:LakeFormationPermissions"
             ],
             "Annotations": {
                 "Properties": {
@@ -5523,6 +5696,9 @@
         },
         {
             "Name": "UpdateCatalog",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5561,6 +5737,9 @@
         },
         {
             "Name": "UpdateColumnStatisticsForPartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5590,6 +5769,9 @@
         },
         {
             "Name": "UpdateColumnStatisticsForTable",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5645,6 +5827,9 @@
         },
         {
             "Name": "UpdateConnection",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5723,6 +5908,9 @@
         },
         {
             "Name": "UpdateDatabase",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5762,6 +5950,21 @@
                     "Name": "devendpoint"
                 }
             ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "UpdateGlueIdentityCenterConfiguration",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
             "SupportedBy": {
                 "IAM Access Analyzer Policy Generation": false,
                 "IAM Action Last Accessed": false
@@ -5886,6 +6089,9 @@
         },
         {
             "Name": "UpdatePartition",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -5978,6 +6184,9 @@
         },
         {
             "Name": "UpdateTable",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -6073,6 +6282,9 @@
         },
         {
             "Name": "UpdateUserDefinedFunction",
+            "ActionConditionKeys": [
+                "glue:LakeFormationPermissions"
+            ],
             "Annotations": {
                 "Properties": {
                     "IsList": false,
@@ -6205,6 +6417,12 @@
             "Name": "glue:EnabledForRedshiftAutoDiscovery",
             "Types": [
                 "Bool"
+            ]
+        },
+        {
+            "Name": "glue:LakeFormationPermissions",
+            "Types": [
+                "String"
             ]
         },
         {

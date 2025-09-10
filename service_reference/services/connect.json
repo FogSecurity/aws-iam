@@ -3142,6 +3142,32 @@
             }
         },
         {
+            "Name": "GetContactMetrics",
+            "ActionConditionKeys": [
+                "connect:InstanceId"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "contact"
+                },
+                {
+                    "Name": "instance"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": true,
+                "IAM Action Last Accessed": true
+            }
+        },
+        {
             "Name": "GetCurrentMetricData",
             "ActionConditionKeys": [
                 "aws:ResourceTag/${TagKey}",

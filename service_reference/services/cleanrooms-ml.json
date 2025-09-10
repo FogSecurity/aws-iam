@@ -1069,6 +1069,25 @@
             }
         },
         {
+            "Name": "ListTrainedModelVersions",
+            "ActionConditionKeys": [
+                "aws:RequestTag/${TagKey}",
+                "aws:TagKeys"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "ListTrainedModels",
             "ActionConditionKeys": [
                 "aws:RequestTag/${TagKey}",

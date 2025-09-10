@@ -135,6 +135,31 @@
             }
         },
         {
+            "Name": "CreateCollaborationChangeRequest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration",
+                    "ConditionKeys": [
+                        "aws:RequestTag/${TagKey}",
+                        "aws:ResourceTag/${TagKey}",
+                        "aws:TagKeys"
+                    ]
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "CreateConfiguredAudienceModelAssociation",
             "Annotations": {
                 "Properties": {
@@ -720,6 +745,26 @@
             }
         },
         {
+            "Name": "GetCollaborationChangeRequest",
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "GetCollaborationConfiguredAudienceModelAssociation",
             "Annotations": {
                 "Properties": {
@@ -1085,6 +1130,26 @@
         },
         {
             "Name": "ListCollaborationAnalysisTemplates",
+            "Annotations": {
+                "Properties": {
+                    "IsList": true,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": false
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "collaboration"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "ListCollaborationChangeRequests",
             "Annotations": {
                 "Properties": {
                     "IsList": true,

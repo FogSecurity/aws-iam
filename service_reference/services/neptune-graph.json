@@ -725,6 +725,29 @@
             }
         },
         {
+            "Name": "StartGraph",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "graph"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
             "Name": "StartImportTask",
             "Annotations": {
                 "Properties": {
@@ -740,6 +763,29 @@
                 },
                 {
                     "Name": "import-task"
+                }
+            ],
+            "SupportedBy": {
+                "IAM Access Analyzer Policy Generation": false,
+                "IAM Action Last Accessed": false
+            }
+        },
+        {
+            "Name": "StopGraph",
+            "ActionConditionKeys": [
+                "aws:ResourceTag/${TagKey}"
+            ],
+            "Annotations": {
+                "Properties": {
+                    "IsList": false,
+                    "IsPermissionManagement": false,
+                    "IsTaggingOnly": false,
+                    "IsWrite": true
+                }
+            },
+            "Resources": [
+                {
+                    "Name": "graph"
                 }
             ],
             "SupportedBy": {
